@@ -1,0 +1,77 @@
+# Created by https://www.toptal.com/developers/gitignore/api/unity
+# Edit at https://www.toptal.com/developers/gitignore?templates=unity
+
+### Unity ###
+# This .gitignore file should be placed at the root of your Unity project directory
+#
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# MemoryCapture failid võivad minna väga suureks.
+# Lisaks võivad need sisaldada tundlikku infot.
+/[Mm]emoryCaptures/
+
+# Salvestused võivad samuti olla väga suured.
+/[Rr]ecordings/
+
+# Tõmba kommentaar maha kui tahad peita Asset Store Tools pluginat
+# /[Aa]ssets/AssetStoreTools*
+
+# JetBrains Rideri automaatne plugin
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Visual Studio vahemälu
+.vs/
+
+# Gradle vahemälu
+.gradle/
+
+# Automaatselt genereeritud Visual Studio / MonoDevelop / Consulo failid
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity genereeritud meta failid
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity crash reportide fail
+sysinfo.txt
+
+# Buildid
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics genereeritud fail
+crashlytics-build.properties
+
+# Addressables pakkfailid
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Ajutised automaatsed Androidi Asset’id
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# End of https://www.toptal.com/developers/gitignore/api/unity
