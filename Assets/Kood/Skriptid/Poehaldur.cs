@@ -7,63 +7,93 @@ public class Poehaldur : MonoBehaviour
     [SerializeField] private Button turrisNupp;
     [SerializeField] private Transform[] kohad;
 
-    [Header("Tornikaardi prefab")]
-    [SerializeField] private Tornikaart tornikaardiPrefab;
-
-    [Header("Tornid")]
+    [Header("Prefabs")]
+    [SerializeField] private GameObject tornikaardiPrefab;
     [SerializeField] private GameObject[] torniPrefabid;
-    [SerializeField] private Sprite[] torniIkoonid;
 
-    [Header("Hind")]
-    [SerializeField] private int turriseHind = 100;
+    [Header("Seaded")]
+    [SerializeField] private int torniHind = 100;
 
-    private void OnEnable()
+    private void Update()
     {
-        if (OravanahaHaldur.Instance != null)
-            OravanahaHaldur.Instance.OravanahadMuutusid += UuendaNupuOlekut;
+        if (OravanahaHaldur.Instance == null)
+        {
+            if (turrisNupp != null) turrisNupp.interactable = false;
+            return;
+        }
 
-        UuendaNupuOlekut(OravanahaHaldur.Instance != null ? OravanahaHaldur.Instance.Oravanahad : 0);
-    }
+        bool onRaha = OravanahaHaldur.Instance.Oravanahad >= torniHind;
+        bool onVabaSlot = LeiaTühiSlot() != null;
 
-    private void OnDisable()
-    {
-        if (OravanahaHaldur.Instance != null)
-            OravanahaHaldur.Instance.OravanahadMuutusid -= UuendaNupuOlekut;
+        if (turrisNupp != null)
+            turrisNupp.interactable = onRaha && onVabaSlot;
     }
 
     public void VajutatiTurrist()
     {
-        if (OravanahaHaldur.Instance == null) return;
+        Debug.Log("TURRIS vajutati");
 
-        if (!OravanahaHaldur.Instance.KulutaOravanahku(turriseHind))
+        if (OravanahaHaldur.Instance == null)
+        {
+            Debug.LogError("OravanahaHaldur puudub!");
             return;
+        }
 
         Transform tühiSlot = LeiaTühiSlot();
         if (tühiSlot == null)
         {
-            OravanahaHaldur.Instance.LisaOravanahku(turriseHind);
+            Debug.Log("Pole vaba sloti");
             return;
         }
 
-        int indeks = Random.Range(0, torniPrefabid.Length);
-        Tornikaart uusKaart = Instantiate(tornikaardiPrefab, tühiSlot);
-        Sprite ikoon = (torniIkoonid != null && torniIkoonid.Length > indeks) ? torniIkoonid[indeks] : null;
-        uusKaart.SeaSisu(torniPrefabid[indeks], ikoon);
-    }
+        bool õnnestus = OravanahaHaldur.Instance.KulutaOravanahku(torniHind);
+        if (!õnnestus)
+        {
+            Debug.Log("Pole piisavalt oravanahku");
+            return;
+        }
 
-    private void UuendaNupuOlekut(int oravanahad)
-    {
-        if (turrisNupp == null) return;
-        turrisNupp.interactable = oravanahad >= turriseHind && LeiaTühiSlot() != null;
+        if (torniPrefabid == null || torniPrefabid.Length == 0)
+        {
+            Debug.LogError("Torni prefabid pole määratud!");
+            return;
+        }
+
+        if (tornikaardiPrefab == null)
+        {
+            Debug.LogError("Tornikaardi prefab pole määratud!");
+            return;
+        }
+
+        GameObject valitudTorn = torniPrefabid[Random.Range(0, torniPrefabid.Length)];
+
+        GameObject kaartObjekt = Instantiate(tornikaardiPrefab, tühiSlot);
+        Tornikaart tornikaart = kaartObjekt.GetComponent<Tornikaart>();
+
+        if (tornikaart != null)
+        {
+            tornikaart.SeaTorn(valitudTorn);
+        }
+        else
+        {
+            Debug.LogError("Tornikaardi prefab'il puudub Tornikaart script!");
+        }
+
+        Debug.Log("Tornikaart loodud sloti: " + tühiSlot.name);
     }
 
     private Transform LeiaTühiSlot()
     {
+        if (kohad == null) return null;
+
         foreach (Transform slot in kohad)
         {
             if (slot == null) continue;
-            if (slot.childCount == 0) return slot;
+            Tornikaart olemasolevKaart = slot.GetComponentInChildren<Tornikaart>();
+            if (olemasolevKaart == null)
+                return slot;
         }
+
         return null;
     }
 }

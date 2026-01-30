@@ -38,7 +38,7 @@ public class JutustuseHaldur : MonoBehaviour
         {
             jutustuseRead = new string[]
             {
-                "Tere! Mina olen Leemet. Ma tulin just Manivaldi matustelt. Oma silmaga pole seda Manivaldi küll kunagi näinud, sest ta ei elanud metsas.",
+                "Tere! Mina olen Leemet. Ma tulin just Manivaldi matustelt. Oma silmaga pole ma seda Manivaldi küll kunagi näinud, sest ta ei elanud metsas.",
                 "Onu Vootele rääkis, et Manivald on näinud ka Põhja Konna... Mis too veel on? Ei tea.", 
                 "Meeme andis mulle miskisuguse sõrmuse. Väga ilus on.",
                 "Kurb küll, et suri mees, kellesarnaseid enam ei sünni, aga mets ei maga kunagi. Mul on vaja turvalist teed koju.",

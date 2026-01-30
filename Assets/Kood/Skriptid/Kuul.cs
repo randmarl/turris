@@ -24,7 +24,12 @@ public class Kuul : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D muu)
     {
-        muu.gameObject.GetComponent<Tervis>().Kahjusta(kuuliTugevus);
+        Tervis tervis = muu.gameObject.GetComponent<Tervis>();
+        if (tervis != null)
+        {
+            tervis.Kahjusta(kuuliTugevus);
+        }
+
         Destroy(gameObject);
     }
 }

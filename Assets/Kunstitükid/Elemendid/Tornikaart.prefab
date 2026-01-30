@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6932806044033708248}
   - component: {fileID: 8211689954839254912}
   - component: {fileID: 2252873814787887774}
+  - component: {fileID: -746969022836460726}
   m_Layer: 5
   m_Name: Tornikaart
   m_TagString: Untagged
@@ -88,4 +89,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f092629e5ceefd4db47c4099ced9652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tornikaart
-  ikoon: {fileID: 8211689954839254912}
+  torniPrefab: {fileID: 0}
+  torniIkoon: {fileID: 0}
+  juurCanvas: {fileID: 0}
+  maatiukiKiht:
+    serializedVersion: 2
+    m_Bits: 0
+  maksimaalneRayKaugus: 100
+--- !u!225 &-746969022836460726
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5364296826834109631}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

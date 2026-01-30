@@ -25,10 +25,10 @@ public class Maatükk : MonoBehaviour
         else
             renderdaja.color = algneVärv;
 
-        if (tabatud != null && tabatud.gameObject == gameObject && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            EhitaTorn();
-        }
+//        if (tabatud != null && tabatud.gameObject == gameObject && Mouse.current.leftButton.wasPressedThisFrame)
+//        {
+//            EhitaTorn();
+//        }
     }
 
     private void EhitaTorn()
