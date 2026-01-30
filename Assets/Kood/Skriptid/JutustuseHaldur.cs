@@ -40,7 +40,7 @@ public class JutustuseHaldur : MonoBehaviour
             {
                 "Tere! Mina olen Leemet. Ma tulin just Manivaldi matustelt. Oma silmaga pole seda Manivaldi küll kunagi näinud, sest ta ei elanud metsas.",
                 "Onu Vootele rääkis, et Manivald on näinud ka Põhja Konna... Mis too veel on? Ei tea.", 
-                "Lisaks andis Meeme mulle miskisuguse sõrmuse. Väga ilus on.",
+                "Meeme andis mulle miskisuguse sõrmuse. Väga ilus on.",
                 "Kurb küll, et suri mees, kellesarnaseid enam ei sünni, aga mets ei maga kunagi. Mul on vaja turvalist teed koju.",
                 "Kaitse teed, enne kui vaenlased matuselisteni jõuavad!"
             };
