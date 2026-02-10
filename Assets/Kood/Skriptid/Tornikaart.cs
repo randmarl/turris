@@ -25,7 +25,11 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (canvasGroup == null) canvasGroup = gameObject.AddComponent<CanvasGroup>();
 
         if (juurCanvas == null)
-            juurCanvas = GetComponentInParent<Canvas>();
+        {
+            var c = GetComponentInParent<Canvas>();
+            if (c != null) juurCanvas = c.rootCanvas;
+            else juurCanvas = FindAnyObjectByType<Canvas>()?.rootCanvas;
+        }
     }
 
     public void SeaSisu(GameObject uusPrefab, Sprite uusIkoon)
@@ -71,11 +75,24 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             img.sprite = sr.sprite;
             img.color = Color.white;
         }
+        RectTransform rt = GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            rt.anchorMin = Vector2.zero;
+            rt.anchorMax = Vector2.one;
+            rt.offsetMin = Vector2.zero;
+            rt.offsetMax = Vector2.zero;
+            rt.localScale = Vector3.one;
+        }
+
     }
 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (juurCanvas == null)
+            juurCanvas = GetComponentInParent<Canvas>()?.rootCanvas ?? FindAnyObjectByType<Canvas>()?.rootCanvas;
+
         algneVanem = transform.parent;
         algneAsukoht = rectTransform.anchoredPosition;
         transform.SetParent(juurCanvas.transform, true);

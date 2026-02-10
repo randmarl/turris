@@ -94,7 +94,7 @@ MonoBehaviour:
   juurCanvas: {fileID: 0}
   maatiukiKiht:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   maksimaalneRayKaugus: 100
 --- !u!225 &-746969022836460726
 CanvasGroup:

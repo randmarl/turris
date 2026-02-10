@@ -14,10 +14,10 @@ public class Ehitaja : MonoBehaviour
         peamine = this;
     }
 
-    public Torn VõtaValitudTorn()
-    {
-        return tornid[valitudTorn];
-    }
+   public Torn VõtaValitudTorn()
+   {
+       return tornid[valitudTorn];
+   }
 
     public void MääraValitudTorn(int uusValik)
     {

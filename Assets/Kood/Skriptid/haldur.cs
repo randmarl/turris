@@ -12,17 +12,14 @@ public class haldur : MonoBehaviour
     {
         peamine = this;
     }
-
     private void Start()
     {
         raha = 100;
     }
-
     public void LisaRaha(int kogus)
     {
         raha += kogus;
     }
-
     public bool KulutaRaha(int kogus)
     {
         if (kogus <= raha)

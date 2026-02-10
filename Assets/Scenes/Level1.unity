@@ -4052,12 +4052,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632482839}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 387.1627, y: 259.80936, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030215099}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &632482841
 MonoBehaviour:
@@ -5404,12 +5404,11 @@ MonoBehaviour:
   - {fileID: 167102379}
   - {fileID: 416445779}
   - {fileID: 260874299}
-  tornikaardiPrefab: {fileID: 2252873814787887774, guid: a48827918146174499a34285c704851e, type: 3}
+  tornikaardiPrefab: {fileID: 0}
   torniPrefabid:
   - {fileID: 2967149486340801840, guid: fb1fac26914c86d43a54adef7272d04d, type: 3}
   - {fileID: 3784557585502695947, guid: a02b3543448b5454bb1f04303bf9eaac, type: 3}
-  torniIkoonid: []
-  turriseHind: 100
+  torniHind: 100
 --- !u!1001 &875376800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6589,52 +6588,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3492372030123539186, guid: 5e690349e4206ee459905f2b44b89b7e, type: 3}
   m_PrefabInstance: {fileID: 1028020513}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1030215097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1030215099}
-  - component: {fileID: 1030215098}
-  m_Layer: 0
-  m_Name: "M\xE4nguhaldurid"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1030215098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030215097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d711c1a9b1db61f42b60769bc4578221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OravanahaHaldur
-  algusOravanahad: 100
---- !u!4 &1030215099
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030215097}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 387.1627, y: 259.80936, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 632482840}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031377313
 GameObject:
   m_ObjectHideFlags: 0
@@ -12452,4 +12405,4 @@ SceneRoots:
   - {fileID: 853909333}
   - {fileID: 1168958589}
   - {fileID: 376913088}
-  - {fileID: 1030215099}
+  - {fileID: 632482840}
