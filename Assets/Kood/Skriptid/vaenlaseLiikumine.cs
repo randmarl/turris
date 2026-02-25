@@ -29,7 +29,11 @@ public class vaenlaseLiikumine : MonoBehaviour
             
             if (teeIndeks == haldur.peamine.teekond.Length)
             {
-                VaenlaseTekitaja.vaenlaseHävitamiseSündmus.Invoke();
+                if (MängijaElud.Instance != null)
+                    MängijaElud.Instance.VõtaElu(1);
+
+                VaenlaseTekitaja.vaenlaseHävitamiseSündmus?.Invoke();
+
                 Destroy(gameObject);
                 return;
             }
