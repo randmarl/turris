@@ -2,32 +2,40 @@ using UnityEngine;
 
 public class Kuul : MonoBehaviour
 {
-    [Header("Viited")]
     [SerializeField] private Rigidbody2D keha2D;
-
-    [Header("Atribuudid")]
-    [SerializeField] private float kuuliKiirus = 5f;
-    [SerializeField] private int kuuliTugevus = 1;
+    [SerializeField] private float kiirus = 10f;
+    [SerializeField] private int kahju = 1;   // <-- lisa see
 
     private Transform sihtmärk;
 
-    public void MääraSihtmärk(Transform _sihtmärk)
+    private void Awake()
     {
-        sihtmärk = _sihtmärk;
+        if (keha2D == null) keha2D = GetComponent<Rigidbody2D>();
+    }
+
+    public void MääraSihtmärk(Transform uusSiht)
+    {
+        sihtmärk = uusSiht;
     }
 
     private void FixedUpdate()
     {
-        if (!sihtmärk) return;
-        Vector2 suund = (sihtmärk.position - transform.position).normalized;
-        keha2D.linearVelocity = suund * kuuliKiirus;
+        if (sihtmärk == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Vector2 suund = ((Vector2)sihtmärk.position - keha2D.position).normalized;
+        keha2D.linearVelocity = suund * kiirus;
     }
+
     private void OnCollisionEnter2D(Collision2D muu)
     {
-        Tervis tervis = muu.gameObject.GetComponent<Tervis>();
+        Tervis tervis = muu.gameObject.GetComponentInParent<Tervis>();
         if (tervis != null)
         {
-            tervis.Kahjusta(kuuliTugevus);
+            tervis.Kahjusta(kahju);  // <-- kasuta kahju
         }
 
         Destroy(gameObject);

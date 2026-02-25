@@ -142,7 +142,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   kuuliMall: {fileID: 5963859620690967218, guid: 4bc6793bd4e26bb4481a01befb30b05f, type: 3}
-  laskepunkt: {fileID: 8535574009745333428}
+  laskepunkt: {fileID: 7516627025773828871}
   sihtimisRaadius: 3
   "p\xF6\xF6ramisKiirus": 175
   kuuleSekundis: 1
@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 7312363161186645107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

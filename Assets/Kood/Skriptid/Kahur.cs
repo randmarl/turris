@@ -44,9 +44,22 @@ public class Kahur : MonoBehaviour
 
     private void Tulista()
     {
+        if (kuuliMall == null || laskepunkt == null)
+        {
+            return;
+        }
+
         GameObject kuuliObjekt = Instantiate(kuuliMall, laskepunkt.position, Quaternion.identity);
+
+        var kuuliCollider = kuuliObjekt.GetComponent<Collider2D>();
+        if (kuuliCollider != null)
+        {
+            foreach (var c in GetComponentsInChildren<Collider2D>())
+                Physics2D.IgnoreCollision(kuuliCollider, c);
+        }
+
         Kuul kuuliSkript = kuuliObjekt.GetComponent<Kuul>();
-        kuuliSkript.MääraSihtmärk(sihtmärk);
+        if (kuuliSkript != null) kuuliSkript.MääraSihtmärk(sihtmärk);
     }
 
     private void LeiaSihtmärk()
@@ -76,4 +89,5 @@ public class Kahur : MonoBehaviour
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, sihtimisRaadius);
     }
-}
+    
+}    

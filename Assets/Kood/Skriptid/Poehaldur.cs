@@ -18,7 +18,8 @@ public class Poehaldur : MonoBehaviour
     {
         if (OravanahaHaldur.Instance == null)
         {
-            if (turrisNupp != null) turrisNupp.interactable = false;
+            if (turrisNupp != null) 
+                turrisNupp.interactable = false;
             return;
         }
 
@@ -31,39 +32,22 @@ public class Poehaldur : MonoBehaviour
 
     public void VajutatiTurrist()
     {
-        //Debug.Log("TURRIS vajutati");
-
         if (OravanahaHaldur.Instance == null)
-        {
-            //Debug.LogError("OravanahaHaldur puudub!");
             return;
-        }
 
         Transform tühiSlot = LeiaTühiSlot();
         if (tühiSlot == null)
-        {
-            //Debug.Log("Pole vaba sloti");
             return;
-        }
 
         bool õnnestus = OravanahaHaldur.Instance.KulutaOravanahku(torniHind);
         if (!õnnestus)
-        {
-            //Debug.Log("Pole piisavalt oravanahku");
             return;
-        }
 
         if (torniPrefabid == null || torniPrefabid.Length == 0)
-        {
-            //Debug.LogError("Torni prefabid pole määratud!");
             return;
-        }
 
         if (tornikaardiPrefab == null)
-        {
-            //Debug.LogError("Tornikaardi prefab pole määratud!");
             return;
-        }
 
         GameObject valitudTorn = torniPrefabid[Random.Range(0, torniPrefabid.Length)];
 
@@ -71,20 +55,19 @@ public class Poehaldur : MonoBehaviour
         Tornikaart tornikaart = kaartObjekt.GetComponent<Tornikaart>();
 
         if (tornikaart != null)
-        {
             tornikaart.SeaTorn(valitudTorn);
-        }
-
-        //Debug.Log("Tornikaart loodud sloti: " + tühiSlot.name);
     }
 
     private Transform LeiaTühiSlot()
     {
-        if (kohad == null) return null;
+        if (kohad == null) 
+            return null;
 
         foreach (Transform slot in kohad)
         {
-            if (slot == null) continue;
+            if (slot == null) 
+                continue;
+
             Tornikaart olemasolevKaart = slot.GetComponentInChildren<Tornikaart>();
             if (olemasolevKaart == null)
                 return slot;
