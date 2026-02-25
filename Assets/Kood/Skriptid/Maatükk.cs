@@ -24,27 +24,18 @@ public class Maatükk : MonoBehaviour
             renderdaja.color = hiirPealVärv;
         else
             renderdaja.color = algneVärv;
-
-//        if (tabatud != null && tabatud.gameObject == gameObject && Mouse.current.leftButton.wasPressedThisFrame)
-//        {
-//            EhitaTorn();
-//        }
     }
 
     private void EhitaTorn()
     {
         if (torn != null) return;
 
-        Torn tornEhitatav = Ehitaja.peamine.VõtaValitudTorn();
+        int hind = Ehitaja.peamine.VõtaEhitusHind();
 
-        if (tornEhitatav.hind > haldur.peamine.raha)
-        {
-            Debug.Log("Sa oled liiga vaene!");
+        if (!OravanahaHaldur.Instance.KulutaOravanahku(hind))
             return;
-        }
 
-        haldur.peamine.KulutaRaha(tornEhitatav.hind);
-
-        torn = Instantiate(tornEhitatav.prefab, transform.position, Quaternion.identity);
+        GameObject prefab = Ehitaja.peamine.VõtaSuvalineTornPrefab();
+        torn = Instantiate(prefab, transform.position, Quaternion.identity);
     }
 }

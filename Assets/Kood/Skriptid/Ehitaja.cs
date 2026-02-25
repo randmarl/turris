@@ -4,23 +4,25 @@ public class Ehitaja : MonoBehaviour
 {
     public static Ehitaja peamine;
 
-    [Header("Viited")]
-    [SerializeField] private Torn[] tornid;
+    [Header("Seaded")]
+    [SerializeField] private int ehituseHind = 100;
 
-    private int valitudTorn = 0;
+    [Header("Tornid (random)")]
+    [SerializeField] private GameObject[] torniPrefabid;
 
     private void Awake()
     {
         peamine = this;
     }
 
-   public Torn VõtaValitudTorn()
-   {
-       return tornid[valitudTorn];
-   }
-
-    public void MääraValitudTorn(int uusValik)
+    public int VõtaEhitusHind()
     {
-        valitudTorn = uusValik;
+        return ehituseHind;
+    }
+
+    public GameObject VõtaSuvalineTornPrefab()
+    {
+        if (torniPrefabid == null || torniPrefabid.Length == 0) return null;
+        return torniPrefabid[Random.Range(0, torniPrefabid.Length)];
     }
 }

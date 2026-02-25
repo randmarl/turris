@@ -15,7 +15,10 @@ public class Tervis : MonoBehaviour
         if (elupunktid <= 0 && !onHävitatud)
         {
             VaenlaseTekitaja.vaenlaseHävitamiseSündmus?.Invoke();
-            if (haldur.peamine != null) haldur.peamine.LisaRaha(väärtus);
+            if (OravanahaHaldur.Instance != null)
+            {
+                OravanahaHaldur.Instance.LisaOravanahku(väärtus);
+            }
             onHävitatud = true;
             Destroy(gameObject);
         }

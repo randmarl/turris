@@ -15,12 +15,19 @@ public class Menüü : MonoBehaviour
         animaator.SetBool("MenüüAvatud", kasMenüüOnAvatud);
     }
 
-    private void OnGUI()
+    private void OnEnable()
     {
-        rahaTekst.text = haldur.peamine.raha.ToString();
+        OravanahaHaldur.Instance.OravanahadMuutusid += UuendaRaha;
+        UuendaRaha(OravanahaHaldur.Instance.Oravanahad);
     }
 
-//    public void MääraValitudTorn()
-//    {      
-//    }
+    private void OnDisable()
+    {
+        OravanahaHaldur.Instance.OravanahadMuutusid -= UuendaRaha;
+    }
+
+    private void UuendaRaha(int uusSumma)
+    {
+        rahaTekst.text = uusSumma.ToString();
+    }
 }
