@@ -3524,7 +3524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3616,7 +3616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OravanahaTekstiUuendaja
   tekst: {fileID: 529279887}
-  eesliide: 'Oravanahad: '
+  eesliide: 
 --- !u!1 &535176181
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,7 +5404,7 @@ MonoBehaviour:
   - {fileID: 167102379}
   - {fileID: 416445779}
   - {fileID: 260874299}
-  tornikaardiPrefab: {fileID: 0}
+  tornikaardiPrefab: {fileID: 5364296826834109631, guid: a48827918146174499a34285c704851e, type: 3}
   torniPrefabid:
   - {fileID: 2967149486340801840, guid: fb1fac26914c86d43a54adef7272d04d, type: 3}
   - {fileID: 3784557585502695947, guid: a02b3543448b5454bb1f04303bf9eaac, type: 3}
@@ -8973,7 +8973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 874794969}
         m_TargetAssemblyTypeName: Poehaldur, Assembly-CSharp
         m_MethodName: VajutatiTurrist
         m_Mode: 1

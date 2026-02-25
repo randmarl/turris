@@ -31,37 +31,37 @@ public class Poehaldur : MonoBehaviour
 
     public void VajutatiTurrist()
     {
-        Debug.Log("TURRIS vajutati");
+        //Debug.Log("TURRIS vajutati");
 
         if (OravanahaHaldur.Instance == null)
         {
-            Debug.LogError("OravanahaHaldur puudub!");
+            //Debug.LogError("OravanahaHaldur puudub!");
             return;
         }
 
         Transform tühiSlot = LeiaTühiSlot();
         if (tühiSlot == null)
         {
-            Debug.Log("Pole vaba sloti");
+            //Debug.Log("Pole vaba sloti");
             return;
         }
 
         bool õnnestus = OravanahaHaldur.Instance.KulutaOravanahku(torniHind);
         if (!õnnestus)
         {
-            Debug.Log("Pole piisavalt oravanahku");
+            //Debug.Log("Pole piisavalt oravanahku");
             return;
         }
 
         if (torniPrefabid == null || torniPrefabid.Length == 0)
         {
-            Debug.LogError("Torni prefabid pole määratud!");
+            //Debug.LogError("Torni prefabid pole määratud!");
             return;
         }
 
         if (tornikaardiPrefab == null)
         {
-            Debug.LogError("Tornikaardi prefab pole määratud!");
+            //Debug.LogError("Tornikaardi prefab pole määratud!");
             return;
         }
 
@@ -74,12 +74,8 @@ public class Poehaldur : MonoBehaviour
         {
             tornikaart.SeaTorn(valitudTorn);
         }
-        else
-        {
-            Debug.LogError("Tornikaardi prefab'il puudub Tornikaart script!");
-        }
 
-        Debug.Log("Tornikaart loodud sloti: " + tühiSlot.name);
+        //Debug.Log("Tornikaart loodud sloti: " + tühiSlot.name);
     }
 
     private Transform LeiaTühiSlot()

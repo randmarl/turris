@@ -4,33 +4,21 @@ using TMPro;
 public class OravanahaTekstiUuendaja : MonoBehaviour
 {
     [SerializeField] private TMP_Text tekst;
-    [SerializeField] private string eesliide = "Oravanahad: ";
-
     private void Reset()
     {
         tekst = GetComponent<TMP_Text>();
     }
 
-    private void OnEnable()
+    private void Awake()
     {
         if (tekst == null) tekst = GetComponent<TMP_Text>();
-
-        if (OravanahaHaldur.Instance != null)
-        {
-            OravanahaHaldur.Instance.OravanahadMuutusid += Uuenda;
-            Uuenda(OravanahaHaldur.Instance.Oravanahad);
-        }
     }
 
-    private void OnDisable()
+    private void Update()
     {
-        if (OravanahaHaldur.Instance != null)
-            OravanahaHaldur.Instance.OravanahadMuutusid -= Uuenda;
-    }
+        if (tekst == null) return;
+        if (OravanahaHaldur.Instance == null) return;
 
-    private void Uuenda(int summa)
-    {
-        if (tekst != null)
-            tekst.text = eesliide + summa;
+        tekst.text = OravanahaHaldur.Instance.Oravanahad.ToString();
     }
 }

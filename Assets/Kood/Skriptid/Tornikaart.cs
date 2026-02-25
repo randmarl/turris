@@ -64,28 +64,37 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     }
 
     public void SeaTorn(GameObject prefab)
+{
+    torniPrefab = prefab;
+
+    Image img = GetComponent<Image>();
+    if (img == null || prefab == null) return;
+
+    var andmed = prefab.GetComponent<TornAndmed>();
+    if (andmed != null && andmed.poeIkoon != null)
     {
-        torniPrefab = prefab;
-
-        Image img = GetComponent<Image>();
+        img.sprite = andmed.poeIkoon;
+        img.color = Color.white;
+    }
+    else
+    {
         SpriteRenderer sr = prefab.GetComponentInChildren<SpriteRenderer>();
-
-        if (img != null && sr != null)
+        if (sr != null)
         {
             img.sprite = sr.sprite;
             img.color = Color.white;
         }
-        RectTransform rt = GetComponent<RectTransform>();
-        if (rt != null)
-        {
-            rt.anchorMin = Vector2.zero;
-            rt.anchorMax = Vector2.one;
-            rt.offsetMin = Vector2.zero;
-            rt.offsetMax = Vector2.zero;
-            rt.localScale = Vector3.one;
-        }
-
     }
+    RectTransform rt = GetComponent<RectTransform>();
+    if (rt != null)
+    {
+        rt.anchorMin = Vector2.zero;
+        rt.anchorMax = Vector2.one;
+        rt.offsetMin = Vector2.zero;
+        rt.offsetMax = Vector2.zero;
+        rt.localScale = Vector3.one;
+    }
+}
 
 
     public void OnBeginDrag(PointerEventData eventData)

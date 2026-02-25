@@ -26,7 +26,7 @@ public class vaenlaseLiikumine : MonoBehaviour
         if (Vector2.Distance(sihtpunkt.position, transform.position) <= 0.1f)
         {
             teeIndeks++;
-
+            
             if (teeIndeks == haldur.peamine.teekond.Length)
             {
                 VaenlaseTekitaja.vaenlaseHävitamiseSündmus.Invoke();
