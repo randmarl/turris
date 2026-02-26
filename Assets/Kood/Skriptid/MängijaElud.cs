@@ -4,12 +4,13 @@ using UnityEngine.Events;
 public class MängijaElud : MonoBehaviour
 {
     public static MängijaElud Instance { get; private set; }
-
     [Header("Seaded")]
     [SerializeField] private int algsedElud = 10;
 
     public int Elud { get; private set; }
-    public UnityEvent<int> EludMuutusid = new UnityEvent<int>();
+    [HideInInspector] public UnityEvent<int> EludMuutusid = new UnityEvent<int>();
+    [HideInInspector] public UnityEvent MängLäbi = new UnityEvent();
+    private bool mangLabiKäivitunud = false;
 
     private void Awake()
     {
@@ -30,16 +31,20 @@ public class MängijaElud : MonoBehaviour
 
     public void VõtaElu(int kogus = 1)
     {
-        if (Elud <= 0) return;
+        if (Elud <= 0)
+            return;
 
         Elud -= kogus;
-        if (Elud < 0) Elud = 0;
+
+        if (Elud < 0)
+            Elud = 0;
 
         EludMuutusid.Invoke(Elud);
 
-        if (Elud == 0)
+        if (Elud == 0 && !mangLabiKäivitunud)
         {
-            Debug.Log("Mäng läbi (elud otsas)!");
+            mangLabiKäivitunud = true;
+            MängLäbi.Invoke();
         }
     }
 }

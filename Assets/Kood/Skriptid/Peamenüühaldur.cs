@@ -10,6 +10,15 @@ public class Peamenüühaldur : MonoBehaviour
     [Header("Stseenid")]
     [SerializeField] private string tase1Stseen = "Level1";
 
+    private void Start()
+    {
+        if (AvaekraaniNavigatsioon.AvaTasemedKohe)
+        {
+            AvaekraaniNavigatsioon.AvaTasemedKohe = false;
+            AvaTasemed();
+        }
+    }
+
     public void AvaTasemed()
     {
         peamenüüPaneel.SetActive(false);
