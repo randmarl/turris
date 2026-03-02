@@ -11,6 +11,7 @@ public class vaenlaseLiikumine : MonoBehaviour
     private Transform sihtpunkt;
     private int teeIndeks = 0;
     private float algneKiirus;
+    private SpriteRenderer sr;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class vaenlaseLiikumine : MonoBehaviour
 
         if (keha2D == null)
             keha2D = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -44,12 +46,26 @@ public class vaenlaseLiikumine : MonoBehaviour
         }
 
         Liigu();
+        UuendaSuunda();
     }
 
     private void Liigu()
     {
         Vector2 suund = (sihtpunkt.position - transform.position).normalized;
         keha2D.linearVelocity = suund * liikumiskiirus;
+    }
+    private void UuendaSuunda()
+    {
+        if (sr == null || keha2D == null) return;
+
+        if (keha2D.linearVelocity.x > 0.01f)
+        {
+            sr.flipX = false;
+        }
+        else if (keha2D.linearVelocity.x < -0.01f)
+        {
+            sr.flipX = true;
+        }
     }
 
     public void UuendaKiirus(float uusKiirus)
