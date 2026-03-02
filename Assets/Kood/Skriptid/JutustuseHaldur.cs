@@ -42,7 +42,7 @@ public class JutustuseHaldur : MonoBehaviour
                 "Onu Vootele rääkis, et Manivald on näinud ka Põhja Konna... Mis too veel on? Ei tea.", 
                 "Meeme andis mulle miskisuguse sõrmuse. Väga ilus on.",
                 "Kurb küll, et suri mees, kellesarnaseid enam ei sünni, aga mets ei maga kunagi. Mul on vaja turvalist teed koju.",
-                "Kaitse teed, enne kui vaenlased matuselisteni jõuavad!"
+                "Kaitse teed, enne kui külainimesed matuselisteni jõuavad!"
             };
         }
     }
