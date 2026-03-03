@@ -41,8 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Muru
+    uniqueID: 3596542451
+    locked: 0
+  - name: Tee
+    uniqueID: 3092389811
+    locked: 0
+  - name: Mets
+    uniqueID: 2437827655
+    locked: 0
   - name: Tornid
     uniqueID: 3630599261
+    locked: 0
+  - name: Vaenlased
+    uniqueID: 1710920027
     locked: 0
   m_RenderingLayers:
   - Default
