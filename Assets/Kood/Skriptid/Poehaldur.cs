@@ -13,12 +13,13 @@ public class Poehaldur : MonoBehaviour
 
     [Header("Seaded")]
     [SerializeField] private int torniHind = 100;
-
+    private bool esimeneOstTehtud = false;
+    
     private void Update()
     {
         if (OravanahaHaldur.Instance == null)
         {
-            if (turrisNupp != null) 
+            if (turrisNupp != null)
                 turrisNupp.interactable = false;
             return;
         }
@@ -49,7 +50,17 @@ public class Poehaldur : MonoBehaviour
         if (tornikaardiPrefab == null)
             return;
 
-        GameObject valitudTorn = torniPrefabid[Random.Range(0, torniPrefabid.Length)];
+        GameObject valitudTorn;
+
+        if (!esimeneOstTehtud)
+        {
+            valitudTorn = torniPrefabid[0];
+            esimeneOstTehtud = true;
+        }
+        else
+        {
+            valitudTorn = torniPrefabid[Random.Range(0, torniPrefabid.Length)];
+        }
 
         GameObject kaartObjekt = Instantiate(tornikaardiPrefab, tühiSlot);
         Tornikaart tornikaart = kaartObjekt.GetComponent<Tornikaart>();
@@ -60,12 +71,12 @@ public class Poehaldur : MonoBehaviour
 
     private Transform LeiaTühiSlot()
     {
-        if (kohad == null) 
+        if (kohad == null)
             return null;
 
         foreach (Transform slot in kohad)
         {
-            if (slot == null) 
+            if (slot == null)
                 continue;
 
             Tornikaart olemasolevKaart = slot.GetComponentInChildren<Tornikaart>();
