@@ -26,16 +26,17 @@ public class Maatükk : MonoBehaviour
             renderdaja.color = algneVärv;
     }
 
-    private void EhitaTorn()
+    public bool KasOnHõivatud()
     {
-        if (torn != null) return;
+        return torn != null;
+    }
 
-        int hind = Ehitaja.peamine.VõtaEhitusHind();
+    public bool ProoviPaigaldadaTorn(GameObject prefab)
+    {
+        if (prefab == null) return false;
+        if (torn != null) return false;
 
-        if (!OravanahaHaldur.Instance.KulutaOravanahku(hind))
-            return;
-
-        GameObject prefab = Ehitaja.peamine.VõtaSuvalineTornPrefab();
         torn = Instantiate(prefab, transform.position, Quaternion.identity);
+        return true;
     }
 }

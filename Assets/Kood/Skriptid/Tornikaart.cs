@@ -141,8 +141,9 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         RaycastHit2D tabamus = Physics2D.Raycast(punkt2D, Vector2.zero, maksimaalneRayKaugus, maatiukiKiht);
         if (!tabamus.collider) return false;
 
-        Vector3 torniPos = tabamus.collider.transform.position;
-        Instantiate(torniPrefab, torniPos, Quaternion.identity);
-        return true;
+        Maatükk maatükk = tabamus.collider.GetComponent<Maatükk>();
+        if (maatükk == null) return false;
+
+        return maatükk.ProoviPaigaldadaTorn(torniPrefab);
     }
 }

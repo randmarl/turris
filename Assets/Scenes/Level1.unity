@@ -5483,7 +5483,7 @@ MonoBehaviour:
   torniPrefabid:
   - {fileID: 2967149486340801840, guid: fb1fac26914c86d43a54adef7272d04d, type: 3}
   - {fileID: 3784557585502695947, guid: a02b3543448b5454bb1f04303bf9eaac, type: 3}
-  torniHind: 50
+  torniHind: 100
 --- !u!1001 &875376800
 PrefabInstance:
   m_ObjectHideFlags: 0
