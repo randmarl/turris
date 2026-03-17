@@ -42,6 +42,7 @@ public class AeglustavTorn : MonoBehaviour
                 RaycastHit2D tabamus = tabamused[i];
 
                 vaenlaseLiikumine liikumine = tabamus.transform.GetComponent<vaenlaseLiikumine>();
+
                 if (liikumine != null)
                 {
                     liikumine.UuendaKiirus(0.5f);
@@ -61,5 +62,10 @@ public class AeglustavTorn : MonoBehaviour
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, sihtimisRaadius);
+    }
+
+    public float VõtaSihtimisRaadius()
+    {
+        return sihtimisRaadius;
     }
 }

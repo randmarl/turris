@@ -26,14 +26,17 @@ public class Kahur : MonoBehaviour
             LeiaSihtmärk();
             return;
         }
+
         PööraSihtmärgiSuunas();
 
         if (!KontrolliKasSihtmärkRaadiuses())
         {
             sihtmärk = null;
-        } else
+        }
+        else
         {
             aegJärgmiseLasuni += Time.deltaTime;
+
             if (aegJärgmiseLasuni >= 1f / kuuleSekundis)
             {
                 Tulista();
@@ -45,9 +48,7 @@ public class Kahur : MonoBehaviour
     private void Tulista()
     {
         if (kuuliMall == null || laskepunkt == null)
-        {
             return;
-        }
 
         GameObject kuuliObjekt = Instantiate(kuuliMall, laskepunkt.position, Quaternion.identity);
 
@@ -59,12 +60,20 @@ public class Kahur : MonoBehaviour
         }
 
         Kuul kuuliSkript = kuuliObjekt.GetComponent<Kuul>();
-        if (kuuliSkript != null) kuuliSkript.MääraSihtmärk(sihtmärk);
+        if (kuuliSkript != null)
+            kuuliSkript.MääraSihtmärk(sihtmärk);
     }
 
     private void LeiaSihtmärk()
     {
-        RaycastHit2D[] tabamused = Physics2D.CircleCastAll(transform.position, sihtimisRaadius, (Vector2)transform.position, 0f, vaenlaseKiht);
+        RaycastHit2D[] tabamused = Physics2D.CircleCastAll(
+            transform.position,
+            sihtimisRaadius,
+            (Vector2)transform.position,
+            0f,
+            vaenlaseKiht
+        );
+
         if (tabamused.Length > 0)
         {
             sihtmärk = tabamused[0].transform;
@@ -78,10 +87,18 @@ public class Kahur : MonoBehaviour
 
     private void PööraSihtmärgiSuunas()
     {
-        float nurk = Mathf.Atan2(sihtmärk.position.y - transform.position.y, sihtmärk.position.x -
-        transform.position.x) * Mathf.Rad2Deg - 90f;
+        float nurk = Mathf.Atan2(
+            sihtmärk.position.y - transform.position.y,
+            sihtmärk.position.x - transform.position.x
+        ) * Mathf.Rad2Deg - 90f;
+
         Quaternion sihtimispööre = Quaternion.Euler(new Vector3(0f, 0f, nurk));
-        kahuriPöördePunkt.rotation = Quaternion.RotateTowards(kahuriPöördePunkt.rotation, sihtimispööre, pööramisKiirus * Time.deltaTime);
+
+        kahuriPöördePunkt.rotation = Quaternion.RotateTowards(
+            kahuriPöördePunkt.rotation,
+            sihtimispööre,
+            pööramisKiirus * Time.deltaTime
+        );
     }
 
     private void OnDrawGizmosSelected()
@@ -89,5 +106,9 @@ public class Kahur : MonoBehaviour
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, sihtimisRaadius);
     }
-    
-}    
+
+    public float VõtaSihtimisRaadius()
+    {
+        return sihtimisRaadius;
+    }
+}
