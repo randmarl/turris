@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Menüü : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Menüü : MonoBehaviour
 
     [Header("Animatori seaded")]
     [SerializeField] private string menüüAvatudParameeter = "MenüüAvatud";
+
+    [Header("Stseenid")]
+    [SerializeField] private string avaekraaniStseen = "avaekraan";
 
     private bool kasMenüüOnAvatud = false;
 
@@ -37,6 +41,12 @@ public class Menüü : MonoBehaviour
 
         if (animator != null)
             animator.SetBool(menüüAvatudParameeter, false);
+    }
+
+    public void MineAvalehele()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(avaekraaniStseen);
     }
 
     private void OnEnable()

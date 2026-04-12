@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System;
 
 public class VaenlaseTekitaja : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class VaenlaseTekitaja : MonoBehaviour
     [Header("Sündmused")]
     public static UnityEvent vaenlaseHävitamiseSündmus = new UnityEvent();
     [HideInInspector] public UnityEvent TaseLäbitud = new UnityEvent();
+
+    public event Action<int, int> LaineMuutus;
+
+    public int PraeguneLaine => praeguneLaine;
+    public int MaksimaalneLaineteArv => maksimaalneLaineteArv;
 
     private int praeguneLaine = 1;
     private float aegViimasestTekitamisest;
@@ -41,6 +47,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private void Start()
     {
+        TeavitaLaineUuendusest();
         StartCoroutine(AlustaLainet());
     }
 
@@ -98,7 +105,13 @@ public class VaenlaseTekitaja : MonoBehaviour
         }
 
         praeguneLaine++;
+        TeavitaLaineUuendusest();
         StartCoroutine(AlustaLainet());
+    }
+
+    private void TeavitaLaineUuendusest()
+    {
+        LaineMuutus?.Invoke(praeguneLaine, maksimaalneLaineteArv);
     }
 
     private void TekitaVaenlane()
@@ -123,7 +136,7 @@ public class VaenlaseTekitaja : MonoBehaviour
         if (kogukaal <= 0f)
             return null;
 
-        float juhuslik = Random.value * kogukaal;
+        float juhuslik = UnityEngine.Random.value * kogukaal;
         float jooksev = 0f;
 
         foreach (var v in vaenlased)
