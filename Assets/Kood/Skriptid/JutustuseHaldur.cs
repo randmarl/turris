@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Linq;
+using UnityEngine.Events;
 
 public class JutustuseHaldur : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class JutustuseHaldur : MonoBehaviour
     [SerializeField] private bool kasutaTähthaavalEfekti = true;
     [SerializeField] private float täheIlmumiseViivitus = 0.04f;
 
+    [Header("Sündmused")]
+    public UnityEvent JutustusLõppes = new UnityEvent();
+
     private string[] jutustuseRead;
     private int praeguneRidaIndeks = 0;
 
@@ -36,6 +40,16 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void Awake()
     {
+        LaeJutustuseReadFailist();
+    }
+
+    private void OnEnable()
+    {
+        KäivitaJutustus();
+    }
+
+    private void LaeJutustuseReadFailist()
+    {
         if (jutustuseFail != null && !string.IsNullOrWhiteSpace(jutustuseFail.text))
         {
             jutustuseRead = jutustuseFail.text
@@ -44,23 +58,57 @@ public class JutustuseHaldur : MonoBehaviour
                 .Where(rida => !string.IsNullOrEmpty(rida))
                 .ToArray();
         }
+        else
+        {
+            jutustuseRead = new string[0];
+        }
     }
 
-    private void OnEnable()
+    public void SeaPealkiri(string uusPealkiri)
     {
-        Time.timeScale = 0f;
+        pealkiri = uusPealkiri;
+    }
 
-        jutustusPaneel.SetActive(true);
+    public void SeaJutustuseFail(TextAsset uusFail)
+    {
+        jutustuseFail = uusFail;
+        LaeJutustuseReadFailist();
+    }
+
+    private void KäivitaJutustus()
+    {
+        Menüü menüü = FindFirstObjectByType<Menüü>();
+        if (menüü != null)
+        {
+            menüü.SulgeMenüü();
+        }
+
+        Time.timeScale = 0f;
+        
+        if (jutustusPaneel != null)
+            jutustusPaneel.SetActive(true);
 
         onPealkiriFaasis = true;
         pealkiriOotamiseTaimer = 0f;
         pealkiriOnTäielikultNäidatud = false;
+        kirjutabTeksti = false;
 
-        pealkiriTekst.gameObject.SetActive(true);
-        jutumullObjekt.SetActive(false);
-        tegelaneObjekt.SetActive(false);
+        if (pealkiriTekst != null)
+            pealkiriTekst.gameObject.SetActive(true);
+
+        if (jutumullObjekt != null)
+            jutumullObjekt.SetActive(false);
+
+        if (tegelaneObjekt != null)
+            tegelaneObjekt.SetActive(false);
 
         praeguneRidaIndeks = 0;
+
+        if (jutustuseRead == null || jutustuseRead.Length == 0)
+        {
+            LõpetaJutustus();
+            return;
+        }
 
         NäitaPealkiri();
     }
@@ -76,6 +124,7 @@ public class JutustuseHaldur : MonoBehaviour
             }
         }
     }
+
     public void TöötleKlikki()
     {
         if (kirjutabTeksti)
@@ -156,8 +205,11 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void LõpetaJutustus()
     {
-        jutustusPaneel.SetActive(false);
+        if (jutustusPaneel != null)
+            jutustusPaneel.SetActive(false);
+
         Time.timeScale = 1f;
+        JutustusLõppes.Invoke();
         enabled = false;
     }
 

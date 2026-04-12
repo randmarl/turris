@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -664368035
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1855018617289572922, guid: d9cc685a8011db74ba61f8544c682a48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,7 +144,7 @@ MonoBehaviour:
   kuuliMall: {fileID: 5963859620690967218, guid: 4bc6793bd4e26bb4481a01befb30b05f, type: 3}
   laskepunkt: {fileID: 7516627025773828871}
   sihtimisRaadius: 3
-  "p\xF6\xF6ramisKiirus": 175
+  "p\xF6\xF6ramisKiirus": 190
   kuuleSekundis: 1
 --- !u!114 &-6158386386495914547
 MonoBehaviour:
@@ -300,7 +300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -664368035
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -1626053906367482352, guid: 11551c8f1710b1544beb1001ff385948, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

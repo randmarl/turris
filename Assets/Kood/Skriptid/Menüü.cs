@@ -5,29 +5,58 @@ public class Menüü : MonoBehaviour
 {
     [Header("Viited")]
     [SerializeField] private TextMeshProUGUI rahaTekst;
-    [SerializeField] private Animator animaator;
+    [SerializeField] private Animator animator;
 
-    private bool kasMenüüOnAvatud = true;
+    [Header("Animatori seaded")]
+    [SerializeField] private string menüüAvatudParameeter = "MenüüAvatud";
+
+    private bool kasMenüüOnAvatud = false;
+
+    private void Awake()
+    {
+        kasMenüüOnAvatud = false;
+
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
+        if (animator != null)
+            animator.SetBool(menüüAvatudParameeter, false);
+    }
 
     public void LülitaMenüü()
     {
         kasMenüüOnAvatud = !kasMenüüOnAvatud;
-        animaator.SetBool("MenüüAvatud", kasMenüüOnAvatud);
+
+        if (animator != null)
+            animator.SetBool(menüüAvatudParameeter, kasMenüüOnAvatud);
+    }
+
+    public void SulgeMenüü()
+    {
+        kasMenüüOnAvatud = false;
+
+        if (animator != null)
+            animator.SetBool(menüüAvatudParameeter, false);
     }
 
     private void OnEnable()
     {
-        OravanahaHaldur.Instance.OravanahadMuutusid += UuendaRaha;
-        UuendaRaha(OravanahaHaldur.Instance.Oravanahad);
+        if (OravanahaHaldur.Instance != null)
+        {
+            OravanahaHaldur.Instance.OravanahadMuutusid += UuendaRaha;
+            UuendaRaha(OravanahaHaldur.Instance.Oravanahad);
+        }
     }
 
     private void OnDisable()
     {
-        OravanahaHaldur.Instance.OravanahadMuutusid -= UuendaRaha;
+        if (OravanahaHaldur.Instance != null)
+            OravanahaHaldur.Instance.OravanahadMuutusid -= UuendaRaha;
     }
 
     private void UuendaRaha(int uusSumma)
     {
-        rahaTekst.text = uusSumma.ToString();
+        if (rahaTekst != null)
+            rahaTekst.text = uusSumma.ToString();
     }
 }

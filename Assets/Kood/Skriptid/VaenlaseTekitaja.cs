@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System.Collections;
 
 public class VaenlaseTekitaja : MonoBehaviour
 {
     [Header("Viited")]
-    [SerializeField] private GameObject[] vaenlaseMallid;
+    [SerializeField] private VaenlasteTõenäosused[] vaenlased;
 
     [Header("Atribuudid")]
     [SerializeField] private int algseltVaenlasi = 10;
@@ -15,8 +14,12 @@ public class VaenlaseTekitaja : MonoBehaviour
     [SerializeField] private float raskuseTegur = 1.5f;
     [SerializeField] private float vaenlasiSekundisPiir = 15f;
 
+    [Header("Leveli lõpp")]
+    [SerializeField] private int maksimaalneLaineteArv = 5;
+
     [Header("Sündmused")]
     public static UnityEvent vaenlaseHävitamiseSündmus = new UnityEvent();
+    [HideInInspector] public UnityEvent TaseLäbitud = new UnityEvent();
 
     private int praeguneLaine = 1;
     private float aegViimasestTekitamisest;
@@ -24,10 +27,16 @@ public class VaenlaseTekitaja : MonoBehaviour
     private int vaenlasiTekitada;
     private float vaenlasiSekundisHetkel;
     private bool kasTekib = false;
+    private bool taseOnLäbitud = false;
 
     private void Awake()
     {
         vaenlaseHävitamiseSündmus.AddListener(VaenlaneHävitatud);
+    }
+
+    private void OnDestroy()
+    {
+        vaenlaseHävitamiseSündmus.RemoveListener(VaenlaneHävitatud);
     }
 
     private void Start()
@@ -37,6 +46,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private void Update()
     {
+        if (taseOnLäbitud) return;
         if (!kasTekib) return;
 
         aegViimasestTekitamisest += Time.deltaTime;
@@ -58,11 +68,18 @@ public class VaenlaseTekitaja : MonoBehaviour
     private void VaenlaneHävitatud()
     {
         vaenlasiElus--;
+
+        if (vaenlasiElus < 0)
+            vaenlasiElus = 0;
     }
 
     private IEnumerator AlustaLainet()
     {
         yield return new WaitForSeconds(aegLaineteVahel);
+
+        if (taseOnLäbitud)
+            yield break;
+
         kasTekib = true;
         vaenlasiTekitada = VaenlasiLaines();
         vaenlasiSekundisHetkel = VaenlasiSekundiga();
@@ -72,15 +89,55 @@ public class VaenlaseTekitaja : MonoBehaviour
     {
         kasTekib = false;
         aegViimasestTekitamisest = 0f;
+
+        if (praeguneLaine >= maksimaalneLaineteArv)
+        {
+            taseOnLäbitud = true;
+            TaseLäbitud.Invoke();
+            return;
+        }
+
         praeguneLaine++;
         StartCoroutine(AlustaLainet());
     }
 
     private void TekitaVaenlane()
     {
-        int indeks = Random.Range(0, vaenlaseMallid.Length);
-        GameObject mall = vaenlaseMallid[indeks];
+        GameObject mall = VõtaJuhuslikVaenlaneKaaluJärgi();
+        if (mall == null)
+            return;
+
         Instantiate(mall, haldur.peamine.algusPunkt[0].position, Quaternion.identity);
+    }
+
+    private GameObject VõtaJuhuslikVaenlaneKaaluJärgi()
+    {
+        float kogukaal = 0f;
+
+        foreach (var v in vaenlased)
+        {
+            if (v != null && v.prefab != null && v.kaal > 0f)
+                kogukaal += v.kaal;
+        }
+
+        if (kogukaal <= 0f)
+            return null;
+
+        float juhuslik = Random.value * kogukaal;
+        float jooksev = 0f;
+
+        foreach (var v in vaenlased)
+        {
+            if (v == null || v.prefab == null || v.kaal <= 0f)
+                continue;
+
+            jooksev += v.kaal;
+
+            if (juhuslik <= jooksev)
+                return v.prefab;
+        }
+
+        return vaenlased[vaenlased.Length - 1].prefab;
     }
 
     private int VaenlasiLaines()
