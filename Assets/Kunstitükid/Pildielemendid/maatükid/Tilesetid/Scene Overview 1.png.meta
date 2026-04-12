@@ -5226,11 +5226,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_233
+      name: "v\xE4ike_kivi"
       rect:
         serializedVersion: 2
-        x: 544
-        y: 800
+        x: 551
+        y: 801
         width: 32
         height: 32
       alignment: 0
@@ -5647,7 +5647,7 @@ TextureImporter:
       name: Scene Overview 1_252
       rect:
         serializedVersion: 2
-        x: 288
+        x: 275
         y: 768
         width: 32
         height: 32
@@ -7338,11 +7338,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_329
+      name: kivi
       rect:
         serializedVersion: 2
-        x: 160
-        y: 672
+        x: 148
+        y: 660
         width: 32
         height: 32
       alignment: 0
@@ -7580,10 +7580,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_340
+      name: murututt
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 672
         width: 32
         height: 32
@@ -8067,7 +8067,7 @@ TextureImporter:
       name: Scene Overview 1_362
       rect:
         serializedVersion: 2
-        x: 352
+        x: 369
         y: 640
         width: 32
         height: 32
@@ -10858,10 +10858,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_489
+      name: vale_murututt
       rect:
         serializedVersion: 2
-        x: 96
+        x: 95
         y: 480
         width: 32
         height: 32
@@ -11562,7 +11562,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_521
+      name: valged_lilled
       rect:
         serializedVersion: 2
         x: 256
@@ -12728,7 +12728,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_574
+      name: kollased_lilled
       rect:
         serializedVersion: 2
         x: 224
@@ -15280,15 +15280,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mets
+      name: "p\xF5\xF5sas"
       rect:
         serializedVersion: 2
-        x: 501
-        y: 257
-        width: 25
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 496
+        y: 256
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -18954,11 +18954,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene Overview 1_857
+      name: hauakivi
       rect:
         serializedVersion: 2
         x: 640
-        y: 64
+        y: 67
         width: 32
         height: 32
       alignment: 0
@@ -20461,7 +20461,6 @@ TextureImporter:
       Scene Overview 1_230: -1908097703
       Scene Overview 1_231: 192178590
       Scene Overview 1_232: 116886279
-      Scene Overview 1_233: -1522343442
       Scene Overview 1_234: -302605022
       Scene Overview 1_235: 1597795762
       Scene Overview 1_236: -903946123
@@ -20567,7 +20566,6 @@ TextureImporter:
       Scene Overview 1_326: -982722039
       Scene Overview 1_327: 467653477
       Scene Overview 1_328: 71444205
-      Scene Overview 1_329: -1765590094
       Scene Overview 1_33: -474157346
       Scene Overview 1_330: 1321201185
       Scene Overview 1_331: 2038643301
@@ -20580,7 +20578,6 @@ TextureImporter:
       Scene Overview 1_338: -1020792073
       Scene Overview 1_339: -845807931
       Scene Overview 1_34: -610671381
-      Scene Overview 1_340: -1320275277
       Scene Overview 1_341: -1459603020
       Scene Overview 1_342: 730602104
       Scene Overview 1_343: -948035196
@@ -20744,7 +20741,6 @@ TextureImporter:
       Scene Overview 1_486: 208255196
       Scene Overview 1_487: 376574636
       Scene Overview 1_488: 468808518
-      Scene Overview 1_489: 802391816
       Scene Overview 1_49: 54896156
       Scene Overview 1_490: 1592637910
       Scene Overview 1_491: 2088546159
@@ -20780,7 +20776,6 @@ TextureImporter:
       Scene Overview 1_519: -1699786235
       Scene Overview 1_52: 625531457
       Scene Overview 1_520: 116014777
-      Scene Overview 1_521: 881117597
       Scene Overview 1_522: 291971692
       Scene Overview 1_523: 328053200
       Scene Overview 1_524: -18977706
@@ -20838,7 +20833,6 @@ TextureImporter:
       Scene Overview 1_571: -332131434
       Scene Overview 1_572: 1296124566
       Scene Overview 1_573: -1920586732
-      Scene Overview 1_574: 1586857940
       Scene Overview 1_575: -226374207
       Scene Overview 1_576: -938865874
       Scene Overview 1_577: -1121604709
@@ -21149,7 +21143,6 @@ TextureImporter:
       Scene Overview 1_854: 1940605191
       Scene Overview 1_855: 1838627454
       Scene Overview 1_856: -1773014624
-      Scene Overview 1_857: -2017149383
       Scene Overview 1_858: 1001941981
       Scene Overview 1_859: -1578372701
       Scene Overview 1_86: 1185427947
@@ -21225,10 +21218,17 @@ TextureImporter:
       Scene Overview 1_97: 1745684781
       Scene Overview 1_98: 719473255
       Scene Overview 1_99: 130524862
+      hauakivi: -2017149383
       jama: -346486261
-      mets: -471423729
+      kivi: -1765590094
+      kollased_lilled: 1586857940
       muru: 1627325929
+      murututt: -1320275277
+      "p\xF5\xF5sas": -471423729
       tee: -1705929502
+      vale_murututt: 802391816
+      valged_lilled: 881117597
+      "v\xE4ike_kivi": -1522343442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

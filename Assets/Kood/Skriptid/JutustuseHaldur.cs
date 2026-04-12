@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Linq;
 
 public class JutustuseHaldur : MonoBehaviour
 {
@@ -14,12 +15,13 @@ public class JutustuseHaldur : MonoBehaviour
     [Header("Sätted")]
     [SerializeField] private string pealkiri = "Manivaldi matused";
     [SerializeField] private float pealkiriKestusSek = 2.0f;
-    [SerializeField] private string[] jutustuseRead;
+    [SerializeField] private TextAsset jutustuseFail;
 
     [Header("Tekstiefekt")]
     [SerializeField] private bool kasutaTähthaavalEfekti = true;
     [SerializeField] private float täheIlmumiseViivitus = 0.04f;
 
+    private string[] jutustuseRead;
     private int praeguneRidaIndeks = 0;
 
     private bool onPealkiriFaasis = true;
@@ -34,16 +36,13 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void Awake()
     {
-        if (jutustuseRead == null || jutustuseRead.Length == 0)
+        if (jutustuseFail != null && !string.IsNullOrWhiteSpace(jutustuseFail.text))
         {
-            jutustuseRead = new string[]
-            {
-                "Tere! Mina olen Leemet. Ma tulin just Manivaldi matustelt. Oma silmaga pole ma seda Manivaldi küll kunagi näinud, sest ta ei elanud metsas.",
-                "Onu Vootele rääkis, et Manivald on näinud ka Põhja Konna... Mis too veel on? Ei tea.", 
-                "Meeme andis mulle miskisuguse sõrmuse. Väga ilus on.",
-                "Kurb küll, et suri mees, kellesarnaseid enam ei sünni, aga mets ei maga kunagi. Mul on vaja turvalist teed koju.",
-                "Kaitse teed, enne kui külainimesed matuselisteni jõuavad!"
-            };
+            jutustuseRead = jutustuseFail.text
+                .Split(new string[] { "---" }, System.StringSplitOptions.RemoveEmptyEntries)
+                .Select(rida => rida.Trim())
+                .Where(rida => !string.IsNullOrEmpty(rida))
+                .ToArray();
         }
     }
 
