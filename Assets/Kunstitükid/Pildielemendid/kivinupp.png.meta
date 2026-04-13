@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4ed42cab7c6333743b0e1b89e56c904c
+guid: 35543098e99cd4545af28e84f4623ef9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3745616222226101287
-    second: TURRIS_0
-  - first:
-      213: -7129018307519110145
-    second: TURRIS_1
+      213: 5352533760871847218
+    second: kivinupp_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TURRIS_0
+      name: kivinupp_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 2
         y: 0
-        width: 1494
-        height: 1024
+        width: 957
+        height: 413
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7243ab6eb1a1bf330800000000000000
-      internalID: 3745616222226101287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TURRIS_1
-      rect:
-        serializedVersion: 2
-        x: 1464
-        y: 647
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff32117de93a01d90800000000000000
-      internalID: -7129018307519110145
+      spriteID: 2355d09b815084a40800000000000000
+      internalID: 5352533760871847218
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TURRIS_0: 3745616222226101287
-      TURRIS_1: -7129018307519110145
+      kivinupp_0: 5352533760871847218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
