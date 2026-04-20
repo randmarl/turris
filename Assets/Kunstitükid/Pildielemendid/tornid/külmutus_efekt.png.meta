@@ -1,0 +1,1755 @@
+fileFormatVersion: 2
+guid: 924cab7f64513164198db0826b401975
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6148664972034270820
+    second: "k\xFClmutus_efekt_0"
+  - first:
+      213: 5520377756198459941
+    second: "k\xFClmutus_efekt_1"
+  - first:
+      213: -5898023665941668138
+    second: "k\xFClmutus_efekt_2"
+  - first:
+      213: 2339167293877415860
+    second: "k\xFClmutus_efekt_3"
+  - first:
+      213: -8024880667343890032
+    second: "k\xFClmutus_efekt_4"
+  - first:
+      213: -3900063577450181647
+    second: "k\xFClmutus_efekt_5"
+  - first:
+      213: 518493243051708234
+    second: "k\xFClmutus_efekt_6"
+  - first:
+      213: 653310697862909609
+    second: "k\xFClmutus_efekt_7"
+  - first:
+      213: 7628130050633682537
+    second: "k\xFClmutus_efekt_8"
+  - first:
+      213: -2153509107308938525
+    second: "k\xFClmutus_efekt_9"
+  - first:
+      213: 8475630647525529308
+    second: "k\xFClmutus_efekt_10"
+  - first:
+      213: -6148565416778304822
+    second: "k\xFClmutus_efekt_11"
+  - first:
+      213: 8587838213206109628
+    second: "k\xFClmutus_efekt_12"
+  - first:
+      213: -313633683897808901
+    second: "k\xFClmutus_efekt_13"
+  - first:
+      213: -2887882000722954909
+    second: "k\xFClmutus_efekt_14"
+  - first:
+      213: -6198179817788966662
+    second: "k\xFClmutus_efekt_15"
+  - first:
+      213: 7976083074321189858
+    second: "k\xFClmutus_efekt_16"
+  - first:
+      213: -3636402570918269526
+    second: "k\xFClmutus_efekt_17"
+  - first:
+      213: 8847950097720026836
+    second: "k\xFClmutus_efekt_18"
+  - first:
+      213: 6533812351968078845
+    second: "k\xFClmutus_efekt_19"
+  - first:
+      213: -3643063441751958491
+    second: "k\xFClmutus_efekt_20"
+  - first:
+      213: -2164302545937057751
+    second: "k\xFClmutus_efekt_21"
+  - first:
+      213: 2003428250700330271
+    second: "k\xFClmutus_efekt_22"
+  - first:
+      213: -339705566273975801
+    second: "k\xFClmutus_efekt_23"
+  - first:
+      213: 2698668154950734139
+    second: "k\xFClmutus_efekt_24"
+  - first:
+      213: -2462220660120041046
+    second: "k\xFClmutus_efekt_25"
+  - first:
+      213: -3838868232994004800
+    second: "k\xFClmutus_efekt_26"
+  - first:
+      213: 7463895892301129326
+    second: "k\xFClmutus_efekt_27"
+  - first:
+      213: 2094850590700803180
+    second: "k\xFClmutus_efekt_28"
+  - first:
+      213: 6759629685103032459
+    second: "k\xFClmutus_efekt_29"
+  - first:
+      213: -4289226021328639667
+    second: "k\xFClmutus_efekt_30"
+  - first:
+      213: 1024544773561609376
+    second: "k\xFClmutus_efekt_31"
+  - first:
+      213: 5133364989978312444
+    second: "k\xFClmutus_efekt_32"
+  - first:
+      213: -854394440350641984
+    second: "k\xFClmutus_efekt_33"
+  - first:
+      213: -781724829967277870
+    second: "k\xFClmutus_efekt_34"
+  - first:
+      213: -1891999175715868677
+    second: "k\xFClmutus_efekt_35"
+  - first:
+      213: -2289583952743373050
+    second: "k\xFClmutus_efekt_36"
+  - first:
+      213: 6658080619970722641
+    second: "k\xFClmutus_efekt_37"
+  - first:
+      213: 1468917621317652987
+    second: "k\xFClmutus_efekt_38"
+  - first:
+      213: 7353913893428775870
+    second: "k\xFClmutus_efekt_39"
+  - first:
+      213: -142146913127500257
+    second: "k\xFClmutus_efekt_40"
+  - first:
+      213: 3341034789490915014
+    second: "k\xFClmutus_efekt_41"
+  - first:
+      213: -155973158813738887
+    second: "k\xFClmutus_efekt_42"
+  - first:
+      213: -8837710096850500388
+    second: "k\xFClmutus_efekt_43"
+  - first:
+      213: 1659312046990325566
+    second: "k\xFClmutus_efekt_44"
+  - first:
+      213: 3876121275679175744
+    second: "k\xFClmutus_efekt_45"
+  - first:
+      213: 6021358362373332070
+    second: "k\xFClmutus_efekt_46"
+  - first:
+      213: -1336506934816461721
+    second: "k\xFClmutus_efekt_47"
+  - first:
+      213: -1178786029720415497
+    second: "k\xFClmutus_efekt_48"
+  - first:
+      213: 7263243572617152728
+    second: "k\xFClmutus_efekt_49"
+  - first:
+      213: -2665998739203372861
+    second: "k\xFClmutus_efekt_50"
+  - first:
+      213: 3881861877109743374
+    second: "k\xFClmutus_efekt_51"
+  - first:
+      213: -8985265143941739113
+    second: "k\xFClmutus_efekt_52"
+  - first:
+      213: -8918278804905944058
+    second: "k\xFClmutus_efekt_53"
+  - first:
+      213: 4431758281054493307
+    second: "k\xFClmutus_efekt_54"
+  - first:
+      213: -2684375209433990929
+    second: "k\xFClmutus_efekt_55"
+  - first:
+      213: -1332722201940052931
+    second: "k\xFClmutus_efekt_56"
+  - first:
+      213: 6089096230701645119
+    second: "k\xFClmutus_efekt_57"
+  - first:
+      213: -9039809520755033722
+    second: "k\xFClmutus_efekt_58"
+  - first:
+      213: -8719249669616501130
+    second: "k\xFClmutus_efekt_59"
+  - first:
+      213: 219125179032707370
+    second: "k\xFClmutus_efekt_60"
+  - first:
+      213: -152048889956306748
+    second: "k\xFClmutus_efekt_61"
+  - first:
+      213: -7518127416610340981
+    second: "k\xFClmutus_efekt_62"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_0"
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 847
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c999203f8cd8baaa0800000000000000
+      internalID: -6148664972034270820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_1"
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 855
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a5d2032525c9c40800000000000000
+      internalID: 5520377756198459941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_2"
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 873
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de13b299b2062ea0800000000000000
+      internalID: -5898023665941668138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_3"
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 847
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf66c5a244667020800000000000000
+      internalID: 2339167293877415860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_4"
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 751
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 099511afc85e1a090800000000000000
+      internalID: -8024880667343890032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_5"
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 791
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb84a8f6d030e9c0800000000000000
+      internalID: -3900063577450181647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_6"
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 719
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f89828bde023700800000000000000
+      internalID: 518493243051708234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_7"
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 791
+        width: 40
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aec41a4e96011900800000000000000
+      internalID: 653310697862909609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_8"
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 775
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ec0809ddf8cd960800000000000000
+      internalID: 7628130050633682537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_9"
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 727
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea384e60e23d12e0800000000000000
+      internalID: -2153509107308938525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_10"
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 787
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd65c290b2d7f9570800000000000000
+      internalID: 8475630647525529308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_11"
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 740
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac27da67458ebaaa0800000000000000
+      internalID: -6148565416778304822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_12"
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 687
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbdeca6ca512e2770800000000000000
+      internalID: 8587838213206109628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_13"
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 680
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf78ca183dfb5abf0800000000000000
+      internalID: -313633683897808901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_14"
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 640
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365f9a9fe9e2ce7d0800000000000000
+      internalID: -2887882000722954909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_15"
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 702
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af871ba8b44abf9a0800000000000000
+      internalID: -6198179817788966662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_16"
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 655
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb8be70c4db0be60800000000000000
+      internalID: 7976083074321189858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_17"
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 682
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad6914d027e88dc0800000000000000
+      internalID: -3636402570918269526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_18"
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 639
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d62cf44cbb3aca70800000000000000
+      internalID: 8847950097720026836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_19"
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 599
+        width: 66
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbed1c67b3ccaa50800000000000000
+      internalID: 6533812351968078845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_20"
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 601
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c992cf91d317dc0800000000000000
+      internalID: -3643063441751958491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_21"
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 616
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928b2fa2d4ad6f1e0800000000000000
+      internalID: -2164302545937057751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_22"
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 607
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15b9ff116b9dcb10800000000000000
+      internalID: 2003428250700330271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_23"
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 623
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a440a569f194bf0800000000000000
+      internalID: -339705566273975801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_24"
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 544
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b315f768368937520800000000000000
+      internalID: 2698668154950734139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_25"
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 511
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9cae2ea5f64ddd0800000000000000
+      internalID: -2462220660120041046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_26"
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 576
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c06cd86ea999bac0800000000000000
+      internalID: -3838868232994004800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_27"
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 527
+        width: 82
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e662b15c4c5159760800000000000000
+      internalID: 7463895892301129326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_28"
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 551
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c641d346387621d10800000000000000
+      internalID: 2094850590700803180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_29"
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 561
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8870c172670fcd50800000000000000
+      internalID: 6759629685103032459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_30"
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 544
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49285da8ab9974c0800000000000000
+      internalID: -4289226021328639667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_31"
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 519
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac6f941b0ae73e00800000000000000
+      internalID: 1024544773561609376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_32"
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 567
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe751ab2406d3740800000000000000
+      internalID: 5133364989978312444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_33"
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 472
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0d4d488c49424f0800000000000000
+      internalID: -854394440350641984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_34"
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 463
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0a2bda861c625f0800000000000000
+      internalID: -781724829967277870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_35"
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 479
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffaf1026c44eb5e0800000000000000
+      internalID: -1891999175715868677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_36"
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 439
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607eb459683c930e0800000000000000
+      internalID: -2289583952743373050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_37"
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 431
+        width: 83
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b744f3c01466c50800000000000000
+      internalID: 6658080619970722641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_38"
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 471
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf153fe3bc4a26410800000000000000
+      internalID: 1468917621317652987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_39"
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 439
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbc1ae29b95e0660800000000000000
+      internalID: 7353913893428775870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_40"
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 473
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16fd19b22ef60ef0800000000000000
+      internalID: -142146913127500257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_41"
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 394
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6f3d1807dbd5e20800000000000000
+      internalID: 3341034789490915014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_42"
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 375
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978596a0d3fd5ddf0800000000000000
+      internalID: -155973158813738887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_43"
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 384
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4c759bd752a5580800000000000000
+      internalID: -8837710096850500388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_44"
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 343
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37726ce38f070710800000000000000
+      internalID: 1659312046990325566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_45"
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 331
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044f03f73cfbac530800000000000000
+      internalID: 3876121275679175744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_46"
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 367
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c179e2789209350800000000000000
+      internalID: 6021358362373332070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_47"
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 338
+        width: 67
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c2b6e1606c37de0800000000000000
+      internalID: -1336506934816461721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_48"
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 391
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f25258f95c14afe0800000000000000
+      internalID: -1178786029720415497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_49"
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 307
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d80cf60c893cc460800000000000000
+      internalID: 7263243572617152728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_50"
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 287
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8c4229548700bd0800000000000000
+      internalID: -2665998739203372861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_51"
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 271
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fd14c6fc42fd530800000000000000
+      internalID: 3881861877109743374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_52"
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 334
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d47a225fced4380800000000000000
+      internalID: -8985265143941739113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_53"
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 245
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c9fa19da8eb3480800000000000000
+      internalID: -8918278804905944058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_54"
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 255
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a16a81da4c08d30800000000000000
+      internalID: 4431758281054493307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_55"
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 239
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe872dd28fe2fbad0800000000000000
+      internalID: -2684375209433990929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_56"
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 263
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d343619e738318de0800000000000000
+      internalID: -1332722201940052931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_57"
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 198
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d342aa2c0d08450800000000000000
+      internalID: 6089096230701645119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_58"
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 159
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689b336c2252c8280800000000000000
+      internalID: -9039809520755033722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_59"
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 152
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ef09e3f900ff680800000000000000
+      internalID: -8719249669616501130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_60"
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 199
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21a699703d7a0300800000000000000
+      internalID: 219125179032707370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_61"
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 149
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c079a51750d3edf0800000000000000
+      internalID: -152048889956306748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "k\xFClmutus_efekt_62"
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 57
+        width: 166
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fb0d482fe3aa790800000000000000
+      internalID: -7518127416610340981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "k\xFClmutus_efekt_0": -6148664972034270820
+      "k\xFClmutus_efekt_1": 5520377756198459941
+      "k\xFClmutus_efekt_10": 8475630647525529308
+      "k\xFClmutus_efekt_11": -6148565416778304822
+      "k\xFClmutus_efekt_12": 8587838213206109628
+      "k\xFClmutus_efekt_13": -313633683897808901
+      "k\xFClmutus_efekt_14": -2887882000722954909
+      "k\xFClmutus_efekt_15": -6198179817788966662
+      "k\xFClmutus_efekt_16": 7976083074321189858
+      "k\xFClmutus_efekt_17": -3636402570918269526
+      "k\xFClmutus_efekt_18": 8847950097720026836
+      "k\xFClmutus_efekt_19": 6533812351968078845
+      "k\xFClmutus_efekt_2": -5898023665941668138
+      "k\xFClmutus_efekt_20": -3643063441751958491
+      "k\xFClmutus_efekt_21": -2164302545937057751
+      "k\xFClmutus_efekt_22": 2003428250700330271
+      "k\xFClmutus_efekt_23": -339705566273975801
+      "k\xFClmutus_efekt_24": 2698668154950734139
+      "k\xFClmutus_efekt_25": -2462220660120041046
+      "k\xFClmutus_efekt_26": -3838868232994004800
+      "k\xFClmutus_efekt_27": 7463895892301129326
+      "k\xFClmutus_efekt_28": 2094850590700803180
+      "k\xFClmutus_efekt_29": 6759629685103032459
+      "k\xFClmutus_efekt_3": 2339167293877415860
+      "k\xFClmutus_efekt_30": -4289226021328639667
+      "k\xFClmutus_efekt_31": 1024544773561609376
+      "k\xFClmutus_efekt_32": 5133364989978312444
+      "k\xFClmutus_efekt_33": -854394440350641984
+      "k\xFClmutus_efekt_34": -781724829967277870
+      "k\xFClmutus_efekt_35": -1891999175715868677
+      "k\xFClmutus_efekt_36": -2289583952743373050
+      "k\xFClmutus_efekt_37": 6658080619970722641
+      "k\xFClmutus_efekt_38": 1468917621317652987
+      "k\xFClmutus_efekt_39": 7353913893428775870
+      "k\xFClmutus_efekt_4": -8024880667343890032
+      "k\xFClmutus_efekt_40": -142146913127500257
+      "k\xFClmutus_efekt_41": 3341034789490915014
+      "k\xFClmutus_efekt_42": -155973158813738887
+      "k\xFClmutus_efekt_43": -8837710096850500388
+      "k\xFClmutus_efekt_44": 1659312046990325566
+      "k\xFClmutus_efekt_45": 3876121275679175744
+      "k\xFClmutus_efekt_46": 6021358362373332070
+      "k\xFClmutus_efekt_47": -1336506934816461721
+      "k\xFClmutus_efekt_48": -1178786029720415497
+      "k\xFClmutus_efekt_49": 7263243572617152728
+      "k\xFClmutus_efekt_5": -3900063577450181647
+      "k\xFClmutus_efekt_50": -2665998739203372861
+      "k\xFClmutus_efekt_51": 3881861877109743374
+      "k\xFClmutus_efekt_52": -8985265143941739113
+      "k\xFClmutus_efekt_53": -8918278804905944058
+      "k\xFClmutus_efekt_54": 4431758281054493307
+      "k\xFClmutus_efekt_55": -2684375209433990929
+      "k\xFClmutus_efekt_56": -1332722201940052931
+      "k\xFClmutus_efekt_57": 6089096230701645119
+      "k\xFClmutus_efekt_58": -9039809520755033722
+      "k\xFClmutus_efekt_59": -8719249669616501130
+      "k\xFClmutus_efekt_6": 518493243051708234
+      "k\xFClmutus_efekt_60": 219125179032707370
+      "k\xFClmutus_efekt_61": -152048889956306748
+      "k\xFClmutus_efekt_62": -7518127416610340981
+      "k\xFClmutus_efekt_7": 653310697862909609
+      "k\xFClmutus_efekt_8": 7628130050633682537
+      "k\xFClmutus_efekt_9": -2153509107308938525
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
