@@ -12,7 +12,7 @@ public class Poehaldur : MonoBehaviour
     [SerializeField] private TornideTõenäosused[] tornid;
 
     [Header("Seaded")]
-    [SerializeField] private int torniHind = 100;
+    [SerializeField] private int torniHind = 50;
     private bool esimeneOstTehtud = false;
 
     private void Update()

@@ -12,6 +12,7 @@ public class JutustuseHaldur : MonoBehaviour
     [SerializeField] private TMP_Text jutumulliTekst;
     [SerializeField] private GameObject jutumullObjekt;
     [SerializeField] private GameObject tegelaneObjekt;
+    [SerializeField] private TMP_Text jatkamiseTekst;
 
     [Header("Sätted")]
     [SerializeField] private string pealkiri = "Manivaldi matused";
@@ -21,6 +22,12 @@ public class JutustuseHaldur : MonoBehaviour
     [Header("Tekstiefekt")]
     [SerializeField] private bool kasutaTähthaavalEfekti = true;
     [SerializeField] private float täheIlmumiseViivitus = 0.04f;
+
+    [Header("Jätkamise vihje")]
+    [SerializeField] private float jatkamiseVihjeViivitus = 3f;
+    [SerializeField] private float jatkamiseVihjeFadeKestus = 1f;
+    [SerializeField] private float jatkamiseVihjeNähtavKestus = 1.2f;
+    [SerializeField] private float jatkamiseVihjePeidusKestus = 0.8f;
 
     [Header("Sündmused")]
     public UnityEvent JutustusLõppes = new UnityEvent();
@@ -32,15 +39,21 @@ public class JutustuseHaldur : MonoBehaviour
     private bool kirjutabTeksti = false;
 
     private Coroutine kirjutamiseCoroutine;
+    private Coroutine vihjeCoroutine;
+
     private float pealkiriOotamiseTaimer = 0f;
     private bool pealkiriOnTäielikultNäidatud = false;
 
     private string praeguneTäisTekst = "";
     private TMP_Text aktiivneTekstiväli;
 
+    private float viimaseKlikiAeg = 0f;
+    private bool jatkamiseVihjeNahtav = false;
+
     private void Awake()
     {
         LaeJutustuseReadFailist();
+        PeidaJatkamiseVihje();
     }
 
     private void OnEnable()
@@ -84,9 +97,12 @@ public class JutustuseHaldur : MonoBehaviour
         }
 
         Time.timeScale = 0f;
-        
+
         if (jutustusPaneel != null)
             jutustusPaneel.SetActive(true);
+
+        viimaseKlikiAeg = 0f;
+        PeidaJatkamiseVihje();
 
         onPealkiriFaasis = true;
         pealkiriOotamiseTaimer = 0f;
@@ -123,10 +139,23 @@ public class JutustuseHaldur : MonoBehaviour
                 NäitaJutumulli();
             }
         }
+
+        if (!onPealkiriFaasis && !kirjutabTeksti)
+        {
+            viimaseKlikiAeg += Time.unscaledDeltaTime;
+
+            if (!jatkamiseVihjeNahtav && viimaseKlikiAeg >= jatkamiseVihjeViivitus)
+            {
+                NaitaJatkamiseVihje();
+            }
+        }
     }
 
     public void TöötleKlikki()
     {
+        viimaseKlikiAeg = 0f;
+        PeidaJatkamiseVihje();
+
         if (kirjutabTeksti)
         {
             LõpetaKirjutamineKohe();
@@ -167,6 +196,9 @@ public class JutustuseHaldur : MonoBehaviour
     {
         onPealkiriFaasis = false;
 
+        viimaseKlikiAeg = 0f;
+        PeidaJatkamiseVihje();
+
         pealkiriTekst.gameObject.SetActive(false);
         jutumullObjekt.SetActive(true);
         tegelaneObjekt.SetActive(true);
@@ -177,6 +209,9 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void NäitaRida(int indeks)
     {
+        viimaseKlikiAeg = 0f;
+        PeidaJatkamiseVihje();
+
         aktiivneTekstiväli = jutumulliTekst;
         praeguneTäisTekst = jutustuseRead[indeks];
 
@@ -205,6 +240,8 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void LõpetaJutustus()
     {
+        PeidaJatkamiseVihje();
+
         if (jutustusPaneel != null)
             jutustusPaneel.SetActive(false);
 
@@ -253,5 +290,76 @@ public class JutustuseHaldur : MonoBehaviour
             pealkiriOnTäielikultNäidatud = true;
             pealkiriOotamiseTaimer = 0f;
         }
+    }
+
+    private void PeidaJatkamiseVihje()
+    {
+        jatkamiseVihjeNahtav = false;
+
+        if (vihjeCoroutine != null)
+        {
+            StopCoroutine(vihjeCoroutine);
+            vihjeCoroutine = null;
+        }
+
+        if (jatkamiseTekst != null)
+        {
+            Color c = jatkamiseTekst.color;
+            c.a = 0f;
+            jatkamiseTekst.color = c;
+        }
+    }
+
+    private void NaitaJatkamiseVihje()
+    {
+        jatkamiseVihjeNahtav = true;
+
+        if (vihjeCoroutine != null)
+            StopCoroutine(vihjeCoroutine);
+
+        vihjeCoroutine = StartCoroutine(JatkamiseVihjeAnimatsioon());
+    }
+
+    private IEnumerator JatkamiseVihjeAnimatsioon()
+    {
+        if (jatkamiseTekst == null)
+            yield break;
+
+        Color c = jatkamiseTekst.color;
+        c.a = 0f;
+        jatkamiseTekst.color = c;
+
+        while (jatkamiseVihjeNahtav)
+        {
+            float aeg = 0f;
+            while (aeg < jatkamiseVihjeFadeKestus)
+            {
+                aeg += Time.unscaledDeltaTime;
+                c.a = Mathf.Clamp01(aeg / jatkamiseVihjeFadeKestus);
+                jatkamiseTekst.color = c;
+                yield return null;
+            }
+
+            c.a = 1f;
+            jatkamiseTekst.color = c;
+
+            yield return new WaitForSecondsRealtime(jatkamiseVihjeNähtavKestus);
+
+            aeg = 0f;
+            while (aeg < jatkamiseVihjeFadeKestus)
+            {
+                aeg += Time.unscaledDeltaTime;
+                c.a = 1f - Mathf.Clamp01(aeg / jatkamiseVihjeFadeKestus);
+                jatkamiseTekst.color = c;
+                yield return null;
+            }
+
+            c.a = 0f;
+            jatkamiseTekst.color = c;
+
+            yield return new WaitForSecondsRealtime(jatkamiseVihjePeidusKestus);
+        }
+
+        vihjeCoroutine = null;
     }
 }
