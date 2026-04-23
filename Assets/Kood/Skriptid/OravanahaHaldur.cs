@@ -51,4 +51,10 @@ public class OravanahaHaldur : MonoBehaviour
         Oravanahad = Mathf.Max(0, uusSumma);
         OravanahadMuutusid?.Invoke(Oravanahad);
     }
+
+    public void LähtestaAlgrahale()
+    {
+        Oravanahad = algusOravanahad;
+        OravanahadMuutusid?.Invoke(Oravanahad);
+    }
 }

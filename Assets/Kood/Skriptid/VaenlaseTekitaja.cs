@@ -26,6 +26,9 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     public int PraeguneLaine => praeguneLaine;
     public int MaksimaalneLaineteArv => maksimaalneLaineteArv;
+    public bool KasLaineKäib => kasTekib;
+    public float LaineKestus => laineKestus;
+    public bool KasOnViimaneLaine => praeguneLaine >= maksimaalneLaineteArv;
 
     private int praeguneLaine = 1;
     private float aegViimasestTekitamisest;
@@ -34,6 +37,9 @@ public class VaenlaseTekitaja : MonoBehaviour
     private float vaenlasiSekundisHetkel;
     private bool kasTekib = false;
     private bool taseOnLäbitud = false;
+
+    private float laineKestus = 0f;
+    private Coroutine järgmiseLaineCoroutine;
 
     private void Awake()
     {
@@ -48,7 +54,7 @@ public class VaenlaseTekitaja : MonoBehaviour
     private void Start()
     {
         TeavitaLaineUuendusest();
-        StartCoroutine(AlustaLainet());
+        järgmiseLaineCoroutine = StartCoroutine(AlustaLainet());
     }
 
     private void Update()
@@ -56,6 +62,7 @@ public class VaenlaseTekitaja : MonoBehaviour
         if (taseOnLäbitud) return;
         if (!kasTekib) return;
 
+        laineKestus += Time.deltaTime;
         aegViimasestTekitamisest += Time.deltaTime;
 
         if (aegViimasestTekitamisest >= (1f / vaenlasiSekundisHetkel) && vaenlasiTekitada > 0)
@@ -87,7 +94,10 @@ public class VaenlaseTekitaja : MonoBehaviour
         if (taseOnLäbitud)
             yield break;
 
+        järgmiseLaineCoroutine = null;
         kasTekib = true;
+        laineKestus = 0f;
+        aegViimasestTekitamisest = 0f;
         vaenlasiTekitada = VaenlasiLaines();
         vaenlasiSekundisHetkel = VaenlasiSekundiga();
     }
@@ -95,6 +105,7 @@ public class VaenlaseTekitaja : MonoBehaviour
     private void LõpetaLaine()
     {
         kasTekib = false;
+        laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
 
         if (praeguneLaine >= maksimaalneLaineteArv)
@@ -106,7 +117,31 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         praeguneLaine++;
         TeavitaLaineUuendusest();
-        StartCoroutine(AlustaLainet());
+        järgmiseLaineCoroutine = StartCoroutine(AlustaLainet());
+    }
+
+    public void KäivitaJärgmineLaineKohe()
+    {
+        if (taseOnLäbitud)
+            return;
+
+        if (!kasTekib)
+            return;
+
+        if (praeguneLaine >= maksimaalneLaineteArv)
+            return;
+
+        kasTekib = false;
+        laineKestus = 0f;
+        aegViimasestTekitamisest = 0f;
+
+        praeguneLaine++;
+        TeavitaLaineUuendusest();
+
+        if (järgmiseLaineCoroutine != null)
+            StopCoroutine(järgmiseLaineCoroutine);
+
+        järgmiseLaineCoroutine = StartCoroutine(AlustaLainet());
     }
 
     private void TeavitaLaineUuendusest()

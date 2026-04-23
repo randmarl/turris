@@ -64,6 +64,10 @@ public class LeveliLõpuHaldur : MonoBehaviour
             jutustuseHaldur.JutustusLõppes.RemoveListener(TagasiAvaekraanile);
 
         Time.timeScale = 1f;
+
+        if (OravanahaHaldur.Instance != null)
+            OravanahaHaldur.Instance.LähtestaAlgrahale();
+
         SceneManager.LoadScene(avaekraaniStseen);
     }
 }

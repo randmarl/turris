@@ -46,9 +46,12 @@ public class Menüü : MonoBehaviour
     public void MineAvalehele()
     {
         Time.timeScale = 1f;
+
+        if (OravanahaHaldur.Instance != null)
+            OravanahaHaldur.Instance.LähtestaAlgrahale();
+
         SceneManager.LoadScene(avaekraaniStseen);
     }
-
     private void OnEnable()
     {
         if (OravanahaHaldur.Instance != null)

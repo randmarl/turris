@@ -57,8 +57,10 @@ public class MängLäbiUI : MonoBehaviour
     {
         if (peataMäng) Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(ooteAeg);
-
         Time.timeScale = 1f;
+        if (OravanahaHaldur.Instance != null)
+            OravanahaHaldur.Instance.LähtestaAlgrahale();
+
         SceneManager.LoadScene(avaekraaniStseen);
     }
 }
