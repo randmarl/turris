@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Poehaldur : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Button turrisNupp;
+    [SerializeField] private TMP_Text turriseHinnaTekst;
     [SerializeField] private Transform[] kohad;
 
     [Header("Prefabs")]
@@ -12,8 +14,17 @@ public class Poehaldur : MonoBehaviour
     [SerializeField] private TornideTõenäosused[] tornid;
 
     [Header("Seaded")]
-    [SerializeField] private int torniHind = 50;
+    [SerializeField] private int algHind = 50;
+    [SerializeField] private int hinnaTõus = 5;
+
+    private int torniHind;
     private bool esimeneOstTehtud = false;
+
+    private void Awake()
+    {
+        torniHind = algHind;
+        UuendaHinnaTeksti();
+    }
 
     private void Update()
     {
@@ -29,6 +40,14 @@ public class Poehaldur : MonoBehaviour
 
         if (turrisNupp != null)
             turrisNupp.interactable = onRaha && onVabaSlot;
+
+        UuendaHinnaTeksti();
+    }
+
+    private void UuendaHinnaTeksti()
+    {
+        if (turriseHinnaTekst != null)
+            turriseHinnaTekst.text = torniHind.ToString();
     }
 
     public void VajutatiTurrist()
@@ -72,6 +91,10 @@ public class Poehaldur : MonoBehaviour
 
         if (tornikaart != null)
             tornikaart.SeaTorn(valitudTorn);
+
+        // HINNA SUURENDAMINE
+        torniHind += hinnaTõus;
+        UuendaHinnaTeksti();
     }
 
     private GameObject VõtaJuhuslikTornKaaluJärgi()

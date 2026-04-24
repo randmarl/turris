@@ -14,6 +14,9 @@ public class ÕpetuseHaldur : MonoBehaviour
         public GameObject visuaal;
     }
 
+    [Header("Käivitamine")]
+    [SerializeField] private bool käivitaAutomaatselt = false;
+
     [Header("UI viited")]
     [SerializeField] private GameObject õpetusPaneel;
     [SerializeField] private TMP_Text õpetusTekst;
@@ -37,6 +40,7 @@ public class ÕpetuseHaldur : MonoBehaviour
 
     private int praeguneSamm = 0;
     private bool kirjutabTeksti = false;
+    private bool õpetusKäib = false;
 
     private Coroutine kirjutamiseCoroutine;
     private Coroutine vihjeCoroutine;
@@ -47,15 +51,26 @@ public class ÕpetuseHaldur : MonoBehaviour
 
     private void Awake()
     {
-        if (õpetusPaneel != null)
+        if (õpetusPaneel != null && !käivitaAutomaatselt)
             õpetusPaneel.SetActive(false);
 
         PeidaJatkamiseVihje();
         PeidaKõikVisuaalid();
     }
 
+    private void Start()
+    {
+        if (käivitaAutomaatselt)
+        {
+            KäivitaÕpetus();
+        }
+    }
+
     private void Update()
     {
+        if (!õpetusKäib)
+            return;
+
         if (õpetusPaneel == null || !õpetusPaneel.activeSelf)
             return;
 
@@ -73,9 +88,20 @@ public class ÕpetuseHaldur : MonoBehaviour
     public void KäivitaÕpetus()
     {
         if (õpetusPaneel == null)
+        {
+            Debug.LogError("ÕpetuseHaldur: õpetusPaneel puudub.");
             return;
+        }
 
+        if (õpetusTekst == null)
+        {
+            Debug.LogError("ÕpetuseHaldur: õpetusTekst puudub.");
+            return;
+        }
+
+        õpetusKäib = true;
         Time.timeScale = 0f;
+
         õpetusPaneel.SetActive(true);
 
         viimaseKlikiAeg = 0f;
@@ -94,6 +120,9 @@ public class ÕpetuseHaldur : MonoBehaviour
 
     public void TöötleKlikki()
     {
+        if (!õpetusKäib)
+            return;
+
         if (õpetusPaneel == null || !õpetusPaneel.activeSelf)
             return;
 
@@ -124,6 +153,10 @@ public class ÕpetuseHaldur : MonoBehaviour
         PeidaKõikVisuaalid();
 
         ÕpetuseSamm samm = sammud[indeks];
+
+        if (samm == null)
+            return;
+
         praeguneTäisTekst = samm.tekst;
 
         if (samm.visuaal != null)
@@ -174,6 +207,8 @@ public class ÕpetuseHaldur : MonoBehaviour
 
     private void LõpetaÕpetus()
     {
+        õpetusKäib = false;
+
         PeidaJatkamiseVihje();
         PeidaKõikVisuaalid();
 
@@ -181,12 +216,14 @@ public class ÕpetuseHaldur : MonoBehaviour
             õpetusPaneel.SetActive(false);
 
         Time.timeScale = 1f;
+
         ÕpetusLõppes.Invoke();
     }
 
     private void PeidaKõikVisuaalid()
     {
-        if (sammud == null) return;
+        if (sammud == null)
+            return;
 
         foreach (var samm in sammud)
         {
@@ -235,6 +272,7 @@ public class ÕpetuseHaldur : MonoBehaviour
         while (jatkamiseVihjeNahtav)
         {
             float aeg = 0f;
+
             while (aeg < jatkamiseVihjeFadeKestus)
             {
                 aeg += Time.unscaledDeltaTime;
@@ -249,6 +287,7 @@ public class ÕpetuseHaldur : MonoBehaviour
             yield return new WaitForSecondsRealtime(jatkamiseVihjeNähtavKestus);
 
             aeg = 0f;
+
             while (aeg < jatkamiseVihjeFadeKestus)
             {
                 aeg += Time.unscaledDeltaTime;

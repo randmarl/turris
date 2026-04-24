@@ -9,6 +9,7 @@ public class Peamenüühaldur : MonoBehaviour
 
     [Header("Stseenid")]
     [SerializeField] private string tase1Stseen = "Level1";
+    [SerializeField] private string õpetuseStseen = "Õpetus";
 
     private void Start()
     {
@@ -38,12 +39,13 @@ public class Peamenüühaldur : MonoBehaviour
 
     public void AvaOpetus()
     {
-        Debug.Log("Õpetus avaneb.");
+        SceneManager.LoadScene(õpetuseStseen);
     }
 
     public void Välju()
     {
         Application.Quit();
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif

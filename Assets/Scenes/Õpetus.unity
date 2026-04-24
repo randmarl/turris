@@ -3579,15 +3579,15 @@ GameObject:
   - component: {fileID: 492758458}
   - component: {fileID: 492758461}
   - component: {fileID: 492758460}
-  - component: {fileID: 492758459}
   - component: {fileID: 492758462}
+  - component: {fileID: 492758463}
   m_Layer: 5
   m_Name: Jutustuspaneel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &492758458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3611,36 +3611,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &492758459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492758457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06dea7aa94ac940935d872cd2168fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JutustuseHaldur
-  jutustusPaneel: {fileID: 492758457}
-  pealkiriTekst: {fileID: 1009352714}
-  jutumulliTekst: {fileID: 821175442}
-  jutumullObjekt: {fileID: 383896637}
-  tegelaneObjekt: {fileID: 320130058}
-  jatkamiseTekst: {fileID: 1876532073}
-  pealkiri: Manivaldi matused
-  pealkiriKestusSek: 2
-  jutustuseFail: {fileID: 4900000, guid: 912bb1a512b980e47accc56ce670ac35, type: 3}
-  "kasutaT\xE4hthaavalEfekti": 1
-  "t\xE4heIlmumiseViivitus": 0.04
-  jatkamiseVihjeViivitus: 5
-  jatkamiseVihjeFadeKestus: 2
-  "jatkamiseVihjeN\xE4htavKestus": 1.2
-  jatkamiseVihjePeidusKestus: 0.8
-  "JutustusL\xF5ppes":
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &492758460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3691,7 +3661,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e778e67c74d984785d70c54986fd39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JutustusKlikkija
-  jutustuseHaldur: {fileID: 492758459}
+  jutustuseHaldur: {fileID: 492758463}
+--- !u!114 &492758463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492758457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b06dea7aa94ac940935d872cd2168fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JutustuseHaldur
+  jutustusPaneel: {fileID: 492758457}
+  pealkiriTekst: {fileID: 1009352714}
+  jutumulliTekst: {fileID: 821175442}
+  jutumullObjekt: {fileID: 383896637}
+  tegelaneObjekt: {fileID: 320130058}
+  jatkamiseTekst: {fileID: 1876532073}
+  pealkiri: "\xD5petus l\xE4bitud!"
+  pealkiriKestusSek: 2
+  jutustuseFail: {fileID: 4900000, guid: 9483a6f0cfc89544db6182caa2e8dd01, type: 3}
+  "kasutaT\xE4hthaavalEfekti": 1
+  "t\xE4heIlmumiseViivitus": 0.04
+  jatkamiseVihjeViivitus: 3
+  jatkamiseVihjeFadeKestus: 1
+  "jatkamiseVihjeN\xE4htavKestus": 1.2
+  jatkamiseVihjePeidusKestus: 0.8
+  "JutustusL\xF5ppes":
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &498552672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6779,81 +6779,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3492372030123539186, guid: 5e690349e4206ee459905f2b44b89b7e, type: 3}
   m_PrefabInstance: {fileID: 891655399}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &913759078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 913759079}
-  - component: {fileID: 913759081}
-  - component: {fileID: 913759080}
-  m_Layer: 5
-  m_Name: Leemet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &913759079
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913759078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1726566640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 267.0334, y: 350.9711}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &913759080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913759078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6db160e4a4e1cb4e9be9fdff3c99c81, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &913759081
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913759078}
-  m_CullTransparentMesh: 1
 --- !u!1 &920937917
 GameObject:
   m_ObjectHideFlags: 0
@@ -8337,25 +8262,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d26c98dc2f17e4fa7858dcc58ea0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::\xD5petuseHaldur"
-  "k\xE4ivitaAutomaatselt": 0
+  "k\xE4ivitaAutomaatselt": 1
   "\xF5petusPaneel": {fileID: 1080789332}
   "\xF5petusTekst": {fileID: 1728806129}
   jatkamiseTekst: {fileID: 535293607}
   sammud:
   - tekst: "Vaenlased liiguvad m\xF6\xF6da teerada. Sinu \xFClesanne on kaitsta teeraja
-      l\xF5ppu, kus on Leemet ja matuselised."
+      l\xF5ppu. Enne m\xE4ngu ei ole teada kumb tee ots on algus ehk kust vaenlased
+      tulema hakkavad. See selgub m\xE4ngu alguses."
     visuaal: {fileID: 475995248}
-  - tekst: "Enne m\xE4ngu ei ole teada, kumb tee ots on algus ehk kust vaenlased
-      tulema hakkavad. See selgub m\xE4ngu alguses. Kui 10 vaenlast Leemeti juurde
-      j\xF5uab, siis kaotad m\xE4ngu."
+  - tekst: "Kui 10 vaenlast l\xF5ppu j\xF5uab, siis kaotad m\xE4ngu."
     visuaal: {fileID: 1726566639}
   - tekst: "Teeraja \xFCmber saad paigutada torne, mida saad osta men\xFC\xFCst (klikka
-      men\xFC\xFC nuppu). Selles tasemes on kahte t\xFC\xFCpi torne: p\xF5der teeb
-      vaenlastele kahju ja lumehelves aeglustab vaenlasi, aga ei tee kahju."
+      men\xFC\xFC nuppu). N\xE4iteks esimeses tasemes on kahte t\xFC\xFCpi torne:
+      p\xF5der teeb vaenlastele kahju ja lumehelves aeglustab vaenlasi, aga ei tee
+      kahju."
     visuaal: {fileID: 501757367}
-  - tekst: "Ka vaenlasi on kahte t\xFC\xFCpi: \xFCks on kiire ja n\xF5rk, teine aeglane
-      ja tugev. Vaenlaste h\xE4vitamise eest saad oravanahkasid, mille kogust n\xE4ed
-      men\xFC\xFC \xFCleval osas."
+  - tekst: "Ka vaenlasi on erinevat t\xFC\xFCpi. Esimeses tasemes n\xE4iteks: \xFCks
+      on kiire ja n\xF5rk, teine aeglane ja tugev. Vaenlaste h\xE4vitamise eest saad
+      oravanahkasid, mille kogust n\xE4ed men\xFC\xFC \xFCleval osas."
     visuaal: {fileID: 150235172}
   - tekst: "Vajutades TURRIS nuppu ehk lausudes ussis\xF5nu saad vasakul men\xFC\xFCs
       tekitada juhuslikke torne. Esimese torni hind on 50 oravanahka, j\xE4rgmised
@@ -8418,7 +8343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8573,12 +8498,12 @@ MonoBehaviour:
     kaal: 0.6
   - prefab: {fileID: 3000850699507781024, guid: 4569095ebde00464599f021b4fa9020b, type: 3}
     kaal: 0.4
-  algseltVaenlasi: 6
-  vaenlasiSekundis: 0.75
+  algseltVaenlasi: 7
+  vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
   raskuseTegur: 1.2
   vaenlasiSekundisPiir: 15
-  maksimaalneLaineteArv: 5
+  maksimaalneLaineteArv: 1
   "TaseL\xE4bitud":
     m_PersistentCalls:
       m_Calls: []
@@ -8595,9 +8520,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::LeveliL\xF5puHaldur"
   vaenlaseTekitaja: {fileID: 1091655593}
-  jutustuseHaldur: {fileID: 492758459}
-  "v\xF5iduPealkiri": "V\xD5IT!"
-  "v\xF5iduJutustuseFail": {fileID: 4900000, guid: d29c96b52c012724ea06e3a8eeac7199, type: 3}
+  jutustuseHaldur: {fileID: 492758463}
+  "v\xF5iduPealkiri": "\xD5petus l\xE4bitud!"
+  "v\xF5iduJutustuseFail": {fileID: 4900000, guid: 9483a6f0cfc89544db6182caa2e8dd01, type: 3}
   avaekraaniStseen: avaekraan
 --- !u!1001 &1097400958
 PrefabInstance:
@@ -12430,7 +12355,7 @@ MonoBehaviour:
   m_text: "M\xC4NG L\xC4BI!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63eca6a0bf93cee45ab9c5e0cf238f9c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2915080804278570363, guid: 63eca6a0bf93cee45ab9c5e0cf238f9c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18198,7 +18123,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 913759079}
+  - {fileID: 2056162672}
   m_Father: {fileID: 1086773186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18241,7 +18166,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -300}
-  m_SizeDelta: {x: 700, y: 225}
+  m_SizeDelta: {x: 877.4747, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1728806128
 CanvasRenderer:
@@ -20623,6 +20548,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3492372030123539186, guid: 5e690349e4206ee459905f2b44b89b7e, type: 3}
   m_PrefabInstance: {fileID: 2050543505}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2056162671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056162672}
+  - component: {fileID: 2056162674}
+  - component: {fileID: 2056162673}
+  m_Layer: 5
+  m_Name: Leemet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2056162672
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056162671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1726566640}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 827.05347, y: -190.90599}
+  m_SizeDelta: {x: 213.086, y: 306.674}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2056162673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056162671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c6db160e4a4e1cb4e9be9fdff3c99c81, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2056162674
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056162671}
+  m_CullTransparentMesh: 1
 --- !u!1 &2063657858
 GameObject:
   m_ObjectHideFlags: 0
@@ -21059,52 +21059,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3492372030123539186, guid: 5e690349e4206ee459905f2b44b89b7e, type: 3}
   m_PrefabInstance: {fileID: 2102455148}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2123297994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2123297996}
-  - component: {fileID: 2123297995}
-  m_Layer: 0
-  m_Name: LeveliAlgus
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2123297995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123297994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272effee8ccbbe7458951d7f89324862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LeveliAlguseHaldur
-  jutustuseHaldur: {fileID: 492758459}
-  "\xF5petuseHaldur": {fileID: 1080789333}
---- !u!4 &2123297996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123297994}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 523.43585, y: 319.15674, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140893100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21252,4 +21206,3 @@ SceneRoots:
   - {fileID: 632482840}
   - {fileID: 1962190532}
   - {fileID: 1190880199}
-  - {fileID: 2123297996}

@@ -3263,6 +3263,7 @@ MonoBehaviour:
   "peamen\xFC\xFCPaneel": {fileID: 2089328925}
   tasemetePaneel: {fileID: 1631357939}
   tase1Stseen: Level1
+  "\xF5petuseStseen": "\xD5petus"
 --- !u!4 &556568363
 Transform:
   m_ObjectHideFlags: 0
