@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ce6b0bcc675494894c64184410200a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  elupunktid: 5
+  elupunktid: 6
   "v\xE4\xE4rtus": 25
 --- !u!95 &-3265106976775140098
 Animator:

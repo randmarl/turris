@@ -8282,9 +8282,9 @@ MonoBehaviour:
       on kiire ja n\xF5rk, teine aeglane ja tugev. Vaenlaste h\xE4vitamise eest saad
       oravanahkasid, mille kogust n\xE4ed men\xFC\xFC \xFCleval osas."
     visuaal: {fileID: 150235172}
-  - tekst: "Vajutades TURRIS nuppu ehk lausudes ussis\xF5nu saad vasakul men\xFC\xFCs
-      tekitada juhuslikke torne. Esimese torni hind on 50 oravanahka, j\xE4rgmised
-      kallimad. Lohista tornid platsile ja saa vaenlastest jagu!"
+  - tekst: "Vajutades TURRIS nuppu ehk lausudes ussis\xF5nades \"torn\" saad vasakul
+      men\xFC\xFCs tekitada juhuslikke torne. Esimese torni hind on 50 oravanahka,
+      j\xE4rgmised kallimad. Lohista tornid platsile ja saa vaenlastest jagu!"
     visuaal: {fileID: 498552672}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
