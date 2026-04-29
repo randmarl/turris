@@ -1,15 +1,24 @@
 using UnityEngine;
 
-public class haldur : MonoBehaviour
+public class Haldur : MonoBehaviour
 {
-    public static haldur peamine;
+    public static Haldur Peamine { get; private set; }
 
     [Header("Rada")]
-    public Transform[] algusPunkt;
-    public Transform[] teekond;
+    [SerializeField] private Transform[] algusPunktid;
+    [SerializeField] private Transform[] teekond;
+
+    public Transform[] AlgusPunktid => algusPunktid;
+    public Transform[] Teekond => teekond;
 
     private void Awake()
     {
-        peamine = this;
+        if (Peamine != null && Peamine != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Peamine = this;
     }
 }

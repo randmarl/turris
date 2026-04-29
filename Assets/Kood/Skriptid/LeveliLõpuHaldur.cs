@@ -14,7 +14,7 @@ public class LeveliLõpuHaldur : MonoBehaviour
     [Header("Stseen")]
     [SerializeField] private string avaekraaniStseen = "avaekraan";
 
-    private bool võitKäivitunud = false;
+    private bool võitKäivitunud;
 
     private void OnEnable()
     {
@@ -33,18 +33,20 @@ public class LeveliLõpuHaldur : MonoBehaviour
 
     private void KäivitaVõiduJutustus()
     {
-        if (võitKäivitunud) return;
+        if (võitKäivitunud)
+            return;
+
         võitKäivitunud = true;
 
         if (jutustuseHaldur == null)
         {
-            Debug.LogError("LevelLõpuHaldur: JutustuseHaldur viide puudub.");
+            Debug.LogError("LeveliLõpuHaldur: JutustuseHaldur viide puudub.");
             return;
         }
 
         if (võiduJutustuseFail == null)
         {
-            Debug.LogError("LevelLõpuHaldur: võiduJutustuseFail puudub.");
+            Debug.LogError("LeveliLõpuHaldur: võiduJutustuseFail puudub.");
             return;
         }
 

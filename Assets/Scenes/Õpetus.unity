@@ -3681,7 +3681,7 @@ MonoBehaviour:
   tegelaneObjekt: {fileID: 320130058}
   jatkamiseTekst: {fileID: 1876532073}
   pealkiri: "\xD5petus l\xE4bitud!"
-  pealkiriKestusSek: 2
+  pealkiriKestusSekundites: 2
   jutustuseFail: {fileID: 4900000, guid: 9483a6f0cfc89544db6182caa2e8dd01, type: 3}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
@@ -8439,7 +8439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbb0c309594e25408f1a53d4397021e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  algusPunkt:
+  algusPunktid:
   - {fileID: 722293076}
   teekond:
   - {fileID: 1462627536}
@@ -8498,7 +8498,7 @@ MonoBehaviour:
     kaal: 0.6
   - prefab: {fileID: 3000850699507781024, guid: 4569095ebde00464599f021b4fa9020b, type: 3}
     kaal: 0.4
-  algseltVaenlasi: 7
+  algseltVaenlasi: 5
   vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
   raskuseTegur: 1.2

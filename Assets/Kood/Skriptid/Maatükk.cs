@@ -12,18 +12,20 @@ public class Maatükk : MonoBehaviour
 
     private void Start()
     {
-        algneVärv = renderdaja.color;
+        if (renderdaja != null)
+            algneVärv = renderdaja.color;
     }
 
     private void Update()
     {
+        if (renderdaja == null || Camera.main == null)
+            return;
+
         Vector2 hiirePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Collider2D tabatud = Physics2D.OverlapPoint(hiirePos);
 
-        if (tabatud != null && tabatud.gameObject == gameObject)
-            renderdaja.color = hiirPealVärv;
-        else
-            renderdaja.color = algneVärv;
+        bool hiirPeal = tabatud != null && tabatud.gameObject == gameObject;
+        renderdaja.color = hiirPeal ? hiirPealVärv : algneVärv;
     }
 
     public bool KasOnHõivatud()
@@ -33,8 +35,8 @@ public class Maatükk : MonoBehaviour
 
     public bool ProoviPaigaldadaTorn(GameObject prefab)
     {
-        if (prefab == null) return false;
-        if (torn != null) return false;
+        if (prefab == null || torn != null)
+            return false;
 
         torn = Instantiate(prefab, transform.position, Quaternion.identity);
         return true;

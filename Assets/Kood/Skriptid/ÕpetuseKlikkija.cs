@@ -7,7 +7,9 @@ public class ÕpetuseKlikkija : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (õpetuseHaldur != null)
-            õpetuseHaldur.TöötleKlikki();
+        if (õpetuseHaldur == null)
+            return;
+
+        õpetuseHaldur.TöötleKlikki();
     }
 }

@@ -92,7 +92,7 @@ MonoBehaviour:
   torniPrefab: {fileID: 0}
   torniIkoon: {fileID: 0}
   juurCanvas: {fileID: 0}
-  maatiukiKiht:
+  "maat\xFCkiKiht":
     serializedVersion: 2
     m_Bits: 256
   maksimaalneRayKaugus: 100

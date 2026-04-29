@@ -6,7 +6,7 @@ public class LeveliAlguseHaldur : MonoBehaviour
     [SerializeField] private JutustuseHaldur jutustuseHaldur;
     [SerializeField] private ÕpetuseHaldur õpetuseHaldur;
 
-    private bool õpetusJubaKäivitatud = false;
+    private bool õpetusJubaKäivitatud;
 
     private void OnEnable()
     {

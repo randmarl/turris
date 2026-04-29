@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class EludUI : MonoBehaviour
 {
@@ -9,66 +9,72 @@ public class EludUI : MonoBehaviour
     [Header("Peitmine jutustuse ajal")]
     [SerializeField] private GameObject jutustusPaneel;
 
-    private CanvasGroup cg;
-    private MängijaElud eludMgr;
-    private bool onHookitud = false;
+    private CanvasGroup canvasGroup;
+    private MängijaElud mängijaElud;
+    private bool onÜhendatud;
 
     private void Awake()
     {
-        cg = GetComponent<CanvasGroup>();
-        if (cg == null) cg = gameObject.AddComponent<CanvasGroup>();
+        canvasGroup = GetComponent<CanvasGroup>();
+
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
     }
 
     private void OnEnable()
     {
-        ProoviHookida();
+        ProoviÜhendadaEludega();
     }
 
     private void Start()
     {
-        ProoviHookida();
+        ProoviÜhendadaEludega();
         UuendaNähtavust();
     }
 
     private void OnDisable()
     {
-        if (onHookitud && eludMgr != null)
-        {
-            eludMgr.EludMuutusid.RemoveListener(UuendaTeksti);
-        }
-        onHookitud = false;
-        eludMgr = null;
+        if (onÜhendatud && mängijaElud != null)
+            mängijaElud.EludMuutusid.RemoveListener(UuendaTeksti);
+
+        onÜhendatud = false;
+        mängijaElud = null;
     }
 
     private void Update()
     {
-        if (!onHookitud) ProoviHookida();
+        if (!onÜhendatud)
+            ProoviÜhendadaEludega();
 
         UuendaNähtavust();
     }
 
-    private void ProoviHookida()
+    private void ProoviÜhendadaEludega()
     {
-        if (onHookitud) return;
+        if (onÜhendatud)
+            return;
 
-        eludMgr = MängijaElud.Instance;
-        if (eludMgr == null)
-            eludMgr = Object.FindFirstObjectByType<MängijaElud>();
+        mängijaElud = MängijaElud.Instance;
 
-        if (eludMgr == null) return;
+        if (mängijaElud == null)
+            mängijaElud = FindFirstObjectByType<MängijaElud>();
 
-        eludMgr.EludMuutusid.AddListener(UuendaTeksti);
-        onHookitud = true;
-        UuendaTeksti(eludMgr.Elud);
+        if (mängijaElud == null)
+            return;
+
+        mängijaElud.EludMuutusid.AddListener(UuendaTeksti);
+        onÜhendatud = true;
+
+        UuendaTeksti(mängijaElud.Elud);
     }
 
     private void UuendaNähtavust()
     {
-        bool peida = (jutustusPaneel != null && jutustusPaneel.activeSelf);
+        bool peida = jutustusPaneel != null && jutustusPaneel.activeSelf;
 
-        cg.alpha = peida ? 0f : 1f;
-        cg.blocksRaycasts = !peida;
-        cg.interactable = !peida;
+        canvasGroup.alpha = peida ? 0f : 1f;
+        canvasGroup.blocksRaycasts = !peida;
+        canvasGroup.interactable = !peida;
     }
 
     private void UuendaTeksti(int elud)

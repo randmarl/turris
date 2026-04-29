@@ -14,7 +14,7 @@ public class MängLäbiUI : MonoBehaviour
     [SerializeField] private string avaekraaniStseen = "avaekraan";
     [SerializeField] private bool peataMäng = true;
 
-    private bool käivitatud = false;
+    private bool käivitatud;
 
     private void Awake()
     {
@@ -36,7 +36,9 @@ public class MängLäbiUI : MonoBehaviour
 
     private void OnMängLäbi()
     {
-        if (käivitatud) return;
+        if (käivitatud)
+            return;
+
         käivitatud = true;
 
         if (mängLäbiTekst != null)
@@ -48,16 +50,20 @@ public class MängLäbiUI : MonoBehaviour
         StartCoroutine(TagasiAvaekraanile());
     }
 
-    public void Kaivita()
+    public void Käivita()
     {
         OnMängLäbi();
     }
 
     private IEnumerator TagasiAvaekraanile()
     {
-        if (peataMäng) Time.timeScale = 0f;
+        if (peataMäng)
+            Time.timeScale = 0f;
+
         yield return new WaitForSecondsRealtime(ooteAeg);
+
         Time.timeScale = 1f;
+
         if (OravanahaHaldur.Instance != null)
             OravanahaHaldur.Instance.LähtestaAlgrahale();
 

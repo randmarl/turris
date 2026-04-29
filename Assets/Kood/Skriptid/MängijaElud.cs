@@ -4,13 +4,16 @@ using UnityEngine.Events;
 public class MängijaElud : MonoBehaviour
 {
     public static MängijaElud Instance { get; private set; }
+
     [Header("Seaded")]
     [SerializeField] private int algsedElud = 10;
 
     public int Elud { get; private set; }
+
     [HideInInspector] public UnityEvent<int> EludMuutusid = new UnityEvent<int>();
     [HideInInspector] public UnityEvent MängLäbi = new UnityEvent();
-    private bool mangLabiKäivitunud = false;
+
+    private bool mängLäbiKäivitunud;
 
     private void Awake()
     {
@@ -35,15 +38,13 @@ public class MängijaElud : MonoBehaviour
             return;
 
         Elud -= kogus;
-
-        if (Elud < 0)
-            Elud = 0;
+        Elud = Mathf.Max(Elud, 0);
 
         EludMuutusid.Invoke(Elud);
 
-        if (Elud == 0 && !mangLabiKäivitunud)
+        if (Elud == 0 && !mängLäbiKäivitunud)
         {
-            mangLabiKäivitunud = true;
+            mängLäbiKäivitunud = true;
             MängLäbi.Invoke();
         }
     }

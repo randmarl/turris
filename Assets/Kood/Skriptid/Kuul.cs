@@ -4,13 +4,14 @@ public class Kuul : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D keha2D;
     [SerializeField] private float kiirus = 10f;
-    [SerializeField] private int kahju = 1;   // <-- lisa see
+    [SerializeField] private int kahju = 1;
 
     private Transform sihtmärk;
 
     private void Awake()
     {
-        if (keha2D == null) keha2D = GetComponent<Rigidbody2D>();
+        if (keha2D == null)
+            keha2D = GetComponent<Rigidbody2D>();
     }
 
     public void MääraSihtmärk(Transform uusSiht)
@@ -33,10 +34,9 @@ public class Kuul : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D muu)
     {
         Tervis tervis = muu.gameObject.GetComponentInParent<Tervis>();
+
         if (tervis != null)
-        {
-            tervis.Kahjusta(kahju);  // <-- kasuta kahju
-        }
+            tervis.Kahjusta(kahju);
 
         Destroy(gameObject);
     }

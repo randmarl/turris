@@ -107,7 +107,7 @@ MonoBehaviour:
   vaenlaseKiht:
     serializedVersion: 2
     m_Bits: 64
-  kylmaEfekt: {fileID: 5353384157728253215}
+  "k\xFClmaEfekt": {fileID: 5353384157728253215}
   sihtimisRaadius: 2.5
   "r\xFCnnakuidSekundis": 0.33
   aeglustuseKestus: 1

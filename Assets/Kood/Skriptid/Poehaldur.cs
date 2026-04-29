@@ -1,8 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class Poehaldur : MonoBehaviour
+public class PoeHaldur : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Button turrisNupp;
@@ -18,7 +18,7 @@ public class Poehaldur : MonoBehaviour
     [SerializeField] private int hinnaTõus = 5;
 
     private int torniHind;
-    private bool esimeneOstTehtud = false;
+    private bool esimeneOstTehtud;
 
     private void Awake()
     {
@@ -28,62 +28,23 @@ public class Poehaldur : MonoBehaviour
 
     private void Update()
     {
-        if (OravanahaHaldur.Instance == null)
-        {
-            if (turrisNupp != null)
-                turrisNupp.interactable = false;
-            return;
-        }
-
-        bool onRaha = OravanahaHaldur.Instance.Oravanahad >= torniHind;
-        bool onVabaSlot = LeiaTühiSlot() != null;
-
-        if (turrisNupp != null)
-            turrisNupp.interactable = onRaha && onVabaSlot;
-
-        UuendaHinnaTeksti();
-    }
-
-    private void UuendaHinnaTeksti()
-    {
-        if (turriseHinnaTekst != null)
-            turriseHinnaTekst.text = torniHind.ToString();
+        UuendaNupuOleku();
     }
 
     public void VajutatiTurrist()
     {
-        if (OravanahaHaldur.Instance == null)
+        if (OravanahaHaldur.Instance == null || tornikaardiPrefab == null || tornid == null || tornid.Length == 0)
             return;
 
         Transform tühiSlot = LeiaTühiSlot();
         if (tühiSlot == null)
             return;
 
-        bool õnnestus = OravanahaHaldur.Instance.KulutaOravanahku(torniHind);
-        if (!õnnestus)
-            return;
-
-        if (tornid == null || tornid.Length == 0)
-            return;
-
-        if (tornikaardiPrefab == null)
-            return;
-
-        GameObject valitudTorn = null;
-
-        if (!esimeneOstTehtud)
-        {
-            if (tornid[0] != null)
-                valitudTorn = tornid[0].prefab;
-
-            esimeneOstTehtud = true;
-        }
-        else
-        {
-            valitudTorn = VõtaJuhuslikTornKaaluJärgi();
-        }
-
+        GameObject valitudTorn = VõtaValitudTorn();
         if (valitudTorn == null)
+            return;
+
+        if (!OravanahaHaldur.Instance.KulutaOravanahku(torniHind))
             return;
 
         GameObject kaartObjekt = Instantiate(tornikaardiPrefab, tühiSlot);
@@ -92,39 +53,73 @@ public class Poehaldur : MonoBehaviour
         if (tornikaart != null)
             tornikaart.SeaTorn(valitudTorn);
 
-        // HINNA SUURENDAMINE
         torniHind += hinnaTõus;
         UuendaHinnaTeksti();
+        UuendaNupuOleku();
+    }
+
+    private void UuendaNupuOleku()
+    {
+        if (turrisNupp == null)
+            return;
+
+        if (OravanahaHaldur.Instance == null)
+        {
+            turrisNupp.interactable = false;
+            return;
+        }
+
+        bool onRaha = OravanahaHaldur.Instance.Oravanahad >= torniHind;
+        bool onVabaKoht = LeiaTühiSlot() != null;
+
+        turrisNupp.interactable = onRaha && onVabaKoht;
+    }
+
+    private void UuendaHinnaTeksti()
+    {
+        if (turriseHinnaTekst != null)
+            turriseHinnaTekst.text = torniHind.ToString();
+    }
+
+    private GameObject VõtaValitudTorn()
+    {
+        if (!esimeneOstTehtud)
+        {
+            esimeneOstTehtud = true;
+            return tornid[0] != null ? tornid[0].Prefab : null;
+        }
+
+        return VõtaJuhuslikTornKaaluJärgi();
     }
 
     private GameObject VõtaJuhuslikTornKaaluJärgi()
     {
         float kogukaal = 0f;
 
-        foreach (var torn in tornid)
+        foreach (TornideTõenäosused torn in tornid)
         {
-            if (torn != null && torn.prefab != null && torn.kaal > 0f)
-                kogukaal += torn.kaal;
+            if (torn != null && torn.Prefab != null && torn.Kaal > 0f)
+                kogukaal += torn.Kaal;
         }
 
         if (kogukaal <= 0f)
             return null;
 
         float juhuslik = Random.value * kogukaal;
-        float jooksev = 0f;
+        float jooksevKaal = 0f;
 
-        foreach (var torn in tornid)
+        foreach (TornideTõenäosused torn in tornid)
         {
-            if (torn == null || torn.prefab == null || torn.kaal <= 0f)
+            if (torn == null || torn.Prefab == null || torn.Kaal <= 0f)
                 continue;
 
-            jooksev += torn.kaal;
+            jooksevKaal += torn.Kaal;
 
-            if (juhuslik <= jooksev)
-                return torn.prefab;
+            if (juhuslik <= jooksevKaal)
+                return torn.Prefab;
         }
 
-        return tornid[tornid.Length - 1].prefab;
+        return null;
     }
 
     private Transform LeiaTühiSlot()
@@ -132,14 +127,13 @@ public class Poehaldur : MonoBehaviour
         if (kohad == null)
             return null;
 
-        foreach (Transform slot in kohad)
+        foreach (Transform koht in kohad)
         {
-            if (slot == null)
+            if (koht == null)
                 continue;
 
-            Tornikaart olemasolevKaart = slot.GetComponentInChildren<Tornikaart>();
-            if (olemasolevKaart == null)
-                return slot;
+            if (koht.GetComponentInChildren<Tornikaart>() == null)
+                return koht;
         }
 
         return null;

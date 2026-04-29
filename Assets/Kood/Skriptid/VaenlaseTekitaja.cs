@@ -1,7 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections;
-using System;
 
 public class VaenlaseTekitaja : MonoBehaviour
 {
@@ -26,29 +26,26 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     public int PraeguneLaine => praeguneLaine;
     public int MaksimaalneLaineteArv => maksimaalneLaineteArv;
-    public bool KasLaineKäib => kasTekib;
+    public bool KasLaineKäib => kasLaineKäib;
     public float LaineKestus => laineKestus;
     public bool KasOnViimaneLaine => praeguneLaine >= maksimaalneLaineteArv;
 
     private int praeguneLaine = 1;
-    private float aegViimasestTekitamisest;
     private int vaenlasiElus;
     private int vaenlasiTekitada;
-    private float vaenlasiSekundisHetkel;
-    private bool kasTekib = false;
-    private bool taseOnLäbitud = false;
 
-    private float laineKestus = 0f;
+    private float aegViimasestTekitamisest;
+    private float vaenlasiSekundisHetkel;
+    private float laineKestus;
+
+    private bool kasLaineKäib;
+    private bool taseOnLäbitud;
+
     private Coroutine järgmiseLaineCoroutine;
 
     private void Awake()
     {
         vaenlaseHävitamiseSündmus.AddListener(VaenlaneHävitatud);
-    }
-
-    private void OnDestroy()
-    {
-        vaenlaseHävitamiseSündmus.RemoveListener(VaenlaneHävitatud);
     }
 
     private void Start()
@@ -57,34 +54,56 @@ public class VaenlaseTekitaja : MonoBehaviour
         järgmiseLaineCoroutine = StartCoroutine(AlustaLainet());
     }
 
+    private void OnDestroy()
+    {
+        vaenlaseHävitamiseSündmus.RemoveListener(VaenlaneHävitatud);
+    }
+
     private void Update()
     {
-        if (taseOnLäbitud) return;
-        if (!kasTekib) return;
+        if (taseOnLäbitud || !kasLaineKäib)
+            return;
 
-        laineKestus += Time.deltaTime;
-        aegViimasestTekitamisest += Time.deltaTime;
-
-        if (aegViimasestTekitamisest >= (1f / vaenlasiSekundisHetkel) && vaenlasiTekitada > 0)
-        {
-            TekitaVaenlane();
-            vaenlasiTekitada--;
-            vaenlasiElus++;
-            aegViimasestTekitamisest = 0f;
-        }
+        UuendaLaineAega();
+        ProoviVaenlaneTekitada();
 
         if (vaenlasiElus == 0 && vaenlasiTekitada == 0)
-        {
             LõpetaLaine();
-        }
+    }
+
+    public void KäivitaJärgmineLaineKohe()
+    {
+        if (taseOnLäbitud || !kasLaineKäib || KasOnViimaneLaine)
+            return;
+
+        LõpetaPraeguneLaine();
+        AlustaJärgmiseLaineOotamist();
+    }
+
+    private void UuendaLaineAega()
+    {
+        laineKestus += Time.deltaTime;
+        aegViimasestTekitamisest += Time.deltaTime;
+    }
+
+    private void ProoviVaenlaneTekitada()
+    {
+        if (vaenlasiTekitada <= 0)
+            return;
+
+        if (aegViimasestTekitamisest < 1f / vaenlasiSekundisHetkel)
+            return;
+
+        TekitaVaenlane();
+
+        vaenlasiTekitada--;
+        vaenlasiElus++;
+        aegViimasestTekitamisest = 0f;
     }
 
     private void VaenlaneHävitatud()
     {
-        vaenlasiElus--;
-
-        if (vaenlasiElus < 0)
-            vaenlasiElus = 0;
+        vaenlasiElus = Mathf.Max(0, vaenlasiElus - 1);
     }
 
     private IEnumerator AlustaLainet()
@@ -95,7 +114,7 @@ public class VaenlaseTekitaja : MonoBehaviour
             yield break;
 
         järgmiseLaineCoroutine = null;
-        kasTekib = true;
+        kasLaineKäib = true;
         laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
         vaenlasiTekitada = VaenlasiLaines();
@@ -104,37 +123,27 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private void LõpetaLaine()
     {
-        kasTekib = false;
-        laineKestus = 0f;
-        aegViimasestTekitamisest = 0f;
+        LõpetaPraeguneLaine();
 
-        if (praeguneLaine >= maksimaalneLaineteArv)
+        if (KasOnViimaneLaine)
         {
             taseOnLäbitud = true;
             TaseLäbitud.Invoke();
             return;
         }
 
-        praeguneLaine++;
-        TeavitaLaineUuendusest();
-        järgmiseLaineCoroutine = StartCoroutine(AlustaLainet());
+        AlustaJärgmiseLaineOotamist();
     }
 
-    public void KäivitaJärgmineLaineKohe()
+    private void LõpetaPraeguneLaine()
     {
-        if (taseOnLäbitud)
-            return;
-
-        if (!kasTekib)
-            return;
-
-        if (praeguneLaine >= maksimaalneLaineteArv)
-            return;
-
-        kasTekib = false;
+        kasLaineKäib = false;
         laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
+    }
 
+    private void AlustaJärgmiseLaineOotamist()
+    {
         praeguneLaine++;
         TeavitaLaineUuendusest();
 
@@ -152,10 +161,11 @@ public class VaenlaseTekitaja : MonoBehaviour
     private void TekitaVaenlane()
     {
         GameObject mall = VõtaJuhuslikVaenlaneKaaluJärgi();
-        if (mall == null)
+
+        if (mall == null || Haldur.Peamine == null || Haldur.Peamine.AlgusPunktid.Length == 0)
             return;
 
-        Instantiate(mall, haldur.peamine.algusPunkt[0].position, Quaternion.identity);
+        Instantiate(mall, Haldur.Peamine.AlgusPunktid[0].position, Quaternion.identity);
     }
 
     private GameObject VõtaJuhuslikVaenlaneKaaluJärgi()
@@ -164,8 +174,8 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         foreach (var v in vaenlased)
         {
-            if (v != null && v.prefab != null && v.kaal > 0f)
-                kogukaal += v.kaal;
+            if (v != null && v.Prefab != null && v.Kaal > 0f)
+                kogukaal += v.Kaal;
         }
 
         if (kogukaal <= 0f)
@@ -176,16 +186,16 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         foreach (var v in vaenlased)
         {
-            if (v == null || v.prefab == null || v.kaal <= 0f)
+            if (v == null || v.Prefab == null || v.Kaal <= 0f)
                 continue;
 
-            jooksev += v.kaal;
+            jooksev += v.Kaal;
 
             if (juhuslik <= jooksev)
-                return v.prefab;
+                return v.Prefab;
         }
 
-        return vaenlased[vaenlased.Length - 1].prefab;
+        return vaenlased[vaenlased.Length - 1].Prefab;
     }
 
     private int VaenlasiLaines()

@@ -3156,8 +3156,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 556568362}
-        m_TargetAssemblyTypeName: "Peamen\xFC\xFChaldur, Assembly-CSharp"
-        m_MethodName: AvaOpetus
+        m_TargetAssemblyTypeName: "Peamen\xFC\xFCHaldur, Assembly-CSharp"
+        m_MethodName: "Ava\xD5petus"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

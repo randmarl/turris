@@ -1,9 +1,12 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 [Serializable]
 public class VaenlasteTõenäosused
 {
-    public GameObject prefab;
-    [Min(0f)] public float kaal = 1f;
+    [SerializeField] private GameObject prefab;
+    [SerializeField, Min(0f)] private float kaal = 1f;
+
+    public GameObject Prefab => prefab;
+    public float Kaal => kaal;
 }

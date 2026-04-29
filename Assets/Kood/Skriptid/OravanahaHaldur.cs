@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 public class OravanahaHaldur : MonoBehaviour
 {
@@ -22,8 +22,7 @@ public class OravanahaHaldur : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        Oravanahad = algusOravanahad;
-        OravanahadMuutusid?.Invoke(Oravanahad);
+        SeaOravanahad(algusOravanahad);
     }
 
     public bool KasSaabKulutada(int kogus)
@@ -33,17 +32,16 @@ public class OravanahaHaldur : MonoBehaviour
 
     public bool KulutaOravanahku(int kogus)
     {
-        if (!KasSaabKulutada(kogus)) return false;
+        if (!KasSaabKulutada(kogus))
+            return false;
 
-        Oravanahad -= kogus;
-        OravanahadMuutusid?.Invoke(Oravanahad);
+        SeaOravanahad(Oravanahad - kogus);
         return true;
     }
 
     public void LisaOravanahku(int kogus)
     {
-        Oravanahad += kogus;
-        OravanahadMuutusid?.Invoke(Oravanahad);
+        SeaOravanahad(Oravanahad + kogus);
     }
 
     public void SeaOravanahad(int uusSumma)
@@ -54,7 +52,6 @@ public class OravanahaHaldur : MonoBehaviour
 
     public void LähtestaAlgrahale()
     {
-        Oravanahad = algusOravanahad;
-        OravanahadMuutusid?.Invoke(Oravanahad);
+        SeaOravanahad(algusOravanahad);
     }
 }

@@ -7,7 +7,9 @@ public class JutustusKlikkija : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (jutustuseHaldur != null)
-            jutustuseHaldur.TöötleKlikki();
+        if (jutustuseHaldur == null)
+            return;
+
+        jutustuseHaldur.TöötleKlikki();
     }
 }

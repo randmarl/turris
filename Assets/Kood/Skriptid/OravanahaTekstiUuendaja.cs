@@ -1,9 +1,10 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class OravanahaTekstiUuendaja : MonoBehaviour
 {
     [SerializeField] private TMP_Text tekst;
+
     private void Reset()
     {
         tekst = GetComponent<TMP_Text>();
@@ -11,14 +12,28 @@ public class OravanahaTekstiUuendaja : MonoBehaviour
 
     private void Awake()
     {
-        if (tekst == null) tekst = GetComponent<TMP_Text>();
+        if (tekst == null)
+            tekst = GetComponent<TMP_Text>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (tekst == null) return;
-        if (OravanahaHaldur.Instance == null) return;
+        if (OravanahaHaldur.Instance != null)
+        {
+            OravanahaHaldur.Instance.OravanahadMuutusid += UuendaTeksti;
+            UuendaTeksti(OravanahaHaldur.Instance.Oravanahad);
+        }
+    }
 
-        tekst.text = OravanahaHaldur.Instance.Oravanahad.ToString();
+    private void OnDisable()
+    {
+        if (OravanahaHaldur.Instance != null)
+            OravanahaHaldur.Instance.OravanahadMuutusid -= UuendaTeksti;
+    }
+
+    private void UuendaTeksti(int summa)
+    {
+        if (tekst != null)
+            tekst.text = summa.ToString();
     }
 }

@@ -2,5 +2,7 @@ using UnityEngine;
 
 public class TornAndmed : MonoBehaviour
 {
-    public Sprite poeIkoon;
+    [SerializeField] private Sprite poeIkoon;
+
+    public Sprite PoeIkoon => poeIkoon;
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Peamenüühaldur : MonoBehaviour
+public class PeamenüüHaldur : MonoBehaviour
 {
     [Header("UI paneelid")]
     [SerializeField] private GameObject peamenüüPaneel;
@@ -13,23 +13,29 @@ public class Peamenüühaldur : MonoBehaviour
 
     private void Start()
     {
-        if (AvaekraaniNavigatsioon.AvaTasemedKohe)
-        {
-            AvaekraaniNavigatsioon.AvaTasemedKohe = false;
-            AvaTasemed();
-        }
+        if (!AvaekraaniNavigatsioon.AvaTasemedKohe)
+            return;
+
+        AvaekraaniNavigatsioon.AvaTasemedKohe = false;
+        AvaTasemed();
     }
 
     public void AvaTasemed()
     {
-        peamenüüPaneel.SetActive(false);
-        tasemetePaneel.SetActive(true);
+        if (peamenüüPaneel != null)
+            peamenüüPaneel.SetActive(false);
+
+        if (tasemetePaneel != null)
+            tasemetePaneel.SetActive(true);
     }
 
     public void TagasiPeamenüüsse()
     {
-        tasemetePaneel.SetActive(false);
-        peamenüüPaneel.SetActive(true);
+        if (tasemetePaneel != null)
+            tasemetePaneel.SetActive(false);
+
+        if (peamenüüPaneel != null)
+            peamenüüPaneel.SetActive(true);
     }
 
     public void AvaTase1()
@@ -37,7 +43,7 @@ public class Peamenüühaldur : MonoBehaviour
         SceneManager.LoadScene(tase1Stseen);
     }
 
-    public void AvaOpetus()
+    public void AvaÕpetus()
     {
         SceneManager.LoadScene(õpetuseStseen);
     }

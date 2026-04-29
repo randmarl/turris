@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class Lained : MonoBehaviour
 {
@@ -10,13 +10,14 @@ public class Lained : MonoBehaviour
     [Header("Peitmine jutustuse ajal")]
     [SerializeField] private GameObject jutustusPaneel;
 
-    private CanvasGroup cg;
+    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
-        cg = GetComponent<CanvasGroup>();
-        if (cg == null)
-            cg = gameObject.AddComponent<CanvasGroup>();
+        canvasGroup = GetComponent<CanvasGroup>();
+
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
     }
 
     private void Start()
@@ -27,10 +28,7 @@ public class Lained : MonoBehaviour
         if (vaenlaseTekitaja != null)
         {
             vaenlaseTekitaja.LaineMuutus += UuendaLaineteTeksti;
-            UuendaLaineteTeksti(
-                vaenlaseTekitaja.PraeguneLaine,
-                vaenlaseTekitaja.MaksimaalneLaineteArv
-            );
+            UuendaLaineteTeksti(vaenlaseTekitaja.PraeguneLaine, vaenlaseTekitaja.MaksimaalneLaineteArv);
         }
 
         UuendaNähtavust();
@@ -55,10 +53,10 @@ public class Lained : MonoBehaviour
 
     private void UuendaNähtavust()
     {
-        bool peida = (jutustusPaneel != null && jutustusPaneel.activeSelf);
+        bool peida = jutustusPaneel != null && jutustusPaneel.activeSelf;
 
-        cg.alpha = peida ? 0f : 1f;
-        cg.blocksRaycasts = !peida;
-        cg.interactable = !peida;
+        canvasGroup.alpha = peida ? 0f : 1f;
+        canvasGroup.blocksRaycasts = !peida;
+        canvasGroup.interactable = !peida;
     }
 }

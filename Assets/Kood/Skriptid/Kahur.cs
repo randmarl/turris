@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
@@ -29,20 +27,38 @@ public class Kahur : MonoBehaviour
 
         PööraSihtmärgiSuunas();
 
-        if (!KontrolliKasSihtmärkRaadiuses())
+        if (!KasSihtmärkOnRaadiuses())
         {
             sihtmärk = null;
+            return;
         }
-        else
-        {
-            aegJärgmiseLasuni += Time.deltaTime;
 
-            if (aegJärgmiseLasuni >= 1f / kuuleSekundis)
-            {
-                Tulista();
-                aegJärgmiseLasuni = 0f;
-            }
-        }
+        ProoviTulistada();
+    }
+
+    private void LeiaSihtmärk()
+    {
+        RaycastHit2D[] tabamused = Physics2D.CircleCastAll(
+            transform.position,
+            sihtimisRaadius,
+            Vector2.zero,
+            0f,
+            vaenlaseKiht
+        );
+
+        if (tabamused.Length > 0)
+            sihtmärk = tabamused[0].transform;
+    }
+
+    private void ProoviTulistada()
+    {
+        aegJärgmiseLasuni += Time.deltaTime;
+
+        if (aegJärgmiseLasuni < 1f / kuuleSekundis)
+            return;
+
+        Tulista();
+        aegJärgmiseLasuni = 0f;
     }
 
     private void Tulista()
@@ -52,47 +68,33 @@ public class Kahur : MonoBehaviour
 
         GameObject kuuliObjekt = Instantiate(kuuliMall, laskepunkt.position, Quaternion.identity);
 
-        var kuuliCollider = kuuliObjekt.GetComponent<Collider2D>();
+        Collider2D kuuliCollider = kuuliObjekt.GetComponent<Collider2D>();
+
         if (kuuliCollider != null)
         {
-            foreach (var c in GetComponentsInChildren<Collider2D>())
-                Physics2D.IgnoreCollision(kuuliCollider, c);
+            foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
+                Physics2D.IgnoreCollision(kuuliCollider, collider);
         }
 
-        Kuul kuuliSkript = kuuliObjekt.GetComponent<Kuul>();
-        if (kuuliSkript != null)
-            kuuliSkript.MääraSihtmärk(sihtmärk);
+        Kuul kuul = kuuliObjekt.GetComponent<Kuul>();
+
+        if (kuul != null)
+            kuul.MääraSihtmärk(sihtmärk);
     }
 
-    private void LeiaSihtmärk()
+    private bool KasSihtmärkOnRaadiuses()
     {
-        RaycastHit2D[] tabamused = Physics2D.CircleCastAll(
-            transform.position,
-            sihtimisRaadius,
-            (Vector2)transform.position,
-            0f,
-            vaenlaseKiht
-        );
-
-        if (tabamused.Length > 0)
-        {
-            sihtmärk = tabamused[0].transform;
-        }
-    }
-
-    private bool KontrolliKasSihtmärkRaadiuses()
-    {
-        return Vector2.Distance(sihtmärk.position, transform.position) <= sihtimisRaadius;
+        return Vector2.Distance(transform.position, sihtmärk.position) <= sihtimisRaadius;
     }
 
     private void PööraSihtmärgiSuunas()
     {
-        float nurk = Mathf.Atan2(
-            sihtmärk.position.y - transform.position.y,
-            sihtmärk.position.x - transform.position.x
-        ) * Mathf.Rad2Deg - 90f;
+        if (kahuriPöördePunkt == null)
+            return;
 
-        Quaternion sihtimispööre = Quaternion.Euler(new Vector3(0f, 0f, nurk));
+        Vector2 suund = sihtmärk.position - transform.position;
+        float nurk = Mathf.Atan2(suund.y, suund.x) * Mathf.Rad2Deg - 90f;
+        Quaternion sihtimispööre = Quaternion.Euler(0f, 0f, nurk);
 
         kahuriPöördePunkt.rotation = Quaternion.RotateTowards(
             kahuriPöördePunkt.rotation,

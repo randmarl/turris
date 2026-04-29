@@ -8,10 +8,10 @@ public class Torn
     public int hind;
     public GameObject prefab;
 
-    public Torn(string _nimi, int _hind, GameObject _prefab)
+    public Torn(string nimi, int hind, GameObject prefab)
     {
-        nimi = _nimi;
-        hind = _hind;
-        prefab = _prefab;
+        this.nimi = nimi;
+        this.hind = hind;
+        this.prefab = prefab;
     }
 }

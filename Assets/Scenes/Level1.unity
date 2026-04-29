@@ -3630,7 +3630,7 @@ MonoBehaviour:
   tegelaneObjekt: {fileID: 320130058}
   jatkamiseTekst: {fileID: 1876532073}
   pealkiri: Manivaldi matused
-  pealkiriKestusSek: 2
+  pealkiriKestusSekundites: 2
   jutustuseFail: {fileID: 4900000, guid: 912bb1a512b980e47accc56ce670ac35, type: 3}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
@@ -8514,7 +8514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbb0c309594e25408f1a53d4397021e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  algusPunkt:
+  algusPunktid:
   - {fileID: 722293076}
   teekond:
   - {fileID: 1462627536}
@@ -8573,7 +8573,7 @@ MonoBehaviour:
     kaal: 0.6
   - prefab: {fileID: 3000850699507781024, guid: 4569095ebde00464599f021b4fa9020b, type: 3}
     kaal: 0.4
-  algseltVaenlasi: 6
+  algseltVaenlasi: 5
   vaenlasiSekundis: 0.75
   aegLaineteVahel: 5
   raskuseTegur: 1.2
@@ -18240,8 +18240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
-  m_SizeDelta: {x: 700, y: 225}
+  m_AnchoredPosition: {x: 0, y: -316.22183}
+  m_SizeDelta: {x: 861.3646, y: 257.4437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1728806128
 CanvasRenderer:

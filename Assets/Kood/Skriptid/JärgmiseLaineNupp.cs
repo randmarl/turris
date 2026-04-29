@@ -22,28 +22,30 @@ public class JärgmiseLaineNupp : MonoBehaviour
         if (nupuObjekt == null)
             nupuObjekt = gameObject;
 
-        if (nupp != null)
-            nupp.onClick.AddListener(VajutatiNuppu);
-
         canvasGroup = nupuObjekt.GetComponent<CanvasGroup>();
+
         if (canvasGroup == null)
             canvasGroup = nupuObjekt.AddComponent<CanvasGroup>();
 
-        canvasGroup.alpha = 0f;
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
+        PeidaKohe();
     }
 
-    private void OnDestroy()
+    private void OnEnable()
     {
         if (nupp != null)
-            nupp.onClick.RemoveListener(VajutatiNuppu);
+            nupp.onClick.AddListener(VajutatiNuppu);
     }
 
     private void Start()
     {
         if (vaenlaseTekitaja == null)
             vaenlaseTekitaja = FindFirstObjectByType<VaenlaseTekitaja>();
+    }
+
+    private void OnDisable()
+    {
+        if (nupp != null)
+            nupp.onClick.RemoveListener(VajutatiNuppu);
     }
 
     private void Update()
@@ -54,12 +56,12 @@ public class JärgmiseLaineNupp : MonoBehaviour
             return;
         }
 
-        bool kasPeabNähaOlema =
+        bool peabNähaOlema =
             vaenlaseTekitaja.KasLaineKäib &&
             !vaenlaseTekitaja.KasOnViimaneLaine &&
             vaenlaseTekitaja.LaineKestus >= ilmumiseViivitusSekundites;
 
-        if (kasPeabNähaOlema)
+        if (peabNähaOlema)
             FadeIn();
         else
             FadeOut();
@@ -76,27 +78,35 @@ public class JärgmiseLaineNupp : MonoBehaviour
 
     private void FadeIn()
     {
-        if (canvasGroup == null) return;
+        if (canvasGroup == null)
+            return;
 
         canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 1f, fadeKiirus * Time.deltaTime);
 
-        if (canvasGroup.alpha > 0.9f)
-        {
-            canvasGroup.interactable = true;
-            canvasGroup.blocksRaycasts = true;
-        }
+        bool nähtav = canvasGroup.alpha > 0.9f;
+        canvasGroup.interactable = nähtav;
+        canvasGroup.blocksRaycasts = nähtav;
     }
 
     private void FadeOut()
     {
-        if (canvasGroup == null) return;
+        if (canvasGroup == null)
+            return;
 
         canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 0f, fadeKiirus * Time.deltaTime);
 
-        if (canvasGroup.alpha < 0.1f)
-        {
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-        }
+        bool nähtav = canvasGroup.alpha >= 0.1f;
+        canvasGroup.interactable = nähtav;
+        canvasGroup.blocksRaycasts = nähtav;
+    }
+
+    private void PeidaKohe()
+    {
+        if (canvasGroup == null)
+            return;
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 }

@@ -12,6 +12,18 @@ public class TorniUlatusEelvaade : MonoBehaviour
     {
         jooneRenderdaja = GetComponent<LineRenderer>();
 
+        SeadistaLineRenderer();
+        UuendaRing();
+    }
+
+    public void SeaRaadius(float uusRaadius)
+    {
+        raadius = uusRaadius;
+        UuendaRing();
+    }
+
+    private void SeadistaLineRenderer()
+    {
         jooneRenderdaja.useWorldSpace = false;
         jooneRenderdaja.loop = true;
         jooneRenderdaja.positionCount = segmentideArv;
@@ -28,14 +40,6 @@ public class TorniUlatusEelvaade : MonoBehaviour
 
         jooneRenderdaja.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         jooneRenderdaja.receiveShadows = false;
-
-        UuendaRing();
-    }
-
-    public void SeaRaadius(float uusRaadius)
-    {
-        raadius = uusRaadius;
-        UuendaRing();
     }
 
     private void UuendaRing()
