@@ -53,3 +53,11 @@ Play the game here.
 ### Thesis
 
 This project was created as part of a bachelor's thesis, available here.
+
+## License
+
+© 2026 Marleen Rand. All rights reserved.
+
+This project may not be copied, modified, distributed, or used (for commercial or non-commercial purposes) without explicit permission from the author.
+
+See LICENSE file for details.
