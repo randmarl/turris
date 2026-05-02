@@ -1,3 +1,5 @@
+# TURRIS
+
 ## 🇪🇪 Eesti
 
 Pikselstiilis tornikaitsemäng, mis on inspireeritud Andrus Kivirähki teosest *"Mees, kes teadis ussisõnu"*.
@@ -31,8 +33,6 @@ Käesolevat projekti ei tohi kopeerida, muuta, levitada ega kasutada (nii ärili
 Lisainfo on toodud LICENSE failis.
 
 ---
-
-# TURRIS
 
 ## 🇬🇧 English
 
