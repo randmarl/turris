@@ -14,15 +14,15 @@ public class PoeHaldur : MonoBehaviour
     [SerializeField] private TornideTõenäosused[] tornid;
 
     [Header("Seaded")]
-    [SerializeField] private int algHind = 50;
-    [SerializeField] private int hinnaTõus = 5;
+    [SerializeField] private int alghind = 50;
+    [SerializeField] private float hinnategur = 1.1f;
 
     private int torniHind;
     private bool esimeneOstTehtud;
 
     private void Awake()
     {
-        torniHind = algHind;
+        torniHind = alghind;
         UuendaHinnaTeksti();
     }
 
@@ -53,7 +53,7 @@ public class PoeHaldur : MonoBehaviour
         if (tornikaart != null)
             tornikaart.SeaTorn(valitudTorn);
 
-        torniHind += hinnaTõus;
+        torniHind = Mathf.FloorToInt(torniHind * hinnategur);
         UuendaHinnaTeksti();
         UuendaNupuOleku();
     }
