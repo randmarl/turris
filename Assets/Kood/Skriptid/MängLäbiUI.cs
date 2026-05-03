@@ -24,14 +24,27 @@ public class MängLäbiUI : MonoBehaviour
 
     private void OnEnable()
     {
-        if (MängijaElud.Instance != null)
-            MängijaElud.Instance.MängLäbi.AddListener(OnMängLäbi);
+        ÜhendaMängijaEludega();
+    }
+
+    private void Start()
+    {
+        ÜhendaMängijaEludega();
     }
 
     private void OnDisable()
     {
         if (MängijaElud.Instance != null)
             MängijaElud.Instance.MängLäbi.RemoveListener(OnMängLäbi);
+    }
+
+    private void ÜhendaMängijaEludega()
+    {
+        if (MängijaElud.Instance == null)
+            return;
+
+        MängijaElud.Instance.MängLäbi.RemoveListener(OnMängLäbi);
+        MängijaElud.Instance.MängLäbi.AddListener(OnMängLäbi);
     }
 
     private void OnMängLäbi()
