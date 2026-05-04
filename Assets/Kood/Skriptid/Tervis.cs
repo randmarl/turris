@@ -3,7 +3,7 @@ using UnityEngine;
 public class Tervis : MonoBehaviour
 {
     [Header("Atribuudid")]
-    [SerializeField] private int elupunktid = 2;
+    [SerializeField] private float elupunktid = 2f;
     [SerializeField] private int väärtus = 50;
 
     private bool onHävitatud;
@@ -13,12 +13,15 @@ public class Tervis : MonoBehaviour
         if (onHävitatud)
             return;
 
-        elupunktid -= kahju;
+        float kahjuKordaja = MungaKaitseväli.VõtaKahjuKordaja(transform.position, gameObject);
+        float tegelikKahju = kahju * kahjuKordaja;
 
-        if (elupunktid > 0)
+        elupunktid -= tegelikKahju;
+
+        if (elupunktid > 0f)
             return;
 
-        elupunktid = 0;
+        elupunktid = 0f;
         onHävitatud = true;
 
         VaenlaseTekitaja.vaenlaseHävitamiseSündmus?.Invoke();
