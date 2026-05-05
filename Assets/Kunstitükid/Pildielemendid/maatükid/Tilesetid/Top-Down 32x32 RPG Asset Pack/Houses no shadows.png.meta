@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: ed8430b648d906c47993239abdb32a00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4814278761666364025
+    second: Houses no shadows_0
+  - first:
+      213: -6246173449997025529
+    second: Houses no shadows_1
+  - first:
+      213: 836107368013119216
+    second: Houses no shadows_2
+  - first:
+      213: 6924029084317622994
+    second: Houses no shadows_3
+  - first:
+      213: -6191467360989670735
+    second: Houses no shadows_4
+  - first:
+      213: 1400131645739135114
+    second: Houses no shadows_5
+  - first:
+      213: -4074108909381615339
+    second: Houses no shadows_6
+  - first:
+      213: -6134542764790338958
+    second: Houses no shadows_7
+  - first:
+      213: -5648308371768477512
+    second: Houses no shadows_8
+  - first:
+      213: -6139337028300397477
+    second: Houses no shadows_9
+  - first:
+      213: 7866436570788736915
+    second: Houses no shadows_10
+  - first:
+      213: -2506300366977799105
+    second: Houses no shadows_11
+  - first:
+      213: 9199536763429459937
+    second: Houses no shadows_12
+  - first:
+      213: -5452373678171464783
+    second: Houses no shadows_13
+  - first:
+      213: -9149502499542894856
+    second: Houses no shadows_14
+  - first:
+      213: -25019226067911041
+    second: Houses no shadows_15
+  - first:
+      213: 2644674760986963682
+    second: Houses no shadows_16
+  - first:
+      213: 5422653140101468245
+    second: Houses no shadows_17
+  - first:
+      213: 3265899756909370990
+    second: Houses no shadows_18
+  - first:
+      213: -6007805545338491822
+    second: Houses no shadows_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Houses no shadows_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 353
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972c4dec601cfc240800000000000000
+      internalID: 4814278761666364025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 356
+        width: 138
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f737347522159a0800000000000000
+      internalID: -6246173449997025529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 357
+        width: 104
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe3288a8337a9b00800000000000000
+      internalID: 836107368013119216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_3
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 358
+        width: 106
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2a93164c7171060800000000000000
+      internalID: 6924029084317622994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 321
+        width: 58
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b219cd2d3d731aa0800000000000000
+      internalID: -6191467360989670735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 332
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80701740544e6310800000000000000
+      internalID: 1400131645739135114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_6
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 324
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5110e00588bd577c0800000000000000
+      internalID: -4074108909381615339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_7
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 324
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27aaa3d8bd9bddaa0800000000000000
+      internalID: -6134542764790338958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 320
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8ffde367d2d91b0800000000000000
+      internalID: -5648308371768477512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_9
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 226
+        width: 148
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54a0c71081bccaa0800000000000000
+      internalID: -6139337028300397477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_10
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 229
+        width: 106
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f210a02623b2d60800000000000000
+      internalID: 7866436570788736915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 289
+        width: 60
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c6bdd5815d73dd0800000000000000
+      internalID: -2506300366977799105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 290
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e71c52f1f15baf70800000000000000
+      internalID: 9199536763429459937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_13
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 290
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb56e117074554b0800000000000000
+      internalID: -5452373678171464783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_14
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 289
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6723be3ff660180800000000000000
+      internalID: -9149502499542894856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 287
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ebaad752d17aff0800000000000000
+      internalID: -25019226067911041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_16
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 294
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eea11bdea5c3b420800000000000000
+      internalID: 2644674760986963682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_17
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 192
+        width: 10
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55097ebec42214b40800000000000000
+      internalID: 5422653140101468245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_18
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 192
+        width: 10
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e1e92868ec25d20800000000000000
+      internalID: 3265899756909370990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses no shadows_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 258
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c2a7eefacff9ca0800000000000000
+      internalID: -6007805545338491822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Houses no shadows_0: 4814278761666364025
+      Houses no shadows_1: -6246173449997025529
+      Houses no shadows_10: 7866436570788736915
+      Houses no shadows_11: -2506300366977799105
+      Houses no shadows_12: 9199536763429459937
+      Houses no shadows_13: -5452373678171464783
+      Houses no shadows_14: -9149502499542894856
+      Houses no shadows_15: -25019226067911041
+      Houses no shadows_16: 2644674760986963682
+      Houses no shadows_17: 5422653140101468245
+      Houses no shadows_18: 3265899756909370990
+      Houses no shadows_19: -6007805545338491822
+      Houses no shadows_2: 836107368013119216
+      Houses no shadows_3: 6924029084317622994
+      Houses no shadows_4: -6191467360989670735
+      Houses no shadows_5: 1400131645739135114
+      Houses no shadows_6: -4074108909381615339
+      Houses no shadows_7: -6134542764790338958
+      Houses no shadows_8: -5648308371768477512
+      Houses no shadows_9: -6139337028300397477
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: 1055538d1998be140b9d40827b0a8290
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2295827087265911234
+    second: FLOORS no shadows_0
+  - first:
+      213: 8468257531840982487
+    second: FLOORS no shadows_1
+  - first:
+      213: 8185956250448146055
+    second: FLOORS no shadows_2
+  - first:
+      213: -3760808610379579557
+    second: FLOORS no shadows_3
+  - first:
+      213: -9167617013768550649
+    second: FLOORS no shadows_4
+  - first:
+      213: 5156700846768079798
+    second: FLOORS no shadows_5
+  - first:
+      213: 1344966200932392696
+    second: FLOORS no shadows_6
+  - first:
+      213: -3798229222241127994
+    second: FLOORS no shadows_7
+  - first:
+      213: -3984471626376268148
+    second: FLOORS no shadows_8
+  - first:
+      213: -8454424712703749481
+    second: FLOORS no shadows_9
+  - first:
+      213: 3393243923238686777
+    second: FLOORS no shadows_10
+  - first:
+      213: 2452833619268545874
+    second: FLOORS no shadows_11
+  - first:
+      213: 4252340226646255546
+    second: FLOORS no shadows_12
+  - first:
+      213: 3034022544300546027
+    second: FLOORS no shadows_13
+  - first:
+      213: -8082924674887487821
+    second: FLOORS no shadows_14
+  - first:
+      213: -1709791643103897189
+    second: FLOORS no shadows_15
+  - first:
+      213: 4048889917574492061
+    second: FLOORS no shadows_16
+  - first:
+      213: 769542776424488844
+    second: FLOORS no shadows_17
+  - first:
+      213: -5193397313111651928
+    second: FLOORS no shadows_18
+  - first:
+      213: 2060687797053787033
+    second: FLOORS no shadows_19
+  - first:
+      213: 2178380890563677317
+    second: FLOORS no shadows_20
+  - first:
+      213: 3820902732593599502
+    second: FLOORS no shadows_21
+  - first:
+      213: 3514882574652796148
+    second: FLOORS no shadows_22
+  - first:
+      213: -466363908165310333
+    second: FLOORS no shadows_23
+  - first:
+      213: -4725876873986878840
+    second: FLOORS no shadows_24
+  - first:
+      213: -5718165376408318873
+    second: FLOORS no shadows_25
+  - first:
+      213: 5983586809163744895
+    second: FLOORS no shadows_26
+  - first:
+      213: -7173849182919769036
+    second: FLOORS no shadows_27
+  - first:
+      213: -6662946655598836342
+    second: FLOORS no shadows_28
+  - first:
+      213: 6758597934715976453
+    second: FLOORS no shadows_29
+  - first:
+      213: -2423443173649721947
+    second: FLOORS no shadows_30
+  - first:
+      213: -3502946548609750575
+    second: FLOORS no shadows_31
+  - first:
+      213: -7776516602523843295
+    second: FLOORS no shadows_32
+  - first:
+      213: 1878251816316992508
+    second: FLOORS no shadows_33
+  - first:
+      213: 5210802958305337171
+    second: FLOORS no shadows_34
+  - first:
+      213: 2272206113318316905
+    second: FLOORS no shadows_35
+  - first:
+      213: 8395890440844856304
+    second: FLOORS no shadows_36
+  - first:
+      213: -4298366251646718449
+    second: FLOORS no shadows_37
+  - first:
+      213: 3678279504037343290
+    second: FLOORS no shadows_38
+  - first:
+      213: -6742995681911073602
+    second: FLOORS no shadows_39
+  - first:
+      213: 8246443126350609429
+    second: FLOORS no shadows_40
+  - first:
+      213: 8749691937821693097
+    second: FLOORS no shadows_41
+  - first:
+      213: -8749311349099139863
+    second: FLOORS no shadows_42
+  - first:
+      213: -3298387093519367747
+    second: FLOORS no shadows_43
+  - first:
+      213: 636220588471465359
+    second: FLOORS no shadows_44
+  - first:
+      213: 6205413398391235384
+    second: FLOORS no shadows_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FLOORS no shadows_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 799
+        width: 258
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3eabcd8d659320e0800000000000000
+      internalID: -2295827087265911234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 863
+        width: 386
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd68e3cb5b458570800000000000000
+      internalID: 8468257531840982487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_2
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 877
+        width: 103
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ea9d6b6db5a9170800000000000000
+      internalID: 8185956250448146055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_3
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 873
+        width: 101
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f38169e7ceecbc0800000000000000
+      internalID: -3760808610379579557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_4
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 799
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7078f79e5e416c080800000000000000
+      internalID: -9167617013768550649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 810
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b341984918409740800000000000000
+      internalID: 5156700846768079798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_6
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 799
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe5b7142a74aa210800000000000000
+      internalID: 1344966200932392696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_7
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 810
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c13fc075aaf94bc0800000000000000
+      internalID: -3798229222241127994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_8
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 799
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86383c9a2054b8c0800000000000000
+      internalID: -3984471626376268148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_9
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 810
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792520b6489dbaa80800000000000000
+      internalID: -8454424712703749481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_10
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 799
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93015e8be59371f20800000000000000
+      internalID: 3393243923238686777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_11
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 799
+        width: 98
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d23a95e273a0220800000000000000
+      internalID: 2452833619268545874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_12
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 799
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7aa5108e8530b30800000000000000
+      internalID: 4252340226646255546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 127
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be79f89dd630b1a20800000000000000
+      internalID: 3034022544300546027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_14
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 639
+        width: 194
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be671755dea3df80800000000000000
+      internalID: -8082924674887487821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_15
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 676
+        width: 130
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b995cd83f899548e0800000000000000
+      internalID: -1709791643103897189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_16
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 703
+        width: 98
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f20b79deb803830800000000000000
+      internalID: 4048889917574492061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_17
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 671
+        width: 353
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8fdf34f317fdaa00800000000000000
+      internalID: 769542776424488844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_18
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 578
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a90386d8a85de7b0800000000000000
+      internalID: -5193397313111651928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_19
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 578
+        width: 194
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b8f5822a8099c10800000000000000
+      internalID: 2060687797053787033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_20
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 479
+        width: 258
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c0c8fd0e92b3e10800000000000000
+      internalID: 2178380890563677317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e049f819ac2960530800000000000000
+      internalID: 3820902732593599502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_22
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 447
+        width: 194
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fce369341f57c030800000000000000
+      internalID: 3514882574652796148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_23
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 484
+        width: 65
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3886eb51f742789f0800000000000000
+      internalID: -466363908165310333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 484
+        width: 65
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88257c995005a6eb0800000000000000
+      internalID: -4725876873986878840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_25
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 511
+        width: 98
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c8e34e2eef4a0b0800000000000000
+      internalID: -5718165376408318873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_26
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 484
+        width: 160
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f760be22088f90350800000000000000
+      internalID: 5983586809163744895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_27
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 386
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43447d34d2e517c90800000000000000
+      internalID: -7173849182919769036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_28
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 386
+        width: 194
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8587ab81557883a0800000000000000
+      internalID: -6662946655598836342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_29
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 386
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b3f66530d5bcd50800000000000000
+      internalID: 6758597934715976453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_30
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 385
+        width: 194
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5534506433e5ed0800000000000000
+      internalID: -2423443173649721947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 128
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d96fe66ca8036fc0800000000000000
+      internalID: -3502946548609750575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_32
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 255
+        width: 194
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12583ac0a53441490800000000000000
+      internalID: -7776516602523843295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_33
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 292
+        width: 130
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb7e465314e01a10800000000000000
+      internalID: 1878251816316992508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_34
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 319
+        width: 98
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f185cbead705840800000000000000
+      internalID: 5210802958305337171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_35
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 287
+        width: 353
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b2fc0eb6f788f10800000000000000
+      internalID: 2272206113318316905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_36
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 194
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbc7a36fd1348470800000000000000
+      internalID: 8395890440844856304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_37
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 194
+        width: 194
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ee118faa22954c0800000000000000
+      internalID: -4298366251646718449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_38
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 193
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30feb678bfdb0330800000000000000
+      internalID: 3678279504037343290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_39
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 191
+        width: 194
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb492b937211c62a0800000000000000
+      internalID: -6742995681911073602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51cf696f450417270800000000000000
+      internalID: 8246443126350609429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_41
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 63
+        width: 66
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a416f7a5762d6970800000000000000
+      internalID: 8749691937821693097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_42
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 95
+        width: 193
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ece6af0fa3349680800000000000000
+      internalID: -8749311349099139863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_43
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 100
+        width: 161
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db18b0ff966c932d0800000000000000
+      internalID: -3298387093519367747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_44
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85b1ae114f44d800800000000000000
+      internalID: 636220588471465359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FLOORS no shadows_45
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1
+        width: 194
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8332f8fab9e0e1650800000000000000
+      internalID: 6205413398391235384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FLOORS no shadows_0: -2295827087265911234
+      FLOORS no shadows_1: 8468257531840982487
+      FLOORS no shadows_10: 3393243923238686777
+      FLOORS no shadows_11: 2452833619268545874
+      FLOORS no shadows_12: 4252340226646255546
+      FLOORS no shadows_13: 3034022544300546027
+      FLOORS no shadows_14: -8082924674887487821
+      FLOORS no shadows_15: -1709791643103897189
+      FLOORS no shadows_16: 4048889917574492061
+      FLOORS no shadows_17: 769542776424488844
+      FLOORS no shadows_18: -5193397313111651928
+      FLOORS no shadows_19: 2060687797053787033
+      FLOORS no shadows_2: 8185956250448146055
+      FLOORS no shadows_20: 2178380890563677317
+      FLOORS no shadows_21: 3820902732593599502
+      FLOORS no shadows_22: 3514882574652796148
+      FLOORS no shadows_23: -466363908165310333
+      FLOORS no shadows_24: -4725876873986878840
+      FLOORS no shadows_25: -5718165376408318873
+      FLOORS no shadows_26: 5983586809163744895
+      FLOORS no shadows_27: -7173849182919769036
+      FLOORS no shadows_28: -6662946655598836342
+      FLOORS no shadows_29: 6758597934715976453
+      FLOORS no shadows_3: -3760808610379579557
+      FLOORS no shadows_30: -2423443173649721947
+      FLOORS no shadows_31: -3502946548609750575
+      FLOORS no shadows_32: -7776516602523843295
+      FLOORS no shadows_33: 1878251816316992508
+      FLOORS no shadows_34: 5210802958305337171
+      FLOORS no shadows_35: 2272206113318316905
+      FLOORS no shadows_36: 8395890440844856304
+      FLOORS no shadows_37: -4298366251646718449
+      FLOORS no shadows_38: 3678279504037343290
+      FLOORS no shadows_39: -6742995681911073602
+      FLOORS no shadows_4: -9167617013768550649
+      FLOORS no shadows_40: 8246443126350609429
+      FLOORS no shadows_41: 8749691937821693097
+      FLOORS no shadows_42: -8749311349099139863
+      FLOORS no shadows_43: -3298387093519367747
+      FLOORS no shadows_44: 636220588471465359
+      FLOORS no shadows_45: 6205413398391235384
+      FLOORS no shadows_5: 5156700846768079798
+      FLOORS no shadows_6: 1344966200932392696
+      FLOORS no shadows_7: -3798229222241127994
+      FLOORS no shadows_8: -3984471626376268148
+      FLOORS no shadows_9: -8454424712703749481
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
