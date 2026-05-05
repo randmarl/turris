@@ -11660,7 +11660,7 @@ MonoBehaviour:
     kaal: 0.3
   - prefab: {fileID: 3000850699507781024, guid: f5a9ba0047a51174a80ee4272735dbba, type: 3}
     kaal: 0.2
-  algseltVaenlasi: 5
+  algseltVaenlasi: 8
   vaenlasiSekundis: 0.4
   aegLaineteVahel: 5
   raskuseTegur: 1.35
@@ -16611,8 +16611,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
