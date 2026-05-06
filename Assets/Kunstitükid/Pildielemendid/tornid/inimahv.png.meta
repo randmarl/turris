@@ -103,10 +103,10 @@ TextureImporter:
       name: inimahv_0
       rect:
         serializedVersion: 2
-        x: 467
-        y: 286
-        width: 1120
-        height: 1502
+        x: 303
+        y: 176
+        width: 680
+        height: 920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
