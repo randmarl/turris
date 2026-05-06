@@ -192,6 +192,11 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (torniPrefab == null)
             return 0f;
 
+        ParendavTorn parendavTorn = torniPrefab.GetComponent<ParendavTorn>();
+
+        if (parendavTorn != null)
+            return parendavTorn.VõtaSihtimisRaadius();
+
         Kahur kahur = torniPrefab.GetComponent<Kahur>();
 
         if (kahur != null)

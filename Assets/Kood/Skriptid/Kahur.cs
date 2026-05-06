@@ -17,8 +17,13 @@ public class Kahur : MonoBehaviour
     private Transform sihtmärk;
     private float aegJärgmiseLasuni;
 
+    private float tulekiiruseKordaja = 1f;
+    private float tulekiiruseParenduseLõpuAeg;
+
     private void Update()
     {
+        UuendaTulekiiruseParendust();
+
         if (sihtmärk == null)
         {
             LeiaSihtmärk();
@@ -34,6 +39,23 @@ public class Kahur : MonoBehaviour
         }
 
         ProoviTulistada();
+    }
+
+    private void UuendaTulekiiruseParendust()
+    {
+        if (tulekiiruseKordaja <= 1f)
+            return;
+
+        if (Time.time < tulekiiruseParenduseLõpuAeg)
+            return;
+
+        tulekiiruseKordaja = 1f;
+    }
+
+    public void ParendaTulekiirust(float kordaja, float kestus)
+    {
+        tulekiiruseKordaja = Mathf.Max(tulekiiruseKordaja, kordaja);
+        tulekiiruseParenduseLõpuAeg = Mathf.Max(tulekiiruseParenduseLõpuAeg, Time.time + kestus);
     }
 
     private void LeiaSihtmärk()
@@ -54,7 +76,9 @@ public class Kahur : MonoBehaviour
     {
         aegJärgmiseLasuni += Time.deltaTime;
 
-        if (aegJärgmiseLasuni < 1f / kuuleSekundis)
+        float tegelikKuuleSekundis = kuuleSekundis * tulekiiruseKordaja;
+
+        if (aegJärgmiseLasuni < 1f / tegelikKuuleSekundis)
             return;
 
         Tulista();
