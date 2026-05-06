@@ -15,6 +15,7 @@ public class PeamenüüHaldur : MonoBehaviour
     [SerializeField] private string tase5Stseen = "Level5";
     [SerializeField] private string tase6Stseen = "Level6";
     [SerializeField] private string tase7Stseen = "Level7";
+    [SerializeField] private string tase8Stseen = "Level8";
     [SerializeField] private string õpetuseStseen = "Õpetus";
 
     private void Start()
@@ -76,6 +77,11 @@ public class PeamenüüHaldur : MonoBehaviour
     public void AvaTase7()
     {
         SceneManager.LoadScene(tase7Stseen);
+    }
+
+    public void AvaTase8()
+    {
+        SceneManager.LoadScene(tase8Stseen);
     }
 
     public void AvaÕpetus()
