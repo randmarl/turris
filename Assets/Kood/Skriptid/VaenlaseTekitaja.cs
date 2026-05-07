@@ -8,6 +8,9 @@ public class VaenlaseTekitaja : MonoBehaviour
     [Header("Viited")]
     [SerializeField] private VaenlasteTõenäosused[] vaenlased;
 
+    [Header("Boss")]
+    [SerializeField] private GameObject bossVaenlaseMall;
+
     [Header("Atribuudid")]
     [SerializeField] private int algseltVaenlasi = 10;
     [SerializeField] private float vaenlasiSekundis = 1f;
@@ -94,7 +97,10 @@ public class VaenlaseTekitaja : MonoBehaviour
         if (aegViimasestTekitamisest < 1f / vaenlasiSekundisHetkel)
             return;
 
-        TekitaVaenlane();
+        bool vaenlaneTekkis = TekitaVaenlane();
+
+        if (!vaenlaneTekkis)
+            return;
 
         vaenlasiTekitada--;
         vaenlasiElus++;
@@ -158,14 +164,25 @@ public class VaenlaseTekitaja : MonoBehaviour
         LaineMuutus?.Invoke(praeguneLaine, maksimaalneLaineteArv);
     }
 
-    private void TekitaVaenlane()
+    private bool TekitaVaenlane()
     {
-        GameObject mall = VõtaJuhuslikVaenlaneKaaluJärgi();
+        GameObject mall = VõtaJärgmineVaenlane();
 
         if (mall == null || Haldur.Peamine == null || Haldur.Peamine.AlgusPunktid.Length == 0)
-            return;
+            return false;
 
         Instantiate(mall, Haldur.Peamine.AlgusPunktid[0].position, Quaternion.identity);
+        return true;
+    }
+
+    private GameObject VõtaJärgmineVaenlane()
+    {
+        bool onViimaseLaineViimaneVaenlane = KasOnViimaneLaine && vaenlasiTekitada == 1;
+
+        if (onViimaseLaineViimaneVaenlane && bossVaenlaseMall != null)
+            return bossVaenlaseMall;
+
+        return VõtaJuhuslikVaenlaneKaaluJärgi();
     }
 
     private GameObject VõtaJuhuslikVaenlaneKaaluJärgi()

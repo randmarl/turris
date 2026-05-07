@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 3366577029693831892}
   - component: {fileID: 7031361285832937355}
   - component: {fileID: -7725952161133919829}
-  - component: {fileID: -1237888673578858894}
-  - component: {fileID: -7837783143081057079}
+  - component: {fileID: -3265106976775140098}
   m_Layer: 6
-  m_Name: KaitseVaenlane
+  m_Name: BossVaenlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -172,8 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::vaenlaseLiikumine
   keha2D: {fileID: 8395011701436206559}
-  liikumiskiirus: 1.5
-  "l\xF5pusV\xF5etavadElud": 1
+  liikumiskiirus: 0.45
+  "l\xF5pusV\xF5etavadElud": 5
 --- !u!114 &-7725952161133919829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,24 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ce6b0bcc675494894c64184410200a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  elupunktid: 5
-  "v\xE4\xE4rtus": 50
---- !u!114 &-1237888673578858894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3000850699507781024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe3f5061540fa44ebe5192ac3a40534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: "Assembly-CSharp::MungaKaitsev\xE4li"
-  raadius: 2
-  kahjuKordaja: 0.7
-  kaitsebIseennast: 1
---- !u!95 &-7837783143081057079
+  elupunktid: 300
+  "v\xE4\xE4rtus": 300
+--- !u!95 &-3265106976775140098
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -213,7 +197,7 @@ Animator:
   m_GameObject: {fileID: 3000850699507781024}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6e66002065f7a6447ad20552566e0b15, type: 2}
+  m_Controller: {fileID: 9100000, guid: 77039a49a672c7548a2410e345779fd5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -7,6 +7,7 @@ public class VaenlaseLiikumine : MonoBehaviour
 
     [Header("Atribuudid")]
     [SerializeField] private float liikumiskiirus = 3f;
+    [SerializeField] private int lõpusVõetavadElud = 1;
 
     private Transform sihtpunkt;
     private int teeIndeks;
@@ -38,7 +39,7 @@ public class VaenlaseLiikumine : MonoBehaviour
             if (Haldur.Peamine == null || teeIndeks >= Haldur.Peamine.Teekond.Length)
             {
                 if (MängijaElud.Instance != null)
-                    MängijaElud.Instance.VõtaElu(1);
+                    MängijaElud.Instance.VõtaElu(lõpusVõetavadElud);
 
                 VaenlaseTekitaja.vaenlaseHävitamiseSündmus?.Invoke();
                 Destroy(gameObject);
