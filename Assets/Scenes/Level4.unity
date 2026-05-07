@@ -1406,7 +1406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &150235173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6067,7 +6067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &498552673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6168,7 +6168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &501757368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8863,9 +8863,9 @@ MonoBehaviour:
   - prefab: {fileID: 2967149486340801840, guid: fb1fac26914c86d43a54adef7272d04d, type: 3}
     kaal: 0.5
   - prefab: {fileID: 3784557585502695947, guid: a02b3543448b5454bb1f04303bf9eaac, type: 3}
-    kaal: 0.3
+    kaal: 0.25
   - prefab: {fileID: 2967149486340801840, guid: 6fb51d28d8608a0448b5f57335e189de, type: 3}
-    kaal: 0.2
+    kaal: 0.25
   alghind: 50
   hinnategur: 1.1
 --- !u!1001 &875376800
@@ -11445,7 +11445,9 @@ MonoBehaviour:
   "\xF5petusPaneel": {fileID: 1080789332}
   "\xF5petusTekst": {fileID: 1728806129}
   jatkamiseTekst: {fileID: 535293607}
-  sammud: []
+  sammud:
+  - tekst: "Ole t\xE4helepanelik, m\xE4ng l\xE4heb n\xFC\xFCd keerukamaks!"
+    visuaal: {fileID: 475995248}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
   jatkamiseVihjeViivitus: 3
@@ -11543,7 +11545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1086773186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11655,17 +11657,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vaenlased:
   - prefab: {fileID: 3000850699507781024, guid: ef5d5cb28fd2ff84ba44fc274c79272f, type: 3}
-    kaal: 0.5
+    kaal: 0.6
   - prefab: {fileID: 3000850699507781024, guid: 4569095ebde00464599f021b4fa9020b, type: 3}
-    kaal: 0.3
+    kaal: 0.25
   - prefab: {fileID: 3000850699507781024, guid: f5a9ba0047a51174a80ee4272735dbba, type: 3}
-    kaal: 0.2
+    kaal: 0.15
+  bossVaenlaseMall: {fileID: 3000850699507781024, guid: 50656a5b0fa9a2146ac3f6c0f7525178, type: 3}
+  keskmiseLaineBoss: 5
+  keskmiseLaineBossid: 0
+  viimaseLaineBossid: 0
+  bossideVaheSekundites: 5
   algseltVaenlasi: 8
   vaenlasiSekundis: 0.4
   aegLaineteVahel: 5
-  raskuseTegur: 1.35
+  raskuseTegur: 1.28
   vaenlasiSekundisPiir: 15
-  maksimaalneLaineteArv: 8
+  maksimaalneLaineteArv: 5
   "TaseL\xE4bitud":
     m_PersistentCalls:
       m_Calls: []
@@ -20743,7 +20750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1726566640
 RectTransform:
   m_ObjectHideFlags: 0

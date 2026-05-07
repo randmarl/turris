@@ -11500,12 +11500,17 @@ MonoBehaviour:
     kaal: 0.3
   - prefab: {fileID: 3000850699507781024, guid: f5a9ba0047a51174a80ee4272735dbba, type: 3}
     kaal: 0.2
+  bossVaenlaseMall: {fileID: 3000850699507781024, guid: 50656a5b0fa9a2146ac3f6c0f7525178, type: 3}
+  keskmiseLaineBoss: 5
+  keskmiseLaineBossid: 0
+  viimaseLaineBossid: 0
+  bossideVaheSekundites: 5
   algseltVaenlasi: 9
   vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
-  raskuseTegur: 1.43
+  raskuseTegur: 1.45
   vaenlasiSekundisPiir: 15
-  maksimaalneLaineteArv: 9
+  maksimaalneLaineteArv: 6
   "TaseL\xE4bitud":
     m_PersistentCalls:
       m_Calls: []

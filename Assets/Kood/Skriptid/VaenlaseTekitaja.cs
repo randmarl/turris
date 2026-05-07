@@ -13,7 +13,6 @@ public class VaenlaseTekitaja : MonoBehaviour
     [SerializeField] private int keskmiseLaineBoss = 5;
     [SerializeField] private int keskmiseLaineBossid = 1;
     [SerializeField] private int viimaseLaineBossid = 2;
-    [SerializeField] private float bossideVaheSekundites = 5f;
 
     [Header("Atribuudid")]
     [SerializeField] private int algseltVaenlasi = 10;
@@ -47,7 +46,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private bool kasLaineKäib;
     private bool taseOnLäbitud;
-    private bool bossiFaasKäib;
+    private bool bossSellesLainesTekitatud;
 
     private Coroutine järgmiseLaineCoroutine;
 
@@ -69,7 +68,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private void Update()
     {
-        if (taseOnLäbitud || bossiFaasKäib || !kasLaineKäib)
+        if (taseOnLäbitud || !kasLaineKäib)
             return;
 
         UuendaLaineAega();
@@ -81,7 +80,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     public void KäivitaJärgmineLaineKohe()
     {
-        if (taseOnLäbitud || bossiFaasKäib || !kasLaineKäib || KasOnViimaneLaine)
+        if (taseOnLäbitud || !kasLaineKäib || KasOnViimaneLaine)
             return;
 
         LõpetaPraeguneLaine();
@@ -110,6 +109,9 @@ public class VaenlaseTekitaja : MonoBehaviour
         vaenlasiTekitada--;
         vaenlasiElus++;
         aegViimasestTekitamisest = 0f;
+
+        if (vaenlasiTekitada == 0)
+            ProoviTekitadaBossSellesLaines();
     }
 
     private void VaenlaneHävitatud()
@@ -126,10 +128,45 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         järgmiseLaineCoroutine = null;
         kasLaineKäib = true;
+        bossSellesLainesTekitatud = false;
+
         laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
         vaenlasiTekitada = VaenlasiLaines();
         vaenlasiSekundisHetkel = VaenlasiSekundiga();
+    }
+
+    private void ProoviTekitadaBossSellesLaines()
+    {
+        if (bossSellesLainesTekitatud)
+            return;
+
+        if (bossVaenlaseMall == null)
+            return;
+
+        if (KasOnViimaneLaine)
+        {
+            bossSellesLainesTekitatud = true;
+            TekitaBossidKohe(viimaseLaineBossid);
+            return;
+        }
+
+        if (praeguneLaine == keskmiseLaineBoss)
+        {
+            bossSellesLainesTekitatud = true;
+            TekitaBossidKohe(keskmiseLaineBossid);
+        }
+    }
+
+    private void TekitaBossidKohe(int bossideArv)
+    {
+        for (int i = 0; i < bossideArv; i++)
+        {
+            bool bossTekkis = TekitaKindelVaenlane(bossVaenlaseMall);
+
+            if (bossTekkis)
+                vaenlasiElus++;
+        }
     }
 
     private void LõpetaLaine()
@@ -138,13 +175,8 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         if (KasOnViimaneLaine)
         {
-            KäivitaBossiFaas(viimaseLaineBossid, true);
-            return;
-        }
-
-        if (praeguneLaine == keskmiseLaineBoss)
-        {
-            KäivitaBossiFaas(keskmiseLaineBossid, false);
+            taseOnLäbitud = true;
+            TaseLäbitud.Invoke();
             return;
         }
 
@@ -156,60 +188,6 @@ public class VaenlaseTekitaja : MonoBehaviour
         kasLaineKäib = false;
         laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
-    }
-
-    private void KäivitaBossiFaas(int bossideArv, bool lõpetaTasePärast)
-    {
-        bossiFaasKäib = true;
-
-        if (bossVaenlaseMall == null)
-        {
-            Debug.LogWarning("VaenlaseTekitaja: bossVaenlaseMall puudub.");
-
-            bossiFaasKäib = false;
-
-            if (lõpetaTasePärast)
-            {
-                taseOnLäbitud = true;
-                TaseLäbitud.Invoke();
-            }
-            else
-            {
-                AlustaJärgmiseLaineOotamist();
-            }
-
-            return;
-        }
-
-        StartCoroutine(TekitaBossidJaOotaLõppu(bossideArv, lõpetaTasePärast));
-    }
-
-    private IEnumerator TekitaBossidJaOotaLõppu(int bossideArv, bool lõpetaTasePärast)
-    {
-        for (int i = 0; i < bossideArv; i++)
-        {
-            bool bossTekkis = TekitaKindelVaenlane(bossVaenlaseMall);
-
-            if (bossTekkis)
-                vaenlasiElus++;
-
-            if (i < bossideArv - 1)
-                yield return new WaitForSeconds(bossideVaheSekundites);
-        }
-
-        while (vaenlasiElus > 0)
-            yield return null;
-
-        bossiFaasKäib = false;
-
-        if (lõpetaTasePärast)
-        {
-            taseOnLäbitud = true;
-            TaseLäbitud.Invoke();
-            yield break;
-        }
-
-        AlustaJärgmiseLaineOotamist();
     }
 
     private void AlustaJärgmiseLaineOotamist()

@@ -16226,15 +16226,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vaenlased:
   - prefab: {fileID: 3000850699507781024, guid: ef5d5cb28fd2ff84ba44fc274c79272f, type: 3}
-    kaal: 0.6
+    kaal: 0.65
   - prefab: {fileID: 3000850699507781024, guid: 4569095ebde00464599f021b4fa9020b, type: 3}
-    kaal: 0.4
+    kaal: 0.35
+  bossVaenlaseMall: {fileID: 3000850699507781024, guid: 50656a5b0fa9a2146ac3f6c0f7525178, type: 3}
+  keskmiseLaineBoss: 5
+  keskmiseLaineBossid: 0
+  viimaseLaineBossid: 0
+  bossideVaheSekundites: 5
   algseltVaenlasi: 5
   vaenlasiSekundis: 0.4
   aegLaineteVahel: 5
   raskuseTegur: 1.2
   vaenlasiSekundisPiir: 15
-  maksimaalneLaineteArv: 5
+  maksimaalneLaineteArv: 3
   "TaseL\xE4bitud":
     m_PersistentCalls:
       m_Calls: []

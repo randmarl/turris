@@ -10626,9 +10626,9 @@ MonoBehaviour:
   - prefab: {fileID: 2967149486340801840, guid: fb1fac26914c86d43a54adef7272d04d, type: 3}
     kaal: 0.5
   - prefab: {fileID: 3784557585502695947, guid: a02b3543448b5454bb1f04303bf9eaac, type: 3}
-    kaal: 0.3
+    kaal: 0.25
   - prefab: {fileID: 2967149486340801840, guid: 6fb51d28d8608a0448b5f57335e189de, type: 3}
-    kaal: 0.2
+    kaal: 0.25
   alghind: 50
   hinnategur: 1.1
 --- !u!1001 &875376800
@@ -12850,12 +12850,17 @@ MonoBehaviour:
     kaal: 0.6
   - prefab: {fileID: 3000850699507781024, guid: 4569095ebde00464599f021b4fa9020b, type: 3}
     kaal: 0.4
+  bossVaenlaseMall: {fileID: 3000850699507781024, guid: 50656a5b0fa9a2146ac3f6c0f7525178, type: 3}
+  keskmiseLaineBoss: 5
+  keskmiseLaineBossid: 0
+  viimaseLaineBossid: 0
+  bossideVaheSekundites: 5
   algseltVaenlasi: 7
   vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
-  raskuseTegur: 1.25
+  raskuseTegur: 1.22
   vaenlasiSekundisPiir: 15
-  maksimaalneLaineteArv: 6
+  maksimaalneLaineteArv: 4
   "TaseL\xE4bitud":
     m_PersistentCalls:
       m_Calls: []

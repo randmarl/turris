@@ -12352,8 +12352,9 @@ MonoBehaviour:
   sammud:
   - tekst: Lisaks eelmistele vaenlastele...
     visuaal: {fileID: 150235172}
-  - tekst: "Lisandub n\xFC\xFCd m\xE4ngu uus boss vaenlane, kes ilmub v\xE4lja p\xE4rast
-      k\xF5iki laineid. Tal on v\xE4ga palju elusid ehk ole tema jaoks valmis!"
+  - tekst: "Lisandub n\xFC\xFCd m\xE4ngu uus boss vaenlane, kes ilmub v\xE4lja lainete
+      l\xF5pus ning talle ei m\xF5ju lumehelbe torn. Tal on v\xE4ga palju elusid
+      ehk ole tema jaoks valmis!"
     visuaal: {fileID: 498552672}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
@@ -12556,13 +12557,12 @@ MonoBehaviour:
   keskmiseLaineBoss: 5
   keskmiseLaineBossid: 0
   viimaseLaineBossid: 1
-  bossideVaheSekundites: 5
   algseltVaenlasi: 9
   vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
-  raskuseTegur: 1.5
+  raskuseTegur: 1.51
   vaenlasiSekundisPiir: 15
-  maksimaalneLaineteArv: 10
+  maksimaalneLaineteArv: 7
   "TaseL\xE4bitud":
     m_PersistentCalls:
       m_Calls: []
