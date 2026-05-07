@@ -10,6 +10,10 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     [Header("Boss")]
     [SerializeField] private GameObject bossVaenlaseMall;
+    [SerializeField] private int keskmiseLaineBoss = 5;
+    [SerializeField] private int keskmiseLaineBossid = 1;
+    [SerializeField] private int viimaseLaineBossid = 2;
+    [SerializeField] private float bossideVaheSekundites = 5f;
 
     [Header("Atribuudid")]
     [SerializeField] private int algseltVaenlasi = 10;
@@ -19,7 +23,7 @@ public class VaenlaseTekitaja : MonoBehaviour
     [SerializeField] private float vaenlasiSekundisPiir = 15f;
 
     [Header("Leveli lõpp")]
-    [SerializeField] private int maksimaalneLaineteArv = 5;
+    [SerializeField] private int maksimaalneLaineteArv = 10;
 
     [Header("Sündmused")]
     public static UnityEvent vaenlaseHävitamiseSündmus = new UnityEvent();
@@ -43,6 +47,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private bool kasLaineKäib;
     private bool taseOnLäbitud;
+    private bool bossiFaasKäib;
 
     private Coroutine järgmiseLaineCoroutine;
 
@@ -64,7 +69,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private void Update()
     {
-        if (taseOnLäbitud || !kasLaineKäib)
+        if (taseOnLäbitud || bossiFaasKäib || !kasLaineKäib)
             return;
 
         UuendaLaineAega();
@@ -76,7 +81,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     public void KäivitaJärgmineLaineKohe()
     {
-        if (taseOnLäbitud || !kasLaineKäib || KasOnViimaneLaine)
+        if (taseOnLäbitud || bossiFaasKäib || !kasLaineKäib || KasOnViimaneLaine)
             return;
 
         LõpetaPraeguneLaine();
@@ -133,8 +138,13 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         if (KasOnViimaneLaine)
         {
-            taseOnLäbitud = true;
-            TaseLäbitud.Invoke();
+            KäivitaBossiFaas(viimaseLaineBossid, true);
+            return;
+        }
+
+        if (praeguneLaine == keskmiseLaineBoss)
+        {
+            KäivitaBossiFaas(keskmiseLaineBossid, false);
             return;
         }
 
@@ -146,6 +156,60 @@ public class VaenlaseTekitaja : MonoBehaviour
         kasLaineKäib = false;
         laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
+    }
+
+    private void KäivitaBossiFaas(int bossideArv, bool lõpetaTasePärast)
+    {
+        bossiFaasKäib = true;
+
+        if (bossVaenlaseMall == null)
+        {
+            Debug.LogWarning("VaenlaseTekitaja: bossVaenlaseMall puudub.");
+
+            bossiFaasKäib = false;
+
+            if (lõpetaTasePärast)
+            {
+                taseOnLäbitud = true;
+                TaseLäbitud.Invoke();
+            }
+            else
+            {
+                AlustaJärgmiseLaineOotamist();
+            }
+
+            return;
+        }
+
+        StartCoroutine(TekitaBossidJaOotaLõppu(bossideArv, lõpetaTasePärast));
+    }
+
+    private IEnumerator TekitaBossidJaOotaLõppu(int bossideArv, bool lõpetaTasePärast)
+    {
+        for (int i = 0; i < bossideArv; i++)
+        {
+            bool bossTekkis = TekitaKindelVaenlane(bossVaenlaseMall);
+
+            if (bossTekkis)
+                vaenlasiElus++;
+
+            if (i < bossideArv - 1)
+                yield return new WaitForSeconds(bossideVaheSekundites);
+        }
+
+        while (vaenlasiElus > 0)
+            yield return null;
+
+        bossiFaasKäib = false;
+
+        if (lõpetaTasePärast)
+        {
+            taseOnLäbitud = true;
+            TaseLäbitud.Invoke();
+            yield break;
+        }
+
+        AlustaJärgmiseLaineOotamist();
     }
 
     private void AlustaJärgmiseLaineOotamist()
@@ -175,13 +239,17 @@ public class VaenlaseTekitaja : MonoBehaviour
         return true;
     }
 
+    private bool TekitaKindelVaenlane(GameObject mall)
+    {
+        if (mall == null || Haldur.Peamine == null || Haldur.Peamine.AlgusPunktid.Length == 0)
+            return false;
+
+        Instantiate(mall, Haldur.Peamine.AlgusPunktid[0].position, Quaternion.identity);
+        return true;
+    }
+
     private GameObject VõtaJärgmineVaenlane()
     {
-        bool onViimaseLaineViimaneVaenlane = KasOnViimaneLaine && vaenlasiTekitada == 1;
-
-        if (onViimaseLaineViimaneVaenlane && bossVaenlaseMall != null)
-            return bossVaenlaseMall;
-
         return VõtaJuhuslikVaenlaneKaaluJärgi();
     }
 
