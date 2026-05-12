@@ -9,7 +9,7 @@ public class AeglustavTorn : MonoBehaviour
     [SerializeField] private GameObject külmaEfekt;
 
     [Header("Atribuudid")]
-    [SerializeField] private float sihtimisRaadius = 5f;
+    [SerializeField] private float sihtimisraadius = 5f;
     [SerializeField] private float rünnakuidSekundis = 4f;
     [SerializeField] private float aeglustuseKestus = 1f;
 
@@ -26,6 +26,7 @@ public class AeglustavTorn : MonoBehaviour
 
     private void Update()
     {
+        // aeg järgmise aeglustuseni
         aegJärgmiseMõjuni += Time.deltaTime;
 
         if (aegJärgmiseMõjuni < 1f / rünnakuidSekundis)
@@ -37,9 +38,10 @@ public class AeglustavTorn : MonoBehaviour
 
     private void AeglustaVaenlasi()
     {
+        // vaenlased torni raadiuses
         RaycastHit2D[] tabamused = Physics2D.CircleCastAll(
             transform.position,
-            sihtimisRaadius,
+            sihtimisraadius,
             Vector2.zero,
             0f,
             vaenlaseKiht
@@ -55,7 +57,11 @@ public class AeglustavTorn : MonoBehaviour
                 continue;
 
             aeglustusRakendus = true;
+
+            // vaenlase kiirus väiksemaks
             liikumine.UuendaKiirus(AeglustuseKordaja);
+
+            // kiirus hiljem tagasi
             StartCoroutine(TaastaVaenlaseKiirus(liikumine));
         }
 
@@ -65,10 +71,11 @@ public class AeglustavTorn : MonoBehaviour
         if (efektiCoroutine != null)
             StopCoroutine(efektiCoroutine);
 
-        efektiCoroutine = StartCoroutine(NaitaKylmaEfekti());
+        // külmaefekti taaskäivitamine
+        efektiCoroutine = StartCoroutine(NäitaKülmaEfekti());
     }
 
-    private IEnumerator NaitaKylmaEfekti()
+    private IEnumerator NäitaKülmaEfekti()
     {
         if (külmaEfekt != null)
             külmaEfekt.SetActive(true);
@@ -91,12 +98,13 @@ public class AeglustavTorn : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        // raadius editoris nähtavaks
         Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, sihtimisRaadius);
+        Handles.DrawWireDisc(transform.position, transform.forward, sihtimisraadius);
     }
 
     public float VõtaSihtimisRaadius()
     {
-        return sihtimisRaadius;
+        return sihtimisraadius;
     }
 }

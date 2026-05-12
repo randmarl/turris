@@ -108,7 +108,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   "k\xFClmaEfekt": {fileID: 5353384157728253215}
-  sihtimisRaadius: 2.5
+  sihtimisraadius: 3
   "r\xFCnnakuidSekundis": 0.33
   aeglustuseKestus: 1
 --- !u!1 &5353384157728253215

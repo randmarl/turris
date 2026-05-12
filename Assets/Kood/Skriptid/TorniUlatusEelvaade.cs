@@ -35,6 +35,7 @@ public class TorniUlatusEelvaade : MonoBehaviour
         jooneRenderdaja.startColor = new Color(0f, 0.4f, 0f, 0.7f);
         jooneRenderdaja.endColor = new Color(0f, 0.4f, 0f, 0.7f);
 
+        // joon teiste objektide peale
         jooneRenderdaja.sortingLayerName = "Vaenlased";
         jooneRenderdaja.sortingOrder = 9999;
 
@@ -49,10 +50,12 @@ public class TorniUlatusEelvaade : MonoBehaviour
 
         jooneRenderdaja.positionCount = segmentideArv;
 
+        // mitu kraadi iga punkti vahel
         float nurgaSamm = 360f / segmentideArv;
 
         for (int i = 0; i < segmentideArv; i++)
         {
+            // ringi punkt trigonomeetriaga
             float nurk = i * nurgaSamm * Mathf.Deg2Rad;
             float x = Mathf.Cos(nurk) * raadius;
             float y = Mathf.Sin(nurk) * raadius;

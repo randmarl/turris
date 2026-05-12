@@ -947,6 +947,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -6, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 15
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -5, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -2209,7 +2219,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: bcce469ce6a50594d89a2ab6e0ac2407, type: 2}
   - m_RefCount: 44
     m_Data: {fileID: 11400000, guid: e7487ae5991bb2749a7f09c1465a7b47, type: 2}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 664d2ea046606bb4699ae9354ddbb963, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -2242,10 +2252,10 @@ Tilemap:
     m_Data: {fileID: -9219158154646323789, guid: 61e0c6002b5ac6949922aa2e922012d3, type: 3}
   - m_RefCount: 44
     m_Data: {fileID: 6508570851473634786, guid: 61e0c6002b5ac6949922aa2e922012d3, type: 3}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 891455393, guid: b145894d9f3ce444cae10e57d32cab69, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data:
       e00: 0
       e01: 1
@@ -2390,7 +2400,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 160
+  - m_RefCount: 161
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -2468,7 +2478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   lainedTekst: {fileID: 82665096}
   vaenlaseTekitaja: {fileID: 1091655593}
-  jutustusPaneel: {fileID: 492758457}
+  jutustuspaneel: {fileID: 0}
 --- !u!114 &82665096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2827,7 +2837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EludUI
   eludTekst: {fileID: 1335876799}
-  jutustusPaneel: {fileID: 492758457}
+  jutustuspaneel: {fileID: 0}
 --- !u!225 &108787990
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6524,21 +6534,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b06dea7aa94ac940935d872cd2168fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JutustuseHaldur
-  jutustusPaneel: {fileID: 492758457}
-  pealkiriTekst: {fileID: 1009352714}
-  jutumulliTekst: {fileID: 821175442}
+  jutustuspaneel: {fileID: 492758457}
+  pealkirjatekst: {fileID: 1009352714}
+  jutumullitekst: {fileID: 821175442}
   jutumullObjekt: {fileID: 383896637}
   tegelaneObjekt: {fileID: 320130058}
-  jatkamiseTekst: {fileID: 1876532073}
+  "j\xE4tkamiseTekst": {fileID: 1876532073}
   pealkiri: "ELU K\xDCLAS"
-  pealkiriKestusSekundites: 3
-  jutustuseFail: {fileID: 4900000, guid: 707f70f32278bbf4ebf61dced20a3aab, type: 3}
+  pealkirjaKestusSekundites: 2
+  jutustusefail: {fileID: 4900000, guid: 707f70f32278bbf4ebf61dced20a3aab, type: 3}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
-  jatkamiseVihjeViivitus: 5
-  jatkamiseVihjeFadeKestus: 2
-  "jatkamiseVihjeN\xE4htavKestus": 1.2
-  jatkamiseVihjePeidusKestus: 0.8
+  "j\xE4tkamisevihjeViivitus": 3
+  "j\xE4tkamisevihjeHaihtumiseKestus": 1
+  "j\xE4tkamisevihjeN\xE4htavKestus": 1.2
+  "j\xE4tkamisevihjePeidusKestus": 0.8
   "JutustusL\xF5ppes":
     m_PersistentCalls:
       m_Calls: []
@@ -12799,7 +12809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbb0c309594e25408f1a53d4397021e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  algusPunktid:
+  alguspunktid:
   - {fileID: 722293076}
   teekond:
   - {fileID: 1462627536}
@@ -12854,7 +12864,6 @@ MonoBehaviour:
   keskmiseLaineBoss: 5
   keskmiseLaineBossid: 0
   viimaseLaineBossid: 0
-  bossideVaheSekundites: 5
   algseltVaenlasi: 7
   vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
@@ -18846,7 +18855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: "Assembly-CSharp::M\xE4ngL\xE4biUI"
   "m\xE4ngL\xE4biObjekt": {fileID: 1274859002}
   "m\xE4ngL\xE4biTekst": {fileID: 1274859003}
-  ooteAeg: 5
+  ooteaeg: 5
   avaekraaniStseen: avaekraan
   "peataM\xE4ng": 1
 --- !u!1001 &1783027581
@@ -20297,7 +20306,7 @@ MonoBehaviour:
   nupp: {fileID: 545737681}
   nupuObjekt: {fileID: 545737679}
   ilmumiseViivitusSekundites: 7
-  fadeKiirus: 5
+  haihtumiskiirus: 5
 --- !u!1001 &1932860012
 PrefabInstance:
   m_ObjectHideFlags: 0

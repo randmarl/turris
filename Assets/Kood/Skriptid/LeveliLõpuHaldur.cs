@@ -8,7 +8,7 @@ public class LeveliLõpuHaldur : MonoBehaviour
     [SerializeField] private JutustuseHaldur jutustuseHaldur;
 
     [Header("Lõpujutustus")]
-    [SerializeField] private string võiduPealkiri = "Kodutee on vaba";
+    [SerializeField] private string võiduPealkiri = "VÕIT!";
     [SerializeField] private TextAsset võiduJutustuseFail;
 
     [Header("Stseen")]
@@ -19,6 +19,7 @@ public class LeveliLõpuHaldur : MonoBehaviour
     private void OnEnable()
     {
         if (vaenlaseTekitaja != null)
+            // kui tase läbi, siis võidujutustus
             vaenlaseTekitaja.TaseLäbitud.AddListener(KäivitaVõiduJutustus);
     }
 
@@ -36,6 +37,7 @@ public class LeveliLõpuHaldur : MonoBehaviour
         if (võitKäivitunud)
             return;
 
+        // väldib võidu topelt käivitamist
         võitKäivitunud = true;
 
         if (jutustuseHaldur == null)
@@ -50,12 +52,14 @@ public class LeveliLõpuHaldur : MonoBehaviour
             return;
         }
 
+        // pärast lõpujutustust tagasi avaekraanile
         jutustuseHaldur.JutustusLõppes.RemoveListener(TagasiAvaekraanile);
         jutustuseHaldur.JutustusLõppes.AddListener(TagasiAvaekraanile);
 
         jutustuseHaldur.SeaPealkiri(võiduPealkiri);
         jutustuseHaldur.SeaJutustuseFail(võiduJutustuseFail);
 
+        // käivitab jutustuse uuesti
         jutustuseHaldur.enabled = true;
         jutustuseHaldur.gameObject.SetActive(true);
     }

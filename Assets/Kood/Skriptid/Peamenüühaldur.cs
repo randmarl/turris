@@ -25,6 +25,7 @@ public class PeamenüüHaldur : MonoBehaviour
         if (!AvaekraaniNavigatsioon.AvaTasemedKohe)
             return;
 
+        // avab tasemete paneeli automaatselt
         AvaekraaniNavigatsioon.AvaTasemedKohe = false;
         AvaTasemed();
     }
@@ -61,6 +62,7 @@ public class PeamenüüHaldur : MonoBehaviour
     {
         SceneManager.LoadScene(tase3Stseen);
     }
+
     public void AvaTase4()
     {
         SceneManager.LoadScene(tase4Stseen);
@@ -106,6 +108,7 @@ public class PeamenüüHaldur : MonoBehaviour
         Application.Quit();
 
 #if UNITY_EDITOR
+        // peatab mängu editoris
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }

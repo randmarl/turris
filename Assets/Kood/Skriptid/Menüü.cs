@@ -28,6 +28,7 @@ public class Menüü : MonoBehaviour
     {
         if (OravanahaHaldur.Instance != null)
         {
+            // kuulab oravanahkade muutumist
             OravanahaHaldur.Instance.OravanahadMuutusid += UuendaRaha;
             UuendaRaha(OravanahaHaldur.Instance.Oravanahad);
         }
@@ -64,6 +65,7 @@ public class Menüü : MonoBehaviour
     private void UuendaMenüüAnimatsiooni()
     {
         if (animator != null)
+            // annab animaatorile menüü oleku
             animator.SetBool(menüüAvatudParameeter, kasMenüüOnAvatud);
     }
 

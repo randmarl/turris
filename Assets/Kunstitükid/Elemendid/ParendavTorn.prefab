@@ -138,14 +138,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e39ca18d4ac2944a8ae2434d920bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  "kahuriP\xF6\xF6rdePunkt": {fileID: 1015751403690399443}
-  vaenlaseKiht:
+  "kahuriP\xF6\xF6rdepunkt": {fileID: 1015751403690399443}
+  vaenlaskiht:
     serializedVersion: 2
     m_Bits: 64
   kuuliMall: {fileID: 5963859620690967218, guid: 4bc6793bd4e26bb4481a01befb30b05f, type: 3}
   laskepunkt: {fileID: 7516627025773828871}
-  sihtimisRaadius: 3
-  "p\xF6\xF6ramisKiirus": 190
+  sihtimisraadius: 3
+  "p\xF6\xF6ramiskiirus": 135
   kuuleSekundis: 0.5
 --- !u!114 &-6158386386495914547
 MonoBehaviour:

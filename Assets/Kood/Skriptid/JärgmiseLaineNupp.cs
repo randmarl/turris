@@ -10,7 +10,7 @@ public class JärgmiseLaineNupp : MonoBehaviour
 
     [Header("Seaded")]
     [SerializeField] private float ilmumiseViivitusSekundites = 7f;
-    [SerializeField] private float fadeKiirus = 5f;
+    [SerializeField] private float haihtumiskiirus = 5f;
 
     private CanvasGroup canvasGroup;
 
@@ -56,6 +56,7 @@ public class JärgmiseLaineNupp : MonoBehaviour
             return;
         }
 
+        // millal nuppu näidata
         bool peabNähaOlema =
             vaenlaseTekitaja.KasLaineKäib &&
             !vaenlaseTekitaja.KasOnViimaneLaine &&
@@ -72,6 +73,7 @@ public class JärgmiseLaineNupp : MonoBehaviour
         if (vaenlaseTekitaja == null)
             return;
 
+        // järgmine laine kohe käima
         vaenlaseTekitaja.KäivitaJärgmineLaineKohe();
         FadeOut();
     }
@@ -81,7 +83,8 @@ public class JärgmiseLaineNupp : MonoBehaviour
         if (canvasGroup == null)
             return;
 
-        canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 1f, fadeKiirus * Time.deltaTime);
+        // sujuv nähtavaks muutmine
+        canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 1f, haihtumiskiirus * Time.deltaTime);
 
         bool nähtav = canvasGroup.alpha > 0.9f;
         canvasGroup.interactable = nähtav;
@@ -93,7 +96,8 @@ public class JärgmiseLaineNupp : MonoBehaviour
         if (canvasGroup == null)
             return;
 
-        canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 0f, fadeKiirus * Time.deltaTime);
+        // sujuv peitmine
+        canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 0f, haihtumiskiirus * Time.deltaTime);
 
         bool nähtav = canvasGroup.alpha >= 0.1f;
         canvasGroup.interactable = nähtav;

@@ -13,15 +13,8 @@ public class OravanahaHaldur : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
+        // teeb selle halduri teistele skriptidele kättesaadavaks
         Instance = this;
-        DontDestroyOnLoad(gameObject);
-
         SeaOravanahad(algusOravanahad);
     }
 
@@ -46,7 +39,10 @@ public class OravanahaHaldur : MonoBehaviour
 
     public void SeaOravanahad(int uusSumma)
     {
+        // raha ei saa miinusesse minna
         Oravanahad = Mathf.Max(0, uusSumma);
+
+        // ui ja muud kuulajad saavad uuenduse
         OravanahadMuutusid?.Invoke(Oravanahad);
     }
 

@@ -21,7 +21,10 @@ public class Maatükk : MonoBehaviour
         if (renderdaja == null || Camera.main == null)
             return;
 
+        // hiire asukoht mängumaailmas
         Vector2 hiirePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+
+        // kontrollib, kas hiir on selle maatüki peal
         Collider2D tabatud = Physics2D.OverlapPoint(hiirePos);
 
         bool hiirPeal = tabatud != null && tabatud.gameObject == gameObject;
@@ -38,6 +41,7 @@ public class Maatükk : MonoBehaviour
         if (prefab == null || torn != null)
             return false;
 
+        // paneb torni sellele maatükile
         torn = Instantiate(prefab, transform.position, Quaternion.identity);
         return true;
     }

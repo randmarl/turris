@@ -10,7 +10,7 @@ public class MängLäbiUI : MonoBehaviour
     [SerializeField] private TMP_Text mängLäbiTekst;
 
     [Header("Seaded")]
-    [SerializeField] private float ooteAeg = 5f;
+    [SerializeField] private float ooteaeg = 5f;
     [SerializeField] private string avaekraaniStseen = "avaekraan";
     [SerializeField] private bool peataMäng = true;
 
@@ -43,6 +43,7 @@ public class MängLäbiUI : MonoBehaviour
         if (MängijaElud.Instance == null)
             return;
 
+        // väldib sama sündmuse topelt kuulamist
         MängijaElud.Instance.MängLäbi.RemoveListener(OnMängLäbi);
         MängijaElud.Instance.MängLäbi.AddListener(OnMängLäbi);
     }
@@ -52,6 +53,7 @@ public class MängLäbiUI : MonoBehaviour
         if (käivitatud)
             return;
 
+        // mäng läbi ainult ühe korra
         käivitatud = true;
 
         if (mängLäbiTekst != null)
@@ -73,7 +75,8 @@ public class MängLäbiUI : MonoBehaviour
         if (peataMäng)
             Time.timeScale = 0f;
 
-        yield return new WaitForSecondsRealtime(ooteAeg);
+        // ootab ka peatatud mängus
+        yield return new WaitForSecondsRealtime(ooteaeg);
 
         Time.timeScale = 1f;
 

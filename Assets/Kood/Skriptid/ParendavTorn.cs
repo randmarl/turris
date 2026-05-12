@@ -25,6 +25,7 @@ public class ParendavTorn : MonoBehaviour
     {
         aegJärgmiseParenduseni += Time.deltaTime;
 
+        // parendab kindla aja tagant
         if (aegJärgmiseParenduseni >= 1f / parendusiSekundis)
         {
             ParendaLähedalOlevaidTorne();
@@ -36,6 +37,7 @@ public class ParendavTorn : MonoBehaviour
 
     private void ParendaLähedalOlevaidTorne()
     {
+        // otsib kõik kahuritüüpi tornid
         Kahur[] kõikKahurid = FindObjectsByType<Kahur>(FindObjectsSortMode.None);
         bool midagiParendati = false;
 
@@ -49,6 +51,7 @@ public class ParendavTorn : MonoBehaviour
 
             float kaugus = Vector2.Distance(transform.position, kahur.transform.position);
 
+            // ainult raadiuses olevad tornid
             if (kaugus > parenduseRaadius)
                 continue;
 
@@ -59,6 +62,7 @@ public class ParendavTorn : MonoBehaviour
         if (!midagiParendati)
             return;
 
+        // efekt kestab sama kaua kui parendus
         efektiLõpuAeg = Time.time + parenduseKestus;
 
         if (parenduseEfekt != null)
@@ -76,6 +80,7 @@ public class ParendavTorn : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        // raadius editoris nähtavaks
         Handles.color = Color.green;
         Handles.DrawWireDisc(transform.position, transform.forward, parenduseRaadius);
     }

@@ -20,7 +20,10 @@ public class OravanahaTekstiUuendaja : MonoBehaviour
     {
         if (OravanahaHaldur.Instance != null)
         {
+            // hakkab raha muutusi jälgima
             OravanahaHaldur.Instance.OravanahadMuutusid += UuendaTeksti;
+
+            // näitab kohe praegust raha
             UuendaTeksti(OravanahaHaldur.Instance.Oravanahad);
         }
     }
@@ -28,6 +31,7 @@ public class OravanahaTekstiUuendaja : MonoBehaviour
     private void OnDisable()
     {
         if (OravanahaHaldur.Instance != null)
+            // lõpetab raha muutuste jälgimise
             OravanahaHaldur.Instance.OravanahadMuutusid -= UuendaTeksti;
     }
 

@@ -8,7 +8,7 @@ public class Lained : MonoBehaviour
     [SerializeField] private VaenlaseTekitaja vaenlaseTekitaja;
 
     [Header("Peitmine jutustuse ajal")]
-    [SerializeField] private GameObject jutustusPaneel;
+    [SerializeField] private GameObject jutustuspaneel;
 
     private CanvasGroup canvasGroup;
 
@@ -27,7 +27,9 @@ public class Lained : MonoBehaviour
 
         if (vaenlaseTekitaja != null)
         {
+            // kuulab laine numbri muutust
             vaenlaseTekitaja.LaineMuutus += UuendaLaineteTeksti;
+
             UuendaLaineteTeksti(vaenlaseTekitaja.PraeguneLaine, vaenlaseTekitaja.MaksimaalneLaineteArv);
         }
 
@@ -42,6 +44,7 @@ public class Lained : MonoBehaviour
     private void OnDestroy()
     {
         if (vaenlaseTekitaja != null)
+            // lõpetab laine muutuse kuulamise
             vaenlaseTekitaja.LaineMuutus -= UuendaLaineteTeksti;
     }
 
@@ -53,8 +56,9 @@ public class Lained : MonoBehaviour
 
     private void UuendaNähtavust()
     {
-        bool peida = jutustusPaneel != null && jutustusPaneel.activeSelf;
+        bool peida = jutustuspaneel != null && jutustuspaneel.activeSelf;
 
+        // ui peitu jutustuse ajaks
         canvasGroup.alpha = peida ? 0f : 1f;
         canvasGroup.blocksRaycasts = !peida;
         canvasGroup.interactable = !peida;

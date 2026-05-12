@@ -34,10 +34,12 @@ public class VaenlaseLiikumine : MonoBehaviour
 
         if (Vector2.Distance(transform.position, sihtpunkt.position) <= 0.1f)
         {
+            // liigub järgmise teepunkti juurde
             teeIndeks++;
 
             if (Haldur.Peamine == null || teeIndeks >= Haldur.Peamine.Teekond.Length)
             {
+                // raja lõppu jõudnud vaenlane võtab elu
                 if (MängijaElud.Instance != null)
                     MängijaElud.Instance.VõtaElu(lõpusVõetavadElud);
 
@@ -55,6 +57,7 @@ public class VaenlaseLiikumine : MonoBehaviour
 
     private void Liigu()
     {
+        // suund praeguse sihtpunkti poole
         Vector2 suund = (sihtpunkt.position - transform.position).normalized;
         keha2D.linearVelocity = suund * liikumiskiirus;
     }
@@ -64,6 +67,7 @@ public class VaenlaseLiikumine : MonoBehaviour
         if (spriteRenderer == null || keha2D == null)
             return;
 
+        // pöörab pildi liikumise järgi
         if (keha2D.linearVelocity.x > 0.01f)
             spriteRenderer.flipX = false;
         else if (keha2D.linearVelocity.x < -0.01f)

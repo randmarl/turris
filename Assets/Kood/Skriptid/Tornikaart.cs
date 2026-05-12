@@ -60,7 +60,10 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         algneVanem = transform.parent;
         algneAsukoht = rectTransform.anchoredPosition;
 
+        // tõstab kaardi kogu ui peale
         transform.SetParent(juurCanvas.transform, true);
+
+        // laseb raycastil maatükini jõuda
         canvasGroup.blocksRaycasts = false;
 
         LooUlatuseEelvaade();
@@ -84,6 +87,7 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             return;
         }
 
+        // ebaõnnestumisel torn tagasi
         transform.SetParent(algneVanem, true);
         rectTransform.anchoredPosition = algneAsukoht;
     }
@@ -94,6 +98,8 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             return false;
 
         Vector2 punkt = VõtaHiireMaailmaPunkt();
+
+        // otsib hiire alt maatükki
         RaycastHit2D tabamus = Physics2D.Raycast(punkt, Vector2.zero, maksimaalneRayKaugus, maatükiKiht);
 
         if (tabamus.collider == null)
@@ -120,6 +126,7 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         ulatuseEelvaade = new GameObject("TorniUlatusEelvaade");
         ulatuseEelvaade.transform.position = VõtaEelvaateMaailmaPositsioon();
 
+        // loob ringi joonistaja
         LineRenderer lineRenderer = ulatuseEelvaade.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = Color.cyan;
@@ -150,6 +157,7 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         if (tabamus.collider != null)
         {
+            // eelvaade lukustub maatüki keskele
             Vector3 positsioon = tabamus.collider.transform.position;
             positsioon.z = 0f;
             return positsioon;
@@ -163,6 +171,7 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (Camera.main == null)
             return Vector2.zero;
 
+        // ekraanipunktist mängumaailma punkt
         Vector3 hiireMaailmaPositsioon = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return new Vector2(hiireMaailmaPositsioon.x, hiireMaailmaPositsioon.y);
     }
@@ -180,6 +189,7 @@ public class Tornikaart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void VenitaKaartTäisSuurusesse()
     {
+        // ikoon täidab kogu kaardi koha
         rectTransform.anchorMin = Vector2.zero;
         rectTransform.anchorMax = Vector2.one;
         rectTransform.offsetMin = Vector2.zero;

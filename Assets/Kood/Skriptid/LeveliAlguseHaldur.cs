@@ -11,6 +11,7 @@ public class LeveliAlguseHaldur : MonoBehaviour
     private void OnEnable()
     {
         if (jutustuseHaldur != null)
+            // käivitab õpetuse pärast jutustust
             jutustuseHaldur.JutustusLõppes.AddListener(KäivitaÕpetus);
     }
 

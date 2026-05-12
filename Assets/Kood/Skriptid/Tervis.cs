@@ -13,6 +13,7 @@ public class Tervis : MonoBehaviour
         if (onHävitatud)
             return;
 
+        // munga kaitse vähendab kahju
         float kahjuKordaja = MungaKaitseväli.VõtaKahjuKordaja(transform.position, gameObject);
         float tegelikKahju = kahju * kahjuKordaja;
 
@@ -22,6 +23,8 @@ public class Tervis : MonoBehaviour
             return;
 
         elupunktid = 0f;
+
+        // väldib topelt hävitamist
         onHävitatud = true;
 
         VaenlaseTekitaja.vaenlaseHävitamiseSündmus?.Invoke();

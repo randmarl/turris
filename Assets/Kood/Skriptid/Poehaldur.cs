@@ -53,6 +53,7 @@ public class PoeHaldur : MonoBehaviour
         if (tornikaart != null)
             tornikaart.SeaTorn(valitudTorn);
 
+        // hind kasvab pärast ostu
         torniHind = Mathf.FloorToInt(torniHind * hinnategur);
         UuendaHinnaTeksti();
         UuendaNupuOleku();
@@ -72,6 +73,7 @@ public class PoeHaldur : MonoBehaviour
         bool onRaha = OravanahaHaldur.Instance.Oravanahad >= torniHind;
         bool onVabaKoht = LeiaTühiSlot() != null;
 
+        // nupp töötab ainult raha ja vaba koha olemasolul
         turrisNupp.interactable = onRaha && onVabaKoht;
     }
 
@@ -85,6 +87,7 @@ public class PoeHaldur : MonoBehaviour
     {
         if (!esimeneOstTehtud)
         {
+            // esimene ost alati kindel torn
             esimeneOstTehtud = true;
             return tornid[0] != null ? tornid[0].Prefab : null;
         }
@@ -105,6 +108,7 @@ public class PoeHaldur : MonoBehaviour
         if (kogukaal <= 0f)
             return null;
 
+        // valib juhusliku numbri
         float juhuslik = Random.value * kogukaal;
         float jooksevKaal = 0f;
 
@@ -113,6 +117,7 @@ public class PoeHaldur : MonoBehaviour
             if (torn == null || torn.Prefab == null || torn.Kaal <= 0f)
                 continue;
 
+            // liidab tornide kaale kokku
             jooksevKaal += torn.Kaal;
 
             if (juhuslik <= jooksevKaal)

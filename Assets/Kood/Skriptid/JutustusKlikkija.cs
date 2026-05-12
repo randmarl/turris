@@ -10,6 +10,7 @@ public class JutustusKlikkija : MonoBehaviour, IPointerClickHandler
         if (jutustuseHaldur == null)
             return;
 
+        // saadab kliki jutustuse haldurile
         jutustuseHaldur.TöötleKlikki();
     }
 }

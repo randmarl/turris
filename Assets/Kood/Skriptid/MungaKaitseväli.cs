@@ -33,6 +33,7 @@ public class MungaKaitseväli : MonoBehaviour
             if (kaitseväli == null)
                 continue;
 
+            // jätab enda kaitsmise vahele
             if (!kaitseväli.kaitsebIseennast && kaitseväli.gameObject == kaitstavObjekt)
                 continue;
 
@@ -41,6 +42,7 @@ public class MungaKaitseväli : MonoBehaviour
             if (kaugus > kaitseväli.raadius)
                 continue;
 
+            // valib kõige tugevama kaitse
             parimKordaja = Mathf.Min(parimKordaja, kaitseväli.kahjuKordaja);
         }
 
@@ -49,6 +51,7 @@ public class MungaKaitseväli : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        // kaitsevälja raadius editoris
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, raadius);
     }

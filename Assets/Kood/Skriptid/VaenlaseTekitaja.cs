@@ -83,6 +83,7 @@ public class VaenlaseTekitaja : MonoBehaviour
         if (taseOnLäbitud || !kasLaineKäib || KasOnViimaneLaine)
             return;
 
+        // lõpetab praeguse laine ootamata
         LõpetaPraeguneLaine();
         AlustaJärgmiseLaineOotamist();
     }
@@ -116,6 +117,7 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private void VaenlaneHävitatud()
     {
+        // vaenlaste arv ei lähe miinusesse
         vaenlasiElus = Mathf.Max(0, vaenlasiElus - 1);
     }
 
@@ -132,6 +134,8 @@ public class VaenlaseTekitaja : MonoBehaviour
 
         laineKestus = 0f;
         aegViimasestTekitamisest = 0f;
+
+        // määrab laine vaenlaste arvu ja tekkimiskiiruse
         vaenlasiTekitada = VaenlasiLaines();
         vaenlasiSekundisHetkel = VaenlasiSekundiga();
     }
@@ -244,6 +248,7 @@ public class VaenlaseTekitaja : MonoBehaviour
         if (kogukaal <= 0f)
             return null;
 
+        // valib juhusliku numbri
         float juhuslik = UnityEngine.Random.value * kogukaal;
         float jooksev = 0f;
 
@@ -252,6 +257,7 @@ public class VaenlaseTekitaja : MonoBehaviour
             if (v == null || v.Prefab == null || v.Kaal <= 0f)
                 continue;
 
+            // liidab vaenlaste kaale kokku
             jooksev += v.Kaal;
 
             if (juhuslik <= jooksev)
@@ -263,11 +269,13 @@ public class VaenlaseTekitaja : MonoBehaviour
 
     private int VaenlasiLaines()
     {
+        // vaenlaste arv kasvab laine numbriga
         return Mathf.RoundToInt(algseltVaenlasi * Mathf.Pow(praeguneLaine, raskuseTegur));
     }
 
     private float VaenlasiSekundiga()
     {
+        // tekitamise kiirus kasvab, aga piirini
         return Mathf.Clamp(
             vaenlasiSekundis * Mathf.Pow(praeguneLaine, raskuseTegur),
             0f,

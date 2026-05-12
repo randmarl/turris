@@ -8,27 +8,27 @@ using UnityEngine.Events;
 public class JutustuseHaldur : MonoBehaviour
 {
     [Header("UI viited")]
-    [SerializeField] private GameObject jutustusPaneel;
-    [SerializeField] private TMP_Text pealkiriTekst;
-    [SerializeField] private TMP_Text jutumulliTekst;
+    [SerializeField] private GameObject jutustuspaneel;
+    [SerializeField] private TMP_Text pealkirjatekst;
+    [SerializeField] private TMP_Text jutumullitekst;
     [SerializeField] private GameObject jutumullObjekt;
     [SerializeField] private GameObject tegelaneObjekt;
-    [SerializeField] private TMP_Text jatkamiseTekst;
+    [SerializeField] private TMP_Text jätkamiseTekst;
 
     [Header("Sätted")]
     [SerializeField] private string pealkiri = "Manivaldi matused";
-    [SerializeField] private float pealkiriKestusSekundites = 2f;
-    [SerializeField] private TextAsset jutustuseFail;
+    [SerializeField] private float pealkirjaKestusSekundites = 2f;
+    [SerializeField] private TextAsset jutustusefail;
 
     [Header("Tekstiefekt")]
     [SerializeField] private bool kasutaTähthaavalEfekti = true;
     [SerializeField] private float täheIlmumiseViivitus = 0.04f;
 
     [Header("Jätkamise vihje")]
-    [SerializeField] private float jatkamiseVihjeViivitus = 3f;
-    [SerializeField] private float jatkamiseVihjeFadeKestus = 1f;
-    [SerializeField] private float jatkamiseVihjeNähtavKestus = 1.2f;
-    [SerializeField] private float jatkamiseVihjePeidusKestus = 0.8f;
+    [SerializeField] private float jätkamisevihjeViivitus = 3f;
+    [SerializeField] private float jätkamisevihjeHaihtumiseKestus = 1f;
+    [SerializeField] private float jätkamisevihjeNähtavKestus = 1.2f;
+    [SerializeField] private float jätkamisevihjePeidusKestus = 0.8f;
 
     [Header("Sündmused")]
     public UnityEvent JutustusLõppes = new UnityEvent();
@@ -39,12 +39,12 @@ public class JutustuseHaldur : MonoBehaviour
     private bool onPealkiriFaasis = true;
     private bool kirjutabTeksti;
     private bool pealkiriOnTäielikultNäidatud;
-    private bool jatkamiseVihjeNähtav;
+    private bool jätkamisevihjeNähtav;
 
     private Coroutine kirjutamiseCoroutine;
     private Coroutine vihjeCoroutine;
 
-    private float pealkiriOotamiseTaimer;
+    private float pealkirjaOotamiseTaimer;
     private float viimaseKlikiAeg;
 
     private string praeguneTäisTekst = "";
@@ -74,6 +74,7 @@ public class JutustuseHaldur : MonoBehaviour
 
         if (kirjutabTeksti)
         {
+            // klikk näitab terve teksti kohe
             LõpetaKirjutamineKohe();
             return;
         }
@@ -94,7 +95,7 @@ public class JutustuseHaldur : MonoBehaviour
 
     public void SeaJutustuseFail(TextAsset uusFail)
     {
-        jutustuseFail = uusFail;
+        jutustusefail = uusFail;
         LaeJutustuseReadFailist();
     }
 
@@ -105,10 +106,11 @@ public class JutustuseHaldur : MonoBehaviour
         if (menüü != null)
             menüü.SulgeMenüü();
 
+        // mäng pausile jutustuse ajaks
         Time.timeScale = 0f;
 
-        if (jutustusPaneel != null)
-            jutustusPaneel.SetActive(true);
+        if (jutustuspaneel != null)
+            jutustuspaneel.SetActive(true);
 
         LähtestaJutustuseOlek();
 
@@ -124,7 +126,7 @@ public class JutustuseHaldur : MonoBehaviour
     private void LähtestaJutustuseOlek()
     {
         viimaseKlikiAeg = 0f;
-        pealkiriOotamiseTaimer = 0f;
+        pealkirjaOotamiseTaimer = 0f;
         praeguseReaIndeks = 0;
 
         onPealkiriFaasis = true;
@@ -133,8 +135,8 @@ public class JutustuseHaldur : MonoBehaviour
 
         PeidaJatkamiseVihje();
 
-        if (pealkiriTekst != null)
-            pealkiriTekst.gameObject.SetActive(true);
+        if (pealkirjatekst != null)
+            pealkirjatekst.gameObject.SetActive(true);
 
         if (jutumullObjekt != null)
             jutumullObjekt.SetActive(false);
@@ -145,13 +147,14 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void LaeJutustuseReadFailist()
     {
-        if (jutustuseFail == null || string.IsNullOrWhiteSpace(jutustuseFail.text))
+        if (jutustusefail == null || string.IsNullOrWhiteSpace(jutustusefail.text))
         {
             jutustuseRead = Array.Empty<string>();
             return;
         }
 
-        jutustuseRead = jutustuseFail.text
+        // tekstifaili jagamine jutustuse osadeks
+        jutustuseRead = jutustusefail.text
             .Split(new[] { "---" }, StringSplitOptions.RemoveEmptyEntries)
             .Select(rida => rida.Trim())
             .Where(rida => !string.IsNullOrEmpty(rida))
@@ -163,9 +166,10 @@ public class JutustuseHaldur : MonoBehaviour
         if (!onPealkiriFaasis || !pealkiriOnTäielikultNäidatud)
             return;
 
-        pealkiriOotamiseTaimer += Time.unscaledDeltaTime;
+        // paus töötab ka peatatud mängus
+        pealkirjaOotamiseTaimer += Time.unscaledDeltaTime;
 
-        if (pealkiriOotamiseTaimer >= pealkiriKestusSekundites)
+        if (pealkirjaOotamiseTaimer >= pealkirjaKestusSekundites)
             NäitaJutumulli();
     }
 
@@ -176,13 +180,13 @@ public class JutustuseHaldur : MonoBehaviour
 
         viimaseKlikiAeg += Time.unscaledDeltaTime;
 
-        if (!jatkamiseVihjeNähtav && viimaseKlikiAeg >= jatkamiseVihjeViivitus)
+        if (!jätkamisevihjeNähtav && viimaseKlikiAeg >= jätkamisevihjeViivitus)
             NaitaJatkamiseVihje();
     }
 
     private void NäitaPealkiri()
     {
-        aktiivneTekstiväli = pealkiriTekst;
+        aktiivneTekstiväli = pealkirjatekst;
         praeguneTäisTekst = pealkiri;
 
         if (kasutaTähthaavalEfekti)
@@ -190,17 +194,17 @@ public class JutustuseHaldur : MonoBehaviour
             AlustaKirjutamist(aktiivneTekstiväli, praeguneTäisTekst, () =>
             {
                 pealkiriOnTäielikultNäidatud = true;
-                pealkiriOotamiseTaimer = 0f;
+                pealkirjaOotamiseTaimer = 0f;
             });
 
             return;
         }
 
-        if (pealkiriTekst != null)
-            pealkiriTekst.text = pealkiri;
+        if (pealkirjatekst != null)
+            pealkirjatekst.text = pealkiri;
 
         pealkiriOnTäielikultNäidatud = true;
-        pealkiriOotamiseTaimer = 0f;
+        pealkirjaOotamiseTaimer = 0f;
     }
 
     private void NäitaJutumulli()
@@ -210,8 +214,8 @@ public class JutustuseHaldur : MonoBehaviour
         viimaseKlikiAeg = 0f;
         PeidaJatkamiseVihje();
 
-        if (pealkiriTekst != null)
-            pealkiriTekst.gameObject.SetActive(false);
+        if (pealkirjatekst != null)
+            pealkirjatekst.gameObject.SetActive(false);
 
         if (jutumullObjekt != null)
             jutumullObjekt.SetActive(true);
@@ -228,7 +232,7 @@ public class JutustuseHaldur : MonoBehaviour
         viimaseKlikiAeg = 0f;
         PeidaJatkamiseVihje();
 
-        aktiivneTekstiväli = jutumulliTekst;
+        aktiivneTekstiväli = jutumullitekst;
         praeguneTäisTekst = jutustuseRead[indeks];
 
         if (kasutaTähthaavalEfekti)
@@ -237,8 +241,8 @@ public class JutustuseHaldur : MonoBehaviour
             return;
         }
 
-        if (jutumulliTekst != null)
-            jutumulliTekst.text = praeguneTäisTekst;
+        if (jutumullitekst != null)
+            jutumullitekst.text = praeguneTäisTekst;
     }
 
     private void JärgmineRidaVõiLõpeta()
@@ -258,11 +262,12 @@ public class JutustuseHaldur : MonoBehaviour
     {
         PeidaJatkamiseVihje();
 
-        if (jutustusPaneel != null)
-            jutustusPaneel.SetActive(false);
+        if (jutustuspaneel != null)
+            jutustuspaneel.SetActive(false);
 
         Time.timeScale = 1f;
 
+        // annab teistele skriptidele teada
         JutustusLõppes.Invoke();
         enabled = false;
     }
@@ -283,6 +288,7 @@ public class JutustuseHaldur : MonoBehaviour
         kirjutabTeksti = true;
         tekstiväli.text = "";
 
+        // tähed ilmuvad ükshaaval
         foreach (char täht in koguTekst)
         {
             tekstiväli.text += täht;
@@ -309,12 +315,12 @@ public class JutustuseHaldur : MonoBehaviour
             return;
 
         pealkiriOnTäielikultNäidatud = true;
-        pealkiriOotamiseTaimer = 0f;
+        pealkirjaOotamiseTaimer = 0f;
     }
 
     private void PeidaJatkamiseVihje()
     {
-        jatkamiseVihjeNähtav = false;
+        jätkamisevihjeNähtav = false;
 
         if (vihjeCoroutine != null)
         {
@@ -327,7 +333,7 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void NaitaJatkamiseVihje()
     {
-        jatkamiseVihjeNähtav = true;
+        jätkamisevihjeNähtav = true;
 
         if (vihjeCoroutine != null)
             StopCoroutine(vihjeCoroutine);
@@ -337,18 +343,18 @@ public class JutustuseHaldur : MonoBehaviour
 
     private IEnumerator JatkamiseVihjeAnimatsioon()
     {
-        if (jatkamiseTekst == null)
+        if (jätkamiseTekst == null)
             yield break;
 
         SeaJatkamiseTekstiLäbipaistvus(0f);
 
-        while (jatkamiseVihjeNähtav)
+        while (jätkamisevihjeNähtav)
         {
             yield return MuudaJatkamiseVihjeLäbipaistvust(0f, 1f);
-            yield return new WaitForSecondsRealtime(jatkamiseVihjeNähtavKestus);
+            yield return new WaitForSecondsRealtime(jätkamisevihjeNähtavKestus);
 
             yield return MuudaJatkamiseVihjeLäbipaistvust(1f, 0f);
-            yield return new WaitForSecondsRealtime(jatkamiseVihjePeidusKestus);
+            yield return new WaitForSecondsRealtime(jätkamisevihjePeidusKestus);
         }
 
         vihjeCoroutine = null;
@@ -358,10 +364,12 @@ public class JutustuseHaldur : MonoBehaviour
     {
         float aeg = 0f;
 
-        while (aeg < jatkamiseVihjeFadeKestus)
+        while (aeg < jätkamisevihjeHaihtumiseKestus)
         {
             aeg += Time.unscaledDeltaTime;
-            float väärtus = Mathf.Lerp(algus, lõpp, aeg / jatkamiseVihjeFadeKestus);
+
+            // läbipaistvuse sujuv muutmine
+            float väärtus = Mathf.Lerp(algus, lõpp, aeg / jätkamisevihjeHaihtumiseKestus);
             SeaJatkamiseTekstiLäbipaistvus(väärtus);
 
             yield return null;
@@ -372,11 +380,11 @@ public class JutustuseHaldur : MonoBehaviour
 
     private void SeaJatkamiseTekstiLäbipaistvus(float läbipaistvus)
     {
-        if (jatkamiseTekst == null)
+        if (jätkamiseTekst == null)
             return;
 
-        Color värv = jatkamiseTekst.color;
+        Color värv = jätkamiseTekst.color;
         värv.a = läbipaistvus;
-        jatkamiseTekst.color = värv;
+        jätkamiseTekst.color = värv;
     }
 }

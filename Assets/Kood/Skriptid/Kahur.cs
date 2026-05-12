@@ -4,14 +4,14 @@ using UnityEditor;
 public class Kahur : MonoBehaviour
 {
     [Header("Viited")]
-    [SerializeField] private Transform kahuriPöördePunkt;
-    [SerializeField] private LayerMask vaenlaseKiht;
+    [SerializeField] private Transform kahuriPöördepunkt;
+    [SerializeField] private LayerMask vaenlaskiht;
     [SerializeField] private GameObject kuuliMall;
     [SerializeField] private Transform laskepunkt;
 
     [Header("Atribuudid")]
-    [SerializeField] private float sihtimisRaadius = 5f;
-    [SerializeField] private float pööramisKiirus = 6f;
+    [SerializeField] private float sihtimisraadius = 5f;
+    [SerializeField] private float pööramiskiirus = 6f;
     [SerializeField] private float kuuleSekundis = 1f;
 
     private Transform sihtmärk;
@@ -49,23 +49,26 @@ public class Kahur : MonoBehaviour
         if (Time.time < tulekiiruseParenduseLõpuAeg)
             return;
 
+        // tulekiirus tagasi tavaliseks
         tulekiiruseKordaja = 1f;
     }
 
     public void ParendaTulekiirust(float kordaja, float kestus)
     {
+        // jätab tugevama või pikema parenduse alles
         tulekiiruseKordaja = Mathf.Max(tulekiiruseKordaja, kordaja);
         tulekiiruseParenduseLõpuAeg = Mathf.Max(tulekiiruseParenduseLõpuAeg, Time.time + kestus);
     }
 
     private void LeiaSihtmärk()
     {
+        // vaenlased kahuri raadiuses
         RaycastHit2D[] tabamused = Physics2D.CircleCastAll(
             transform.position,
-            sihtimisRaadius,
+            sihtimisraadius,
             Vector2.zero,
             0f,
-            vaenlaseKiht
+            vaenlaskiht
         );
 
         if (tabamused.Length > 0)
@@ -76,6 +79,7 @@ public class Kahur : MonoBehaviour
     {
         aegJärgmiseLasuni += Time.deltaTime;
 
+        // tulekiirus koos võimaliku parendusega
         float tegelikKuuleSekundis = kuuleSekundis * tulekiiruseKordaja;
 
         if (aegJärgmiseLasuni < 1f / tegelikKuuleSekundis)
@@ -96,6 +100,7 @@ public class Kahur : MonoBehaviour
 
         if (kuuliCollider != null)
         {
+            // kuul ei põrkaks oma kahuriga
             foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
                 Physics2D.IgnoreCollision(kuuliCollider, collider);
         }
@@ -108,33 +113,38 @@ public class Kahur : MonoBehaviour
 
     private bool KasSihtmärkOnRaadiuses()
     {
-        return Vector2.Distance(transform.position, sihtmärk.position) <= sihtimisRaadius;
+        return Vector2.Distance(transform.position, sihtmärk.position) <= sihtimisraadius;
     }
 
     private void PööraSihtmärgiSuunas()
     {
-        if (kahuriPöördePunkt == null)
+        if (kahuriPöördepunkt == null)
             return;
 
+        // kahuri pööramine sihtmärgi suunas
+        // allikas: Medium artikkel kahuri pööramisest Unitys
+        // link: https://medium.com/@rohan5210work/from-wobbly-angles-to-perfect-aim-how-i-fixed-cannon-rotation-in-unity-2d-0c1dc81f16ff
         Vector2 suund = sihtmärk.position - transform.position;
         float nurk = Mathf.Atan2(suund.y, suund.x) * Mathf.Rad2Deg - 90f;
         Quaternion sihtimispööre = Quaternion.Euler(0f, 0f, nurk);
 
-        kahuriPöördePunkt.rotation = Quaternion.RotateTowards(
-            kahuriPöördePunkt.rotation,
+        // sujuv pööramine
+        kahuriPöördepunkt.rotation = Quaternion.RotateTowards(
+            kahuriPöördepunkt.rotation,
             sihtimispööre,
-            pööramisKiirus * Time.deltaTime
+            pööramiskiirus * Time.deltaTime
         );
     }
 
     private void OnDrawGizmosSelected()
     {
+        // raadius editoris nähtavaks
         Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, sihtimisRaadius);
+        Handles.DrawWireDisc(transform.position, transform.forward, sihtimisraadius);
     }
 
     public float VõtaSihtimisRaadius()
     {
-        return sihtimisRaadius;
+        return sihtimisraadius;
     }
 }

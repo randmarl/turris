@@ -51,6 +51,7 @@ public class ÕpetuseHaldur : MonoBehaviour
 
     private void Awake()
     {
+        // algolek enne mängu
         if (õpetusPaneel != null && !käivitaAutomaatselt)
             õpetusPaneel.SetActive(false);
 
@@ -72,6 +73,7 @@ public class ÕpetuseHaldur : MonoBehaviour
         if (kirjutabTeksti)
             return;
 
+        // kasutaja passimise aeg
         viimaseKlikiAeg += Time.unscaledDeltaTime;
 
         if (!jatkamiseVihjeNähtav && viimaseKlikiAeg >= jatkamiseVihjeViivitus)
@@ -93,6 +95,8 @@ public class ÕpetuseHaldur : MonoBehaviour
         }
 
         õpetusKäib = true;
+
+        // mäng pausile, ui jääb tööle
         Time.timeScale = 0f;
 
         õpetusPaneel.SetActive(true);
@@ -119,6 +123,7 @@ public class ÕpetuseHaldur : MonoBehaviour
         viimaseKlikiAeg = 0f;
         PeidaJatkamiseVihje();
 
+        // pooleli tekst kohe lõpuni
         if (kirjutabTeksti)
         {
             LõpetaKirjutamineKohe();
@@ -140,6 +145,8 @@ public class ÕpetuseHaldur : MonoBehaviour
     {
         viimaseKlikiAeg = 0f;
         PeidaJatkamiseVihje();
+
+        // ainult ühe sammu pilt nähtav
         PeidaKõikVisuaalid();
 
         ÕpetuseSamm samm = sammud[indeks];
@@ -163,6 +170,7 @@ public class ÕpetuseHaldur : MonoBehaviour
 
     private void AlustaKirjutamist(string tekst)
     {
+        // vana kirjutamine kinni
         if (kirjutamiseCoroutine != null)
             StopCoroutine(kirjutamiseCoroutine);
 
@@ -177,6 +185,8 @@ public class ÕpetuseHaldur : MonoBehaviour
         foreach (char täht in tekst)
         {
             õpetusTekst.text += täht;
+
+            // pärisaja ootamine, sest mäng on pausil
             yield return new WaitForSecondsRealtime(täheIlmumiseViivitus);
         }
 
@@ -191,6 +201,8 @@ public class ÕpetuseHaldur : MonoBehaviour
 
         kirjutamiseCoroutine = null;
         kirjutabTeksti = false;
+
+        // kogu tekst korraga nähtavaks
         õpetusTekst.text = praeguneTäisTekst;
     }
 
@@ -204,6 +216,7 @@ public class ÕpetuseHaldur : MonoBehaviour
         if (õpetusPaneel != null)
             õpetusPaneel.SetActive(false);
 
+        // mäng käima tagasi
         Time.timeScale = 1f;
 
         ÕpetusLõppes.Invoke();
@@ -225,6 +238,7 @@ public class ÕpetuseHaldur : MonoBehaviour
     {
         jatkamiseVihjeNähtav = false;
 
+        // vilkumise coroutine kinni
         if (vihjeCoroutine != null)
         {
             StopCoroutine(vihjeCoroutine);
@@ -233,6 +247,7 @@ public class ÕpetuseHaldur : MonoBehaviour
 
         if (jatkamiseTekst != null)
         {
+            // tekst läbipaistvaks
             Color värv = jatkamiseTekst.color;
             värv.a = 0f;
             jatkamiseTekst.color = värv;
@@ -258,10 +273,12 @@ public class ÕpetuseHaldur : MonoBehaviour
         värv.a = 0f;
         jatkamiseTekst.color = värv;
 
+        // korduv haihtumine sisse ja välja
         while (jatkamiseVihjeNähtav)
         {
             float aeg = 0f;
 
+            // sisse haihtumine
             while (aeg < jatkamiseVihjeFadeKestus)
             {
                 aeg += Time.unscaledDeltaTime;
@@ -277,6 +294,7 @@ public class ÕpetuseHaldur : MonoBehaviour
 
             aeg = 0f;
 
+            // välja haihtumine
             while (aeg < jatkamiseVihjeFadeKestus)
             {
                 aeg += Time.unscaledDeltaTime;

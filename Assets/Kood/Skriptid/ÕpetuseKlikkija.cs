@@ -7,6 +7,7 @@ public class ÕpetuseKlikkija : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // kaitse puuduva viite vastu
         if (õpetuseHaldur == null)
             return;
 

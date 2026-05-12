@@ -19,10 +19,12 @@ public class MängijaElud : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
+            // eemaldab üleliigse elude süsteemi
             Destroy(gameObject);
             return;
         }
 
+        // salvestab selle peamiseks elude süsteemiks
         Instance = this;
         Elud = algsedElud;
     }
@@ -40,10 +42,12 @@ public class MängijaElud : MonoBehaviour
         Elud -= kogus;
         Elud = Mathf.Max(Elud, 0);
 
+        // annab ui-le uue elude arvu
         EludMuutusid.Invoke(Elud);
 
         if (Elud == 0 && !mängLäbiKäivitunud)
         {
+            // mäng läbi ainult ühe korra
             mängLäbiKäivitunud = true;
             MängLäbi.Invoke();
         }

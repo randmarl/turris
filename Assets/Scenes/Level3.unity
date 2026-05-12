@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   lainedTekst: {fileID: 82665096}
   vaenlaseTekitaja: {fileID: 1091655593}
-  jutustusPaneel: {fileID: 492758457}
+  jutustuspaneel: {fileID: 0}
 --- !u!114 &82665096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EludUI
   eludTekst: {fileID: 1335876799}
-  jutustusPaneel: {fileID: 492758457}
+  jutustuspaneel: {fileID: 0}
 --- !u!225 &108787990
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5740,21 +5740,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b06dea7aa94ac940935d872cd2168fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JutustuseHaldur
-  jutustusPaneel: {fileID: 492758457}
-  pealkiriTekst: {fileID: 1009352714}
-  jutumulliTekst: {fileID: 821175442}
+  jutustuspaneel: {fileID: 492758457}
+  pealkirjatekst: {fileID: 1009352714}
+  jutumullitekst: {fileID: 821175442}
   jutumullObjekt: {fileID: 383896637}
   tegelaneObjekt: {fileID: 320130058}
-  jatkamiseTekst: {fileID: 1876532073}
+  "j\xE4tkamiseTekst": {fileID: 1876532073}
   pealkiri: VOKK JA LEIVALABIDAS
-  pealkiriKestusSekundites: 3
-  jutustuseFail: {fileID: 4900000, guid: 5e6216f436ba5b846bd5001e89b5dc90, type: 3}
+  pealkirjaKestusSekundites: 2
+  jutustusefail: {fileID: 4900000, guid: 5e6216f436ba5b846bd5001e89b5dc90, type: 3}
   "kasutaT\xE4hthaavalEfekti": 1
   "t\xE4heIlmumiseViivitus": 0.04
-  jatkamiseVihjeViivitus: 5
-  jatkamiseVihjeFadeKestus: 2
-  "jatkamiseVihjeN\xE4htavKestus": 1.2
-  jatkamiseVihjePeidusKestus: 0.8
+  "j\xE4tkamisevihjeViivitus": 3
+  "j\xE4tkamisevihjeHaihtumiseKestus": 1
+  "j\xE4tkamisevihjeN\xE4htavKestus": 1.2
+  "j\xE4tkamisevihjePeidusKestus": 0.8
   "JutustusL\xF5ppes":
     m_PersistentCalls:
       m_Calls: []
@@ -11279,7 +11279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbb0c309594e25408f1a53d4397021e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  algusPunktid:
+  alguspunktid:
   - {fileID: 722293076}
   teekond:
   - {fileID: 1462627536}
@@ -11335,7 +11335,6 @@ MonoBehaviour:
   keskmiseLaineBoss: 5
   keskmiseLaineBossid: 0
   viimaseLaineBossid: 0
-  bossideVaheSekundites: 5
   algseltVaenlasi: 7
   vaenlasiSekundis: 0.5
   aegLaineteVahel: 5
@@ -19070,7 +19069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: "Assembly-CSharp::M\xE4ngL\xE4biUI"
   "m\xE4ngL\xE4biObjekt": {fileID: 1274859002}
   "m\xE4ngL\xE4biTekst": {fileID: 1274859003}
-  ooteAeg: 5
+  ooteaeg: 5
   avaekraaniStseen: avaekraan
   "peataM\xE4ng": 1
 --- !u!1001 &1780315486
@@ -21377,7 +21376,7 @@ MonoBehaviour:
   nupp: {fileID: 545737681}
   nupuObjekt: {fileID: 545737679}
   ilmumiseViivitusSekundites: 7
-  fadeKiirus: 5
+  haihtumiskiirus: 5
 --- !u!1 &1945132068
 GameObject:
   m_ObjectHideFlags: 0

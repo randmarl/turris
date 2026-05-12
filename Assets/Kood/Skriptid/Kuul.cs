@@ -27,12 +27,14 @@ public class Kuul : MonoBehaviour
             return;
         }
 
+        // liikumissuund sihtmärgi poole
         Vector2 suund = ((Vector2)sihtmärk.position - keha2D.position).normalized;
         keha2D.linearVelocity = suund * kiirus;
     }
 
     private void OnCollisionEnter2D(Collision2D muu)
     {
+        // otsib tabatud objektilt tervise
         Tervis tervis = muu.gameObject.GetComponentInParent<Tervis>();
 
         if (tervis != null)
