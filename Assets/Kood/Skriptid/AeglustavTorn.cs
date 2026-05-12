@@ -98,12 +98,14 @@ public class AeglustavTorn : MonoBehaviour
             liikumine.TaastaKiirus();
     }
 
+    #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         // raadius editoris nähtavaks
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, sihtimisraadius);
     }
+    #endif
 
     public float VõtaSihtimisRaadius()
     {

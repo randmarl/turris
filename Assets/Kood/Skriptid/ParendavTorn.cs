@@ -80,12 +80,14 @@ public class ParendavTorn : MonoBehaviour
             parenduseEfekt.SetActive(false);
     }
 
+    #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         // raadius editoris nähtavaks
         Handles.color = Color.green;
         Handles.DrawWireDisc(transform.position, transform.forward, parenduseRaadius);
     }
+    #endif
 
     public float VõtaSihtimisRaadius()
     {
