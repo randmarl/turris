@@ -9,7 +9,7 @@ Pikselstiilis tornikaitsemäng, mis on inspireeritud Andrus Kivirähki teosest *
 Mängija paigutab torne, teenib mänguvaluutat ehk oravanahkasid ja peab vastu vaenlaste lainetele.
 Kui vaenlased jõuavad lõppu, kaotab mängija elusid.
 
-Mängu saab mängida siin.
+Mängu saab alla laadida [siit](https://marleenrand.itch.io/turris-bachelor-project).
 
 ### Tehnoloogiad
 
@@ -18,7 +18,7 @@ Mängu saab mängida siin.
 
 ### Lõputöö
 
-Projekt on loodud bakalaureusetöö raames, mis on kättesaadav siin.
+Projekt on loodud bakalaureusetöö raames, mis on kättesaadav [siit](https://thesis.cs.ut.ee/65722700-8202-4672-b209-f22c0603b31f).
 
 ### Autor
 
@@ -43,7 +43,7 @@ A pixel-style tower defense game inspired by the novel *"The Man Who Spoke Snaki
 The player places towers, earns in-game currency (squirrel pelts), and defends against waves of enemies.
 If enemies reach the end, the player loses lives.
 
-Play the game here.
+Download the game [here](https://marleenrand.itch.io/turris-bachelor-project).
 
 ### Technologies
 
@@ -52,7 +52,7 @@ Play the game here.
 
 ### Thesis
 
-This project was created as part of a bachelor's thesis, available here.
+This project was created as part of a bachelor's thesis, available [here](https://thesis.cs.ut.ee/65722700-8202-4672-b209-f22c0603b31f).
 
 ## License
 
